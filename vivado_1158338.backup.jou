@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Tue Feb 17 02:18:08 2026
+# Process ID         : 1158338
+# Current directory  : /home/srn6/pprojs/risc-v
+# Command line       : vivado
+# Log file           : /home/srn6/pprojs/risc-v/vivado.log
+# Journal file       : /home/srn6/pprojs/risc-v/vivado.jou
+# Running On         : gelib-4e-36.ews.illinois.edu
+# Platform           : RedHatEnterprise
+# Operating System   : Red Hat Enterprise Linux 9.7 (Plow)
+# Processor Detail   : Intel(R) Xeon(R) W-1350 @ 3.30GHz
+# CPU Frequency      : 4201.251 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16208 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20503 MB
+# Available Virtual  : 13649 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/srn6/pprojs/risc-v/risc-v/risc-v.xpr
+update_compile_order -fileset sources_1
