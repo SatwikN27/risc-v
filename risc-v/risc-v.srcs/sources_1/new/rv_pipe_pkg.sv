@@ -11,11 +11,36 @@ package rv_pipe_pkg;
         JALR            =1100111
     } opcodes_t;
 
+    typedef struct packed {
+        logic invert_alu;
+    } control_t;
+
+    typedef struct packed {
+        logic [31:0] immI;
+        logic [31:0] immS;
+        logic [31:0] immB;
+        logic [31:0] immU;
+        logic [31:0] immJ;
+    } immediates_t;
 
     // IF/ID payload
     typedef struct packed {
         logic [31:0]    pc;
         logic [31:0]    instruction;
+        logic           valid;
     } if_id_t;
+
+    // ID/EX payload
+    typedef struct packed {
+        logic [31:0]        rs1;
+        logic [31:0]        rs2;
+        logic [4:0]         rd_addr;
+        logic [31:0]        pc;
+        logic control_t     control_bits;
+        logic immediates_t  immediates;
+        logic [2:0]         func3;
+        logic [6:0]         func7;
+        logic               valid;
+    } id_ex_t;
 
 endpackage
