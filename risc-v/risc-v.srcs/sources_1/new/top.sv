@@ -4,9 +4,9 @@ module top(
     input clk,
     input rst_n
 );
-    import rv_pipe_pkg::*;
 
-    pipe_if #(.T(if_id_t)) if_id_bus;
+
+    pipe_if #(rv_pipe_pkg::if_id_t) if_id_bus();
 
     fetch_stage u_fetch(
         .clk(clk),

@@ -8,16 +8,14 @@ module fetch_stage (
     // conventional drivers like the other
     input clk,
     input rst_n,
-
-    // 
-    pipe_if #(rv_pipe_pkg::if_id_t).cons if_id_out
+    pipe_if #(.T(rv_pipe_pkg::if_id_t)) if_id_out
 );
     import rv_pipe_pkg::*;
 
     always_comb begin
         if_id_out.valid         = 1'b1; // TODO: add gated logic for valid states
-        if_id_out.pc            = 32'b0; // TODO: replace with incrementing PC
-        if_id_out.instruction   = 32'b0; // TODO: replace with instruction memory
+        if_id_out.data.pc            = 32'b0; // TODO: replace with incrementing PC
+        if_id_out.data.instruction   = 32'b0; // TODO: replace with instruction memory
     end
 
 

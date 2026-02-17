@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Tue Feb 17 05:06:10 2026
+# Process ID         : 64095
+# Current directory  : /home/srn6/pprojs/risc-v/risc-v/risc-v.runs/impl_1
+# Command line       : vivado -log instruction_memory.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source instruction_memory.tcl -notrace
+# Log file           : /home/srn6/pprojs/risc-v/risc-v/risc-v.runs/impl_1/instruction_memory.vdi
+# Journal file       : /home/srn6/pprojs/risc-v/risc-v/risc-v.runs/impl_1/vivado.jou
+# Running On         : gelib-4e-36.ews.illinois.edu
+# Platform           : RedHatEnterprise
+# Operating System   : Red Hat Enterprise Linux 9.7 (Plow)
+# Processor Detail   : Intel(R) Xeon(R) W-1350 @ 3.30GHz
+# CPU Frequency      : 2727.967 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16208 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20503 MB
+# Available Virtual  : 14287 MB
+#-----------------------------------------------------------
+source instruction_memory.tcl -notrace
