@@ -14,8 +14,9 @@ package rv_pipe_pkg;
 
     // IF/ID payload
     typedef struct packed {
-        logic [31:0] pc;
-        logic [31:0] instruction;
+        logic           valid;
+        logic [31:0]    pc;
+        logic [31:0]    instruction;
     } if_id_t;
 
 endpackage
