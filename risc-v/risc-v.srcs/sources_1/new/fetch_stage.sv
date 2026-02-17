@@ -6,8 +6,8 @@
 module fetch_stage (
     // clk and rst_n (active low) inputs, since this state doesnt have
     // conventional drivers like the other
-    input clk,
-    input rst_n,
+    input logic clk,
+    input logic rst_n,
 
     // output is a 
     output rv_pipe_pkg::if_id_t data,
