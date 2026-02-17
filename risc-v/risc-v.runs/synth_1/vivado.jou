@@ -3,22 +3,22 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Tue Feb 17 05:04:12 2026
-# Process ID         : 60465
+# Start of session at: Tue Feb 17 07:31:30 2026
+# Process ID         : 305288
 # Current directory  : /home/srn6/pprojs/risc-v/risc-v/risc-v.runs/synth_1
-# Command line       : vivado -log instruction_memory.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source instruction_memory.tcl
-# Log file           : /home/srn6/pprojs/risc-v/risc-v/risc-v.runs/synth_1/instruction_memory.vds
+# Command line       : vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file           : /home/srn6/pprojs/risc-v/risc-v/risc-v.runs/synth_1/top.vds
 # Journal file       : /home/srn6/pprojs/risc-v/risc-v/risc-v.runs/synth_1/vivado.jou
 # Running On         : gelib-4e-36.ews.illinois.edu
 # Platform           : RedHatEnterprise
 # Operating System   : Red Hat Enterprise Linux 9.7 (Plow)
 # Processor Detail   : Intel(R) Xeon(R) W-1350 @ 3.30GHz
-# CPU Frequency      : 2900.290 MHz
+# CPU Frequency      : 3082.284 MHz
 # CPU Physical cores : 6
 # CPU Logical cores  : 12
 # Host memory        : 16208 MB
 # Swap memory        : 4294 MB
 # Total Virtual      : 20503 MB
-# Available Virtual  : 14313 MB
+# Available Virtual  : 10166 MB
 #-----------------------------------------------------------
-source instruction_memory.tcl -notrace
+source top.tcl -notrace

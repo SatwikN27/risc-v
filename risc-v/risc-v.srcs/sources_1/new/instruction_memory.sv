@@ -25,12 +25,11 @@ module instruction_memory(
     input logic         instr_en,       // instruction enable
     input logic  [31:0] instr_addr,     // instruction address
     output logic [31:0] instr_data,     // instruction data
-    input logic         instr_valid_in, // instruction valid input
     output logic        instr_valid_out // intstruction valid output
     );
     
-    logic valid_pr;      // valid bit pipeline register
-    logic i_reset;  // internal reset
+    logic valid_pr;     // valid bit pipeline register
+    logic i_reset;      // internal reset
     
     
     blk_mem_gen_0 i_mem (       // bram initilization
@@ -43,7 +42,12 @@ module instruction_memory(
     );
     
     always_ff @ (posedge clk) begin
-        valid_pr <= instr_valid_in && !i_reset;
-        instr_valid_out <= valid_pr;
+        if(!rst_n) begin
+            valid_pr <= 1'b0;
+            instr_valid_out <= 1'b0;
+        end else begin
+            valid_pr <= instr_en && !i_reset;
+            instr_valid_out <= valid_pr;
+        end
     end
 endmodule
