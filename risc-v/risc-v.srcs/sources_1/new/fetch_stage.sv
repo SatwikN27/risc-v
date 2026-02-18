@@ -48,6 +48,7 @@ module fetch_stage (
         if_id.pc             <= PC;
         if_id.instruction    <= instr_data;
         if_id.valid          <= instr_valid_out;
+        if_id.opcode         <= instr_data[6:0];
     end
 
 

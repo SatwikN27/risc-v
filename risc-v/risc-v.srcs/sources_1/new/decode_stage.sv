@@ -51,6 +51,7 @@ module decode_stage (
                 id_ex.func3 <= instruction[14:12];
                 id_ex.func7 <= instruction[31:25];
                 id_ex.valid <= if_id.valid;
+                id_ex.opcode <= if_id.opcode;
             end
         end
     end
