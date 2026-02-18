@@ -27,13 +27,13 @@ package rv_pipe_pkg;
     typedef struct packed {
         logic [31:0]    pc;
         logic [31:0]    instruction;
-        logic [7:0]     opcode;
+        logic [6:0]     opcode;
         logic           valid;
     } if_id_t;
 
     // ID/EX payload
     typedef struct packed {
-        logic [7:0]     opcode;
+        logic [6:0]     opcode;
         logic [31:0]        rs1;
         logic [31:0]        rs2;
         logic [4:0]         rd_addr;
@@ -46,7 +46,7 @@ package rv_pipe_pkg;
     } id_ex_t;
 
     typedef struct packed {
-        logic [7:0]  opcode;
+        logic [6:0]  opcode;
         logic [31:0] execute_out;
         logic [4:0]  rd_addr;
         logic        valid;
