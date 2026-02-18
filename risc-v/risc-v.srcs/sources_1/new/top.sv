@@ -21,11 +21,18 @@ module top(
     // initialize decode stage control bits
     id_ex_t id_ex;
     logic decode_flush;
+    logic decode_rf_we; // write enable for the register file
+    logic [4:0] decode_write_addr;
+    logic [31:0] decode_write_value;
 
     decode_stage u_decode(.*);
 
     ex_mem_t ex_mem;
 
     execute_stage u_execute(.*);
+
+
+    mem_wb_t mem_wb;
+
 
 endmodule

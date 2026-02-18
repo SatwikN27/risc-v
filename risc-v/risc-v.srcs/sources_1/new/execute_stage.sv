@@ -70,5 +70,7 @@ module execute_stage(
     always_ff @(posedge clk) begin
         ex_mem.opcode <= id_ex.opcode;
         ex_mem.rd_addr <= id_ex.rd_addr;
+        ex_mem.func3 <= id_ex.func3;
+        ex_mem.func7 <= id_ex.func7;
     end
 endmodule

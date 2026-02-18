@@ -50,6 +50,15 @@ package rv_pipe_pkg;
         logic [31:0] execute_out;
         logic [4:0]  rd_addr;
         logic        valid;
+        logic [2:0]  func3;
+        logic [6:0]  func7;
     } ex_mem_t;
+
+    typedef struct packed {
+        logic valid;
+        logic [4:0] rf_write_addr;
+        logic opcode;
+        logic [31:0] rf_write_value;
+    } mem_wb_t;
 
 endpackage
