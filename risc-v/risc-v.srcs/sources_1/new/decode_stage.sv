@@ -39,7 +39,7 @@ module decode_stage (
 
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
-            if_id <= '0; // on rst assert low, all members of if_id go to 0
+            id_ex <= '0; // on rst assert low, all members of if_id go to 0
         end else begin
             if (!decode_flush) begin
                 id_ex.rs1 <= register_file[instruction[19:15]];
