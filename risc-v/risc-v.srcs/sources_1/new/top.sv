@@ -24,6 +24,8 @@ module top(
 
     decode_stage u_decode(.*);
 
+    ex_mem_t ex_mem;
 
+    execute_stage u_execute(.*);
 
 endmodule
