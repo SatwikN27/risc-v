@@ -5,18 +5,18 @@ module decode_stage (
     input logic clk,
     input logic rst_n,
 
-    // flush deetermines if new values will be read into/out of the pipeline
-    input logic flush,
+    // decode_flush deetermines if new values will be read into/out of the pipeline
+    input logic decode_flush,
 
     // the stage inputs and outputs
-    // decode is the consumer of the if_id pipeline values (data_d)
-    // decode is the driver/producer of the id_ex pipeline values (data_q)
-    input rv_pipe_pkg::if_id_t data_d,
-    output rv_pipe_pkg::id_ex_t data_q
+    // decode is the consumer of the if_id pipeline values (id_ex)
+    // decode is the driver/producer of the id_ex pipeline values (if_id)
+    input rv_pipe_pkg::if_id_t if_id,
+    output rv_pipe_pkg::id_ex_t id_ex
 );
     import rv_pipe_pkg::*;
 
-    logic [31:0] instruction = data_d.instruction;
+    logic [31:0] instruction = if_id.instruction;
     logic msb = instruction[31];
 
     logic [31:0] register_file [0:31];
@@ -39,18 +39,18 @@ module decode_stage (
 
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
-            data_q <= '0; // on rst assert low, all members of data_q go to 0
+            if_id <= '0; // on rst assert low, all members of if_id go to 0
         end else begin
-            if (!flush) begin
-                data_d.rs1 <= register_file[instruction[19:15]];
-                data_d.rs2 <= register_file[instruction[24:20]];
-                data_d.rd_addr <= data_q[11:7];
-                data_d.pc <= data_q.pc;
-                data_d.control_bits <= control_bits;
-                data_d.immediates <= immediates;
-                data_d.func3 <= instruction[14:12];
-                data_d.func7 <= instruction[31:25];
-                data_d.valid <= data_q.valid;
+            if (!decode_flush) begin
+                id_ex.rs1 <= register_file[instruction[19:15]];
+                id_ex.rs2 <= register_file[instruction[24:20]];
+                id_ex.rd_addr <= if_id[11:7];
+                id_ex.pc <= if_id.pc;
+                id_ex.control_bits <= control_bits;
+                id_ex.immediates <= immediates;
+                id_ex.func3 <= instruction[14:12];
+                id_ex.func7 <= instruction[31:25];
+                id_ex.valid <= if_id.valid;
             end
         end
     end

@@ -8,16 +8,16 @@ module fetch_stage (
     // conventional drivers like the other
     input logic         clk,
     input logic         rst_n,
-    input logic         stall,
-    input logic         flush,
-    input logic [31:0]  flushPC,
+    input logic         pc_stall,
+    input logic         pc_flush,
+    input logic [31:0]  pc_flush_addr,
 
     // output is a 
-    output rv_pipe_pkg::if_id_t data
+    output rv_pipe_pkg::if_id_t if_id
 );
     import rv_pipe_pkg::*;
-    
-    
+
+
     // PC init
     logic [31:0]    PC;
     
@@ -28,7 +28,7 @@ module fetch_stage (
     instruction_memory instr_mem (
         .clk                (clk),
         .rst_n              (rst_n),
-        .instr_en           (!stall),
+        .instr_en           (!pc_stall),
         .instr_addr         (PC),
         .instr_data         (instr_data),
         .instr_valid_out    (instr_valid_out)
@@ -37,17 +37,17 @@ module fetch_stage (
     always_ff @ (posedge clk) begin
         if(!rst_n) begin
             PC <= 32'b0;
-        end else if(flush) begin
-            PC <= flushPC;
+        end else if(pc_flush) begin
+            PC <= pc_flush_addr;
         end else begin
             PC <= PC + 4;
         end
     end
 
     always_comb begin
-        data.pc             = PC;
-        data.instruction    = instr_data;
-        data.valid          = instr_valid_out;
+        if_id.pc             = PC;
+        if_id.instruction    = instr_data;
+        if_id.valid          = instr_valid_out;
     end
 
 
