@@ -52,6 +52,7 @@ package rv_pipe_pkg;
         logic        valid;
         logic [2:0]  func3;
         logic [6:0]  func7;
+        logic [31:0] mem_addr;
     } ex_mem_t;
 
     typedef struct packed {

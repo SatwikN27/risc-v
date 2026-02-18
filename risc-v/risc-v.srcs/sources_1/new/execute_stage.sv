@@ -16,6 +16,14 @@ module execute_stage(
     logic [31:0] value2 = id_ex.opcode == 7'b0110011 ? rs1 : id_ex.immediates.immI; 
 
     always_ff @(posedge clk) begin
+        if (id_ex.opcode == LOAD_IMMEDIATE) begin
+            ex_mem.mem_addr <= rs1 + id_ex.immediates.immI;
+        end else begin
+            ex_mem.mem_addr <= rs1 + immS;
+        end
+    end
+
+    always_ff @(posedge clk) begin
         case (id_ex.func3)
             3'h0: begin // ADD & SUB
                 if (id_ex.func7 == 7'h20) begin // SUB
