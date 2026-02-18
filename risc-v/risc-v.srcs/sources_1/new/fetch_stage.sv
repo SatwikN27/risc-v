@@ -44,10 +44,10 @@ module fetch_stage (
         end
     end
 
-    always_comb begin
-        if_id.pc             = PC;
-        if_id.instruction    = instr_data;
-        if_id.valid          = instr_valid_out;
+    always_ff @(posedge clk) begin
+        if_id.pc             <= PC;
+        if_id.instruction    <= instr_data;
+        if_id.valid          <= instr_valid_out;
     end
 
 

@@ -43,4 +43,10 @@ package rv_pipe_pkg;
         logic               valid;
     } id_ex_t;
 
+    typedef struct packed {
+        logic [31:0] execute_out;
+        logic [4:0]  rd_addr;
+        logic        valid;
+    } ex_mem_t;
+
 endpackage
