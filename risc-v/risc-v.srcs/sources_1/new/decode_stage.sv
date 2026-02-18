@@ -15,8 +15,8 @@ module decode_stage (
     input logic [4:0] decode_write_addr,
     input logic [31:0] decide_write_value,
 
-    // decode takes mem_wb as a pipeline reg to handle wb operands
-    input rv_pipe_pkg::mem_wb_t mem_wb,
+    // decode takes wb_dec as a pipeline reg to handle wb operands
+    input rv_pipe_pkg::wb_dec_t wb_dec,
 
     // the stage inputs and outputs
     // decode is the consumer of the if_id pipeline values (id_ex)
@@ -48,10 +48,8 @@ module decode_stage (
     end
 
     always_ff @(posedge clk) begin // no reset for the RF
-        if (mem_wb.valid == 1) begin
-            if (mem_wb.opcode == REGISTER || wb_dec.opcode == IMMEDIATE || wb_dec.opcode == LOAD_IMMEDIATE) begin
-                register_file[mem_wb.rf_write_addr] <= wb_dec.rf_write_value;
-            end
+        if (wb_dec.we == 1 && wb_dec.valid == 1) begin
+            register_file[wb_dec.rd_addr] = wb_dec.write_value;
         end
     end
 
