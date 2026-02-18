@@ -21,10 +21,10 @@ module writeback_stage (
                 end else begin // otherwise the RF recieves some function of the memory out data
                     case (mem_wb.func3) // the load commands come in a variety of types, determined by func3
                         3'h0: begin // LB, rightmost, MSB sign extended from loaded data
-                            wb_dec.write_value <= {{24{read_data[7:0]}},read_data[7:0]};
+                            wb_dec.write_value <= {{24{read_data[7]}},read_data[7:0]};
                         end
                         3'h1: begin // LH, rightmost, MSB sign extended from loaded data
-                            wb_dec.write_value <= {{16{read_data[15:0]}},read_data[15:0]};
+                            wb_dec.write_value <= {{16{read_data[15]}},read_data[15:0]};
                         end
                         3'h2: begin // LW, no sign extension, just takes the memory output
                             wb_dec.write_value <= read_data;
