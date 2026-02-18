@@ -22,8 +22,8 @@ module fetch_stage (
     logic [31:0]    PC;
     
     // I_MEM init
-    logic   instr_data;
-    logic   instr_valid_out;
+    logic [31:0]    instr_data;
+    logic           instr_valid_out;
     
     instruction_memory instr_mem (
         .clk                (clk),
