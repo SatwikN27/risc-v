@@ -16,42 +16,51 @@ module execute_stage(
         case (id_ex.func3)
             3'h0: begin // ADD & SUB
                 if (id_ex.func7 == 7'h20) begin // SUB
-                    execute_out <= rs1 - rs2; 
+                    ex_mem.execute_out <= rs1 - rs2; 
                 end else begin // ADD
-                    execute_out <= rs1 + rs2;
+                    ex_mem.execute_out <= rs1 + rs2;
                 end
+                ex_mem.valid <= 1;
             end
             3'h1: begin // SLL
-                execute_out <= rs1 << rs2[4:0]; // technically onl rs2[4:0] works correctly (32 bit shift)
+                ex_mem.execute_out <= rs1 << rs2[4:0]; // technically onl rs2[4:0] works correctly (32 bit shift)
+                ex_mem.valid <= 1;
             end
             3'h2: begin // SLT
-                execute_out <= ($signed(rs1) < $signed(rs2)) ? 1 : 0; // if rs1 < rs2 -> 1 else -> 0
+                ex_mem.execute_out <= ($signed(rs1) < $signed(rs2)) ? 1 : 0; // if rs1 < rs2 -> 1 else -> 0
                 // note, SV treats all packed arrays as unsigned by default.
                 // SLT uses signed values, so rs1 and rs2 need to be converted
+                ex_mem.valid <= 1;
             end
             3'h3: begin // SLTU
-                execute_out <= (rs1 < rs2) ? 1 : 0; // same as SLT but with unsigned values
+                ex_mem.execute_out <= (rs1 < rs2) ? 1 : 0; // same as SLT but with unsigned values
                 // on the contrary to the above, default comparison is
                 // unsigned, so no conversion needs to happen
+                ex_mem.valid <= 1;
             end
             3'h4: begin // XOR
-                execute_out <= (rs1 ^ rs2);
+                ex_mem.execute_out <= (rs1 ^ rs2);
+                ex_mem.valid <= 1;
             end
             3'h5: begin // SRL & SRA
                 if (id_ex.func7 == 7'h20) begin // SRA
-                    execute_out <= $signed(rs1) >> rs2[4:0];
+                    ex_mem.execute_out <= $signed(rs1) >>> rs2[4:0];
                 end else begin // SRL
-                    execute_out <= rs1 >> rs2;
+                    ex_mem.execute_out <= rs1 >> rs2[4:0];
                 end
+                ex_mem.valid <= 1;
             end
-            3'h6: begin
-
+            3'h6: begin // OR
+                ex_mem.execute_out <= rs1 || rs2;
+                ex_mem.valid <= 1;
             end
-            3'h7: begin
-
+            3'h7: begin // AND
+                ex_mem.execute_out <= rs1 && rs2;
+                ex_mem.valid <= 1;
             end
-
+            default: begin
+                ex_mem.valid <= 0;
+            end
         endcase
     end
-
 endmodule
