@@ -11,7 +11,10 @@ module execute_stage(
     output rv_pipe_pkg::ex_mem_t ex_mem
 );
     import rv_pipe_pkg::*;
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/main
     logic [31:0] rs1 = id_ex.rs1;
     logic [31:0] rs2 = id_ex.rs2;
 
