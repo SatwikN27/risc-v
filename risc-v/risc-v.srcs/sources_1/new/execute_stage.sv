@@ -10,6 +10,7 @@ module execute_stage(
     // producer/driver of the ex_mem pipeline register stage
     output rv_pipe_pkg::ex_mem_t ex_mem
 );
+    import rv_pipe_pkg::*;
     logic [31:0] rs1 = id_ex.rs1;
     logic [31:0] rs2 = id_ex.rs2;
 
