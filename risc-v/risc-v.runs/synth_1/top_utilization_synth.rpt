@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Tue Feb 17 07:32:09 2026
-| Host         : gelib-4e-36.ews.illinois.edu running 64-bit Red Hat Enterprise Linux 9.7 (Plow)
+| Date         : Wed Feb 18 04:34:46 2026
+| Host         : gelib-4e-30.ews.illinois.edu running 64-bit Red Hat Enterprise Linux 9.7 (Plow)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
 | Device       : xc7s50csga324-1IL
@@ -28,18 +28,20 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+-------------------------+------+-------+------------+-----------+-------+
-|        Site Type        | Used | Fixed | Prohibited | Available | Util% |
-+-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |    2 |     0 |          0 |     32600 | <0.01 |
-|   LUT as Logic          |    2 |     0 |          0 |     32600 | <0.01 |
-|   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         |   32 |     0 |          0 |     65200 |  0.05 |
-|   Register as Flip Flop |   32 |     0 |          0 |     65200 |  0.05 |
-|   Register as Latch     |    0 |     0 |          0 |     65200 |  0.00 |
-| F7 Muxes                |    0 |     0 |          0 |     16300 |  0.00 |
-| F8 Muxes                |    0 |     0 |          0 |      8150 |  0.00 |
-+-------------------------+------+-------+------------+-----------+-------+
++----------------------------+------+-------+------------+-----------+-------+
+|          Site Type         | Used | Fixed | Prohibited | Available | Util% |
++----------------------------+------+-------+------------+-----------+-------+
+| Slice LUTs*                |   62 |     0 |          0 |     32600 |  0.19 |
+|   LUT as Logic             |   38 |     0 |          0 |     32600 |  0.12 |
+|   LUT as Memory            |   24 |     0 |          0 |      9600 |  0.25 |
+|     LUT as Distributed RAM |   24 |     0 |            |           |       |
+|     LUT as Shift Register  |    0 |     0 |            |           |       |
+| Slice Registers            |  267 |     0 |          0 |     65200 |  0.41 |
+|   Register as Flip Flop    |  203 |     0 |          0 |     65200 |  0.31 |
+|   Register as Latch        |   64 |     0 |          0 |     65200 |  0.10 |
+| F7 Muxes                   |    0 |     0 |          0 |     16300 |  0.00 |
+| F8 Muxes                   |    0 |     0 |          0 |      8150 |  0.00 |
++----------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
 Warning! For any ECO changes, please run place_design if there are unplaced instances
@@ -58,9 +60,9 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 0     |          Yes |           - |        Reset |
+| 167   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 32    |          Yes |       Reset |            - |
+| 100   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -115,7 +117,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |          0 |        32 |  3.13 |
+| BUFGCTRL   |    3 |     0 |          0 |        32 |  9.38 |
 | BUFIO      |    0 |     0 |          0 |        20 |  0.00 |
 | MMCME2_ADV |    0 |     0 |          0 |         5 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |          0 |         5 |  0.00 |
@@ -148,13 +150,19 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   32 |        Flop & Latch |
-| CARRY4   |    8 |          CarryLogic |
+| FDCE     |  103 |        Flop & Latch |
+| FDRE     |  100 |        Flop & Latch |
+| LDCE     |   64 |        Flop & Latch |
+| RAMD32   |   34 |  Distributed Memory |
+| LUT5     |   34 |                 LUT |
+| CARRY4   |   16 |          CarryLogic |
+| RAMS32   |   10 |  Distributed Memory |
+| BUFG     |    3 |               Clock |
+| LUT3     |    2 |                 LUT |
+| LUT1     |    2 |                 LUT |
 | IBUF     |    2 |                  IO |
 | OBUF     |    1 |                  IO |
-| LUT2     |    1 |                 LUT |
-| LUT1     |    1 |                 LUT |
-| BUFG     |    1 |               Clock |
+| LUT4     |    1 |                 LUT |
 +----------+------+---------------------+
 
 
@@ -164,6 +172,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +---------------+------+
 |    Ref Name   | Used |
 +---------------+------+
+| blk_mem_gen_1 |    1 |
 | blk_mem_gen_0 |    1 |
 +---------------+------+
 

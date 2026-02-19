@@ -2,13 +2,13 @@
 
 package rv_pipe_pkg;
     typedef enum logic [6:0] {
-        REGISTER        =0110011,
-        IMMEDIATE       =0010011,
-        LOAD_IMMEDIATE  =0000011,
-        STORE           =0100011,
-        BRANCH          =1100011,
-        JUMP            =1101111,
-        JALR            =1100111
+        REGISTER        =7'b0110011,
+        IMMEDIATE       =7'b0010011,
+        LOAD_IMMEDIATE  =7'b0000011,
+        STORE           =7'b0100011,
+        BRANCH          =7'b1100011,
+        JUMP            =7'b1101111,
+        JALR            =7'b1100111
     } opcodes_t;
 
     typedef struct packed {

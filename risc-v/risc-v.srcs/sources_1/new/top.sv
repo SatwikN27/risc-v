@@ -32,6 +32,10 @@ module top(
     execute_stage u_execute(.*);
 
     mem_wb_t mem_wb;
+    
+    logic memory_flush;
+    logic memory_stall;
+    memory_stage u_memory(.*);
 
     wb_dec_t wb_dec;
     writeback_stage u_writeback(.*);

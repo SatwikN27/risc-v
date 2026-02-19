@@ -13,7 +13,7 @@ module decode_stage (
 
     // decode_write_addr and _value driven by writeback
     input logic [4:0] decode_write_addr,
-    input logic [31:0] decide_write_value,
+    input logic [31:0] decode_write_value,
 
     // decode takes wb_dec as a pipeline reg to handle wb operands
     input rv_pipe_pkg::wb_dec_t wb_dec,

@@ -56,12 +56,8 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 3
 set_param general.usePosixSpawnForFork 1
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1IL
 
@@ -84,9 +80,16 @@ read_verilog -library xil_defaultlib -sv {
   /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv
   /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/instruction_memory.sv
   /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv
+  /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/main_memory.sv
+  /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv
+  /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/memory_stage.sv
+  /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/writeback_stage.sv
 }
 read_ip -quiet /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
 set_property used_in_implementation false [get_files -all /home/srn6/pprojs/risc-v/risc-v/risc-v.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+
+read_ip -quiet /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
+set_property used_in_implementation false [get_files -all /home/srn6/pprojs/risc-v/risc-v/risc-v.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

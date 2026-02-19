@@ -10,6 +10,8 @@ module execute_stage(
     // producer/driver of the ex_mem pipeline register stage
     output rv_pipe_pkg::ex_mem_t ex_mem
 );
+    import rv_pipe_pkg::*;
+
     logic [31:0] rs1 = id_ex.rs1;
     logic [31:0] rs2 = id_ex.rs2;
 
@@ -19,7 +21,7 @@ module execute_stage(
         if (id_ex.opcode == LOAD_IMMEDIATE) begin
             ex_mem.mem_addr <= rs1 + id_ex.immediates.immI;
         end else begin
-            ex_mem.mem_addr <= rs1 + immS;
+            ex_mem.mem_addr <= rs1 + id_ex.immediates.immS;
         end
     end
 

@@ -10,7 +10,7 @@
 // Target Devices: 
 // Tool Versions: 
 // Description: 
-// 
+// wrapper for main memory
 // Dependencies: 
 // 
 // Revision:
@@ -21,28 +21,29 @@
 
 
 module main_memory(
-    input   clk,
-    input   rst_n,
-    input   mem_en,
-    input   write_en,
-    input   write_addr,
-    input   write_data,
-    input   read_en,
-    input   read_addr,
-    output  read_data,
-    output  write_busy,
-    output  read_busy
+    input  logic        clk,
+    input  logic        rst_n,
+    input  logic        write_chip_en,
+    input  logic        write_en,
+    input  logic [31:0] write_addr,
+    input  logic [31:0] write_data,
+    input  logic        read_chip_en,
+    input  logic [31:0] read_addr,
+    output logic [31:0] read_data
     );
+    
+    logic write_busy;
+    logic read_busy;
     
     blk_mem_gen_1 main_mem_block(
         .clka       (clk),
-        .ena        (mem_en),
+        .ena        (write_chip_en),
         .wea        (write_en),
         .addra      (write_addr),
         .dina       (write_data),
         .clkb       (clk),
         .rstb       (rst_n),
-        .enb        (read_en),
+        .enb        (read_chip_en),
         .addrb      (read_addr),
         .doutb      (read_data),
         .rsta_busy  (write_busy),
