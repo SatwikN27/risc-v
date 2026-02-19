@@ -3,7 +3,8 @@
 module top(
     input logic clk,
     input logic rst_n,
-    output logic out // requried output otherwise the module gets optimized away
+    output logic out, // requried output otherwise the module gets optimized away
+    output logic [31:0] register_file [0:31] // expose register file to prevent vivado from optimizing away
 );
     import rv_pipe_pkg::*;
 

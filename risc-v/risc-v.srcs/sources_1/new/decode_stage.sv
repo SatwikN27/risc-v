@@ -22,7 +22,11 @@ module decode_stage (
     // decode is the consumer of the if_id pipeline values (id_ex)
     // decode is the driver/producer of the id_ex pipeline values (if_id)
     input rv_pipe_pkg::if_id_t if_id,
-    output rv_pipe_pkg::id_ex_t id_ex
+    output rv_pipe_pkg::id_ex_t id_ex,
+
+    output logic [31:0] register_file [0:31] // expose the register file to prevent vivado from optimizing away
+
+
 );
     import rv_pipe_pkg::*;
 
