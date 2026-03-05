@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "/home/srn6/pprojs/risc-v/risc-v/risc-v.runs/impl_1/top.tcl"
+  variable script "/home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/top.tcl"
   variable category "vivado_impl"
 }
 
@@ -97,6 +97,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -113,18 +114,18 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/srn6/pprojs/risc-v/risc-v/risc-v.cache/wt [current_project]
-  set_property parent.project_path /home/srn6/pprojs/risc-v/risc-v/risc-v.xpr [current_project]
-  set_property ip_output_repo /home/srn6/pprojs/risc-v/risc-v/risc-v.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/rohankr2/projects/risc-v/risc-v/risc-v.cache/wt [current_project]
+  set_property parent.project_path /home/rohankr2/projects/risc-v/risc-v/risc-v.xpr [current_project]
+  set_property ip_output_repo /home/rohankr2/projects/risc-v/risc-v/risc-v.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/srn6/pprojs/risc-v/risc-v/risc-v.runs/synth_1/top.dcp
-  read_ip -quiet /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-  read_ip -quiet /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
+  add_files -quiet /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/top.dcp
+  read_ip -quiet /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/ip/blk_mem_gen_1_1/blk_mem_gen_1.xci
+  read_ip -quiet /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/constrs_1/new/constraints.xdc
+  read_xdc /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/constrs_1/new/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

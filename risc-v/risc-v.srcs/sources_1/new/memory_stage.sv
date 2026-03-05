@@ -96,7 +96,7 @@ module memory_stage(
             mem_wb.read_data <= read_data; 
             mem_wb.opcode <= opcode_pr2;
             mem_wb.func3 <= func3_pr2;
-            mem_wb.func7 <= func7_pr2;
+            //mem_wb.func7 <= func7_pr2;
             mem_wb.rd_addr <= rd_addr_pr2;
             mem_wb.execute_out <= execute_out_pr2;
             
@@ -110,7 +110,7 @@ module memory_stage(
             valid_pr1 <= ex_mem.valid;
             opcode_pr1 <= ex_mem.opcode;
             func3_pr1 <= ex_mem.func3;
-            func7_pr1 <= ex_mem.func7;
+            //func7_pr1 <= ex_mem.func7;
             rd_addr_pr1 <= ex_mem.rd_addr;
             execute_out_pr1 <= ex_mem.execute_out;
         end

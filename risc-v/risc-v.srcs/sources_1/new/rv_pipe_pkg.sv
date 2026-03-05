@@ -52,7 +52,7 @@ package rv_pipe_pkg;
         logic [31:0] rs2;
         logic        valid;
         logic [2:0]  func3;
-        logic [6:0]  func7;
+        //logic [6:0]  func7;
         logic [31:0] mem_addr;
     } ex_mem_t;
 
@@ -61,7 +61,7 @@ package rv_pipe_pkg;
         logic [4:0] rd_addr;
         logic opcode;
         logic [2:0] func3;
-        logic [6:0] func7;
+        //logic [6:0] func7; // turns out we dont need these values. writeback covers them
         logic [31:0] read_data;
         logic [31:0] execute_out;
     } mem_wb_t;
@@ -70,7 +70,7 @@ package rv_pipe_pkg;
         logic valid;
         logic [4:0] rd_addr;
         logic we;
-        logic write_value;
+        logic [31:0] write_value;
     } wb_dec_t;
 
 endpackage

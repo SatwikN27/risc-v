@@ -81,6 +81,6 @@ module execute_stage(
         ex_mem.rd_addr <= id_ex.rd_addr;
         ex_mem.rs2 <= id_ex.rs2;
         ex_mem.func3 <= id_ex.func3;
-        ex_mem.func7 <= id_ex.func7;
+        //ex_mem.func7 <= id_ex.func7;
     end
 endmodule

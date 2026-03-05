@@ -3,22 +3,22 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Wed Mar  4 22:45:15 2026
-# Process ID         : 1008550
-# Current directory  : /home/srn6/pprojs/risc-v/risc-v/risc-v.runs/impl_1
+# Start of session at: Wed Mar  4 23:31:42 2026
+# Process ID         : 1044885
+# Current directory  : /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1
 # Command line       : vivado -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
-# Log file           : /home/srn6/pprojs/risc-v/risc-v/risc-v.runs/impl_1/top.vdi
-# Journal file       : /home/srn6/pprojs/risc-v/risc-v/risc-v.runs/impl_1/vivado.jou
-# Running On         : gelib-4e-37.ews.illinois.edu
+# Log file           : /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/top.vdi
+# Journal file       : /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/vivado.jou
+# Running On         : gelib-4e-38.ews.illinois.edu
 # Platform           : RedHatEnterprise
 # Operating System   : Red Hat Enterprise Linux 9.7 (Plow)
 # Processor Detail   : Intel(R) Xeon(R) W-1350 @ 3.30GHz
-# CPU Frequency      : 4390.946 MHz
+# CPU Frequency      : 4399.951 MHz
 # CPU Physical cores : 6
 # CPU Logical cores  : 12
 # Host memory        : 16208 MB
 # Swap memory        : 4294 MB
 # Total Virtual      : 20503 MB
-# Available Virtual  : 13492 MB
+# Available Virtual  : 13373 MB
 #-----------------------------------------------------------
 source top.tcl -notrace
