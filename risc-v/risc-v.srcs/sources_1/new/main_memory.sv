@@ -24,7 +24,7 @@ module main_memory(
     input  logic        clk,
     input  logic        rst_n,
     input  logic        write_chip_en,
-    input  logic        write_en,
+    input  logic [3:0]  write_en,
     input  logic [31:0] write_addr,
     input  logic [31:0] write_data,
     input  logic        read_chip_en,

@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Wed Feb 18 04:35:37 2026
-| Host         : gelib-4e-30.ews.illinois.edu running 64-bit Red Hat Enterprise Linux 9.7 (Plow)
+| Date         : Wed Mar  4 22:45:48 2026
+| Host         : gelib-4e-37.ews.illinois.edu running 64-bit Red Hat Enterprise Linux 9.7 (Plow)
 | Command      : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
 | Design       : top
 | Device       : 7s50-csga324
@@ -138,7 +138,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-        inf        0.000                      0                    1          inf        0.000                      0                    1        0.845        0.000                       0                     1  
+         NA           NA                     NA                   NA           NA           NA                     NA                   NA           NA           NA                      NA                    NA  
 
 
 All user specified timing constraints are met.
@@ -161,7 +161,6 @@ clk    {0.000 1.500}        3.000           333.333
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-clk                                                                                                                                                             0.845        0.000                       0                     1  
 
 
 ------------------------------------------------------------------------------------------------
@@ -198,114 +197,11 @@ Path Group    From Clock    To Clock
 
 Path Group    From Clock    To Clock    
 ----------    ----------    --------    
-(none)        clk                         
 
 
 ------------------------------------------------------------------------------------------------
 | Timing Details
 | --------------
 ------------------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------------------
-From Clock:  clk
-  To Clock:  clk
-
-Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
-Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
-PW    :            0  Failing Endpoints,  Worst Slack        0.845ns,  Total Violation        0.000ns
----------------------------------------------------------------------------------------------------
-
-
-Pulse Width Checks
---------------------------------------------------------------------------------------
-Clock Name:         clk
-Waveform(ns):       { 0.000 1.500 }
-Period(ns):         3.000
-Sources:            { clk }
-
-Check Type  Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
-Min Period  n/a     BUFG/I   n/a            2.155         3.000       0.845      BUFGCTRL_X0Y0  out_OBUF_BUFG_inst/I
-
-
-
---------------------------------------------------------------------------------------
-Path Group:  (none)
-From Clock:  clk
-  To Clock:  
-
-Max Delay             1 Endpoint
-Min Delay             1 Endpoint
---------------------------------------------------------------------------------------
-
-
-Max Delay Paths
---------------------------------------------------------------------------------------
-Slack:                    inf
-  Source:                 clk
-                            (clock source 'clk'  {rise@0.000ns fall@1.500ns period=3.000ns})
-  Destination:            out
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        8.541ns  (logic 3.628ns (42.472%)  route 4.914ns (57.528%))
-  Logic Levels:           3  (BUFG=1 IBUF=1 OBUF=1)
-  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.050ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk fall edge)        1.500     1.500 f  
-    P14                                               0.000     1.500 f  clk (IN)
-                         net (fo=0)                   0.000     1.500    clk
-    P14                  IBUF (Prop_ibuf_I_O)         0.937     2.437 f  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.972     4.409    out_OBUF
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.505 f  out_OBUF_BUFG_inst/O
-                         net (fo=1, routed)           2.942     7.447    out_OBUF_BUFG
-    V12                  OBUF (Prop_obuf_I_O)         2.594    10.041 f  out_OBUF_inst/O
-                         net (fo=0)                   0.000    10.041    out
-    V12                                                               f  out (OUT)
-  -------------------------------------------------------------------    -------------------
-
-
-
-
-
-Min Delay Paths
---------------------------------------------------------------------------------------
-Slack:                    inf
-  Source:                 clk
-                            (clock source 'clk'  {rise@0.000ns fall@1.500ns period=3.000ns})
-  Destination:            out
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        2.688ns  (logic 1.304ns (48.502%)  route 1.384ns (51.498%))
-  Logic Levels:           3  (BUFG=1 IBUF=1 OBUF=1)
-  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.050ns
-    Total Input Jitter      (TIJ):    0.000ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk rise edge)        0.000     0.000 r  
-    P14                                               0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    P14                  IBUF (Prop_ibuf_I_O)         0.166     0.166 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.634     0.801    out_OBUF
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.827 r  out_OBUF_BUFG_inst/O
-                         net (fo=1, routed)           0.750     1.577    out_OBUF_BUFG
-    V12                  OBUF (Prop_obuf_I_O)         1.111     2.688 r  out_OBUF_inst/O
-                         net (fo=0)                   0.000     2.688    out
-    V12                                                               r  out (OUT)
-  -------------------------------------------------------------------    -------------------
-
-
-
 
 

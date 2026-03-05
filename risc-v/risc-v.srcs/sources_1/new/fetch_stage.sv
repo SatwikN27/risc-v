@@ -28,6 +28,8 @@ module fetch_stage (
     instruction_memory instr_mem (
         .clk                (clk),
         .rst_n              (rst_n),
+        .flush              (pc_flush),
+        .stall              (pc_stall),
         .instr_en           (!pc_stall),
         .instr_addr         (PC),
         .instr_data         (instr_data),

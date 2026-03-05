@@ -17,7 +17,7 @@ module writeback_stage (
             if (mem_wb.opcode == REGISTER || mem_wb.opcode == IMMEDIATE || mem_wb.opcode == LOAD_IMMEDIATE) begin // only these three opcodes write back
                 wb_dec.valid <= mem_wb.valid; // pipeline the valid bit
                 wb_dec.rd_addr <= mem_wb.rd_addr; // the write adress is the same for anything writing to the RF
-                wb_dec.we = 1; // if the opcode is any of the above, guarenteed to write, so asser WE
+                wb_dec.we <= 1; // if the opcode is any of the above, guarenteed to write, so asser WE
                 if (mem_wb.opcode == REGISTER || mem_wb.opcode == IMMEDIATE) begin // these two opcodes pull from the execute value
                     wb_dec.write_value <= mem_wb.execute_out; // send the RF the execute value
                 end else begin // otherwise the RF recieves some function of the memory out data

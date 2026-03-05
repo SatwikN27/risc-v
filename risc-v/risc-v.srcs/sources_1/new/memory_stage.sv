@@ -52,7 +52,7 @@ module memory_stage(
     
         
     logic           write_chip_en = 1'b1;
-    logic           write_en;
+    logic [3:0]     write_en;
     logic [31:0]    write_addr;
     logic [31:0]    write_data;
     logic           read_chip_en = 1'b1;
@@ -64,15 +64,22 @@ module memory_stage(
     //opcode decode stage. Replace with control bits
     always_comb begin
         if(ex_mem.opcode == LOAD_IMMEDIATE) begin
-            write_en = 1'b0;
+            write_en = 4'b0000;
             read_addr = ex_mem.mem_addr;
+            write_addr = 32'bx;
+            write_data = 32'bx;
             
         end else if(ex_mem.opcode == STORE) begin
-            write_en = 1'b1;
+            write_en = 4'b1111;
+            read_addr = 32'bx;
             write_addr = ex_mem.mem_addr;
+            write_data = ex_mem.rs2;
             
         end else begin
-            write_en = 1'b0;
+            write_en = 4'b0000;
+            read_addr = 32'bx;
+            write_addr = 32'bx;
+            write_data = 32'bx;
         end
     end
     
@@ -85,12 +92,13 @@ module memory_stage(
             valid_pr2 <= 1'b0;
   
         end else if(!memory_stall) begin
-            valid_pr1 <= ex_mem.valid;
-            opcode_pr1 <= ex_mem.opcode;
-            func3_pr1 <= ex_mem.func3;
-            func7_pr1 <= ex_mem.func7;
-            rd_addr_pr1 <= ex_mem.rd_addr;
-            execute_out_pr1 <= ex_mem.execute_out;
+            mem_wb.valid <= valid_pr2;
+            mem_wb.read_data <= read_data; 
+            mem_wb.opcode <= opcode_pr2;
+            mem_wb.func3 <= func3_pr2;
+            mem_wb.func7 <= func7_pr2;
+            mem_wb.rd_addr <= rd_addr_pr2;
+            mem_wb.execute_out <= execute_out_pr2;
             
             valid_pr2 <= valid_pr1;
             opcode_pr2 <= opcode_pr1;
@@ -99,13 +107,12 @@ module memory_stage(
             rd_addr_pr2 <= rd_addr_pr1;
             execute_out_pr2 <= execute_out_pr1;
             
-            mem_wb.valid <= valid_pr2;
-            mem_wb.read_data <= read_data; 
-            mem_wb.opcode <= opcode_pr2;
-            mem_wb.func3 <= func3_pr2;
-            mem_wb.func7 <= func7_pr2;
-            mem_wb.rd_addr <= rd_addr_pr2;
-            mem_wb.execute_out <= execute_out_pr2;
+            valid_pr1 <= ex_mem.valid;
+            opcode_pr1 <= ex_mem.opcode;
+            func3_pr1 <= ex_mem.func3;
+            func7_pr1 <= ex_mem.func7;
+            rd_addr_pr1 <= ex_mem.rd_addr;
+            execute_out_pr1 <= ex_mem.execute_out;
         end
     end
     

@@ -49,6 +49,7 @@ package rv_pipe_pkg;
         logic [6:0]  opcode;
         logic [31:0] execute_out;
         logic [4:0]  rd_addr;
+        logic [31:0] rs2;
         logic        valid;
         logic [2:0]  func3;
         logic [6:0]  func7;

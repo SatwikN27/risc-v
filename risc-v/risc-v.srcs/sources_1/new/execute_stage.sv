@@ -11,10 +11,6 @@ module execute_stage(
     output rv_pipe_pkg::ex_mem_t ex_mem
 );
     import rv_pipe_pkg::*;
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/remotes/origin/main
     logic [31:0] rs1 = id_ex.rs1;
     logic [31:0] rs2 = id_ex.rs2;
 
@@ -83,6 +79,7 @@ module execute_stage(
     always_ff @(posedge clk) begin
         ex_mem.opcode <= id_ex.opcode;
         ex_mem.rd_addr <= id_ex.rd_addr;
+        ex_mem.rs2 <= id_ex.rs2;
         ex_mem.func3 <= id_ex.func3;
         ex_mem.func7 <= id_ex.func7;
     end

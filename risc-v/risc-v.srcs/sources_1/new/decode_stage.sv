@@ -8,13 +8,6 @@ module decode_stage (
     // decode_flush deetermines if new values will be read into/out of the pipeline
     input logic decode_flush,
 
-    // write enable for the reg file, driven by writeback
-    input logic decode_rf_we,
-
-    // decode_write_addr and _value driven by writeback
-    input logic [4:0] decode_write_addr,
-    input logic [31:0] decode_write_value,
-
     // decode takes wb_dec as a pipeline reg to handle wb operands
     input rv_pipe_pkg::wb_dec_t wb_dec,
 
@@ -24,7 +17,7 @@ module decode_stage (
     input rv_pipe_pkg::if_id_t if_id,
     output rv_pipe_pkg::id_ex_t id_ex,
 
-    output logic [31:0] register_file [0:31] // expose the register file to prevent vivado from optimizing away
+    output logic [31:0] register_file_exposed // expose the register file to prevent vivado from optimizing away
 
 
 );
@@ -34,8 +27,9 @@ module decode_stage (
     logic msb = instruction[31];
 
     logic [31:0] register_file [0:31];
-
-
+    
+    always_ff @(posedge clk) register_file_exposed <= register_file[wb_dec.rd_addr];
+    
     control_t control_bits;
     immediates_t immediates;
 
@@ -47,13 +41,13 @@ module decode_stage (
         immediates.immI = {{20{msb}}, instruction[31:20]};
         immediates.immS = {{20{msb}}, instruction[31:25], instruction[11:7]};
         immediates.immB = {{19{msb}}, instruction[31], instruction[7], instruction[30:25], instruction[11:8]};
-        immediates.immU = {instruction[31:12],{12{0}}};
+        immediates.immU = {instruction[31:12], 12'b0};
         immediates.immJ = {{11{msb}}, instruction[31], instruction[19:12], instruction[20], instruction[30:21]};
     end
 
     always_ff @(posedge clk) begin // no reset for the RF
         if (wb_dec.we == 1 && wb_dec.valid == 1) begin
-            register_file[wb_dec.rd_addr] = wb_dec.write_value;
+            register_file[wb_dec.rd_addr] <= wb_dec.write_value;
         end
     end
 
