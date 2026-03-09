@@ -4,7 +4,9 @@ module top(
     input logic clk,
     //input logic rst_n,
     //output logic out, // requried output otherwise the module gets optimized away
-    output logic [31:0] register_file_exposed // expose register file to prevent vivado from optimizing away
+    //output logic [31:0] register_file_exposed // expose register file to prevent vivado from optimizing away
+    output logic [31:0] instruction
+    
 );
     import rv_pipe_pkg::*;
     logic rst_n = 1;
@@ -22,23 +24,23 @@ module top(
 
     // initialize id_ex pipeline register
     // initialize decode stage control bits
-    id_ex_t id_ex;
-    logic decode_flush = 0; // TODO: ts stall not flush
+//    id_ex_t id_ex;
+//    logic decode_flush = 0; // TODO: ts stall not flush
 
 
-    decode_stage u_decode(.*);
+//    decode_stage u_decode(.*);
 
-    ex_mem_t ex_mem;
+//    ex_mem_t ex_mem;
 
-    execute_stage u_execute(.*);
+//    execute_stage u_execute(.*);
 
-    mem_wb_t mem_wb;
+//    mem_wb_t mem_wb;
     
-    logic memory_flush = 0;
-    logic memory_stall= 0;
-    memory_stage u_memory(.*);
+//    logic memory_flush = 0;
+//    logic memory_stall= 0;
+//    memory_stage u_memory(.*);
 
-    wb_dec_t wb_dec;
-    writeback_stage u_writeback(.*);
+//    wb_dec_t wb_dec;
+//    writeback_stage u_writeback(.*);
 
 endmodule
