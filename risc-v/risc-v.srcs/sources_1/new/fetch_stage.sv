@@ -13,8 +13,8 @@ module fetch_stage (
     input logic [31:0]  pc_flush_addr,
 
     // output is a 
-    output rv_pipe_pkg::if_id_t if_id,
-    output logic [31:0] instruction
+    output rv_pipe_pkg::if_id_t if_id
+    //output logic [31:0] instruction
 );
     import rv_pipe_pkg::*;
 
@@ -48,12 +48,16 @@ module fetch_stage (
 
     always_ff @ (posedge clk) begin
         if(!rst_n) begin
-            {PC_pipe_0_lower, PC_pipe_0_upper} <= 32'b0;
+            PC <= 32'b0;
+            {PC_pipe_1_upper, PC_pipe_1_lower} <= 32'd4;
+            PC_pipe_0_cout <= 1'b0;
+            {PC_pipe_0_upper, PC_pipe_0_lower} <= 32'd8;
+            
         end else if (pc_flush) begin
             {PC_pipe_0_lower, PC_pipe_0_upper} <= pc_flush_addr;
         end else begin
             PC_pipe_0_upper <= PC[31:16];
-            {PC_pipe_0_cout, PC_pipe_0_lower} <= PC[15:0] + 1;
+            {PC_pipe_0_cout, PC_pipe_0_lower} <= PC[15:0] + 12;
                 
             PC_pipe_1_lower <= PC_pipe_0_lower;
             PC_pipe_1_upper <= PC_pipe_0_upper + PC_pipe_0_cout;
@@ -73,7 +77,7 @@ module fetch_stage (
             if_id.valid          <= instr_valid_out;
             if_id.opcode         <= instr_data[6:0];
         
-            instruction          <= instr_data;
+            //instruction          <= instr_data;
         end
     end
 

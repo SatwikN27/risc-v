@@ -8,7 +8,9 @@ module writeback_stage (
     // consumer of the mem_wb pipeline register
     // producer of the wb_dec pipeline register
     input rv_pipe_pkg::mem_wb_t mem_wb,
-    output rv_pipe_pkg::wb_dec_t wb_dec
+    output rv_pipe_pkg::wb_dec_t wb_dec,
+
+    output rv_pipe_pkg::wb_out_t wb_out
 );
     import rv_pipe_pkg::*;
 
@@ -18,34 +20,56 @@ module writeback_stage (
                 wb_dec.valid <= mem_wb.valid; // pipeline the valid bit
                 wb_dec.rd_addr <= mem_wb.rd_addr; // the write adress is the same for anything writing to the RF
                 
+                wb_out.valid <= mem_wb.valid; // pipeline the valid bit
+                wb_out.rd_addr <= mem_wb.rd_addr; // the write adress is the same for anything writing to the RF
+		
+
                 wb_dec.we <= 1; // if the opcode is any of the above, guarenteed to write, so asser WE
+        
+                wb_out.we <= 1; // if the opcode is any of the above, guarenteed to write, so asser WE
                 if (mem_wb.opcode == REGISTER || mem_wb.opcode == IMMEDIATE) begin // these two opcodes pull from the execute value
-                    wb_dec.write_value <= mem_wb.execute_out; // send the RF the execute value
-                end else begin // otherwise the RF recieves some function of the memory out data
+                            wb_dec.write_value <= mem_wb.execute_out; // send the RF the execute value
+        
+                    wb_out.write_value <= mem_wb.execute_out; // send the RF the execute value
+	    end else begin // otherwise the RF recieves some function of the memory out data
                     case (mem_wb.func3) // the load commands come in a variety of types, determined by func3
                         3'h0: begin // LB, rightmost, MSB sign extended from loaded data
                             wb_dec.write_value <= {{24{mem_wb.read_data[7]}},mem_wb.read_data[7:0]};
-                        end
+
+                            wb_out.write_value <= {{24{mem_wb.read_data[7]}},mem_wb.read_data[7:0]};
+			end
                         3'h1: begin // LH, rightmost, MSB sign extended from loaded data
                             wb_dec.write_value <= {{16{mem_wb.read_data[15]}},mem_wb.read_data[15:0]};
-                        end
+
+                            wb_out.write_value <= {{16{mem_wb.read_data[15]}},mem_wb.read_data[15:0]};
+		        end
                         3'h2: begin // LW, no sign extension, just takes the memory output
                             wb_dec.write_value <= mem_wb.read_data;
-                        end
+
+                            wb_out.write_value <= mem_wb.read_data;
+		        end
                         3'h4: begin // LBU, rightmost, 0 extended
                             wb_dec.write_value <= {{24{1'b0}},mem_wb.read_data[7:0]};
-                        end
+
+                            wb_out.write_value <= {{24{1'b0}},mem_wb.read_data[7:0]};
+			end
                         3'h5: begin // LHU, rightmost, 0 extended
                             wb_dec.write_value <= {{16{1'b0}},mem_wb.read_data[15:0]};
-                        end
+
+                            wb_out.write_value <= {{16{1'b0}},mem_wb.read_data[15:0]};
+		    	end
                         default: begin // default to LW
                             wb_dec.write_value <= mem_wb.read_data;
-                        end
+
+                            wb_out.write_value <= mem_wb.read_data;
+		    	end
                     endcase
                 end
             end
         end else begin
             wb_dec.we <= 0; // if not a writing opcode, WE goes low to prevent damage
+            
+	    wb_out.we <= 0; // if not a writing opcode, WE goes low to prevent damage
         end
     end
 endmodule

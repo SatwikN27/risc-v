@@ -14,10 +14,10 @@ module execute_stage(
     logic [31:0] rs1 = id_ex.rs1;
     logic [31:0] rs2 = id_ex.rs2;
 
-    logic [31:0] value2 = id_ex.opcode == 7'b0110011 ? rs1 : id_ex.immediates.immI; 
+    logic [31:0] value2 = {id_ex.opcode[5], id_ex.opcode[4]} == 7'b11 ? rs1 : id_ex.immediates.immI; 
 
     always_ff @(posedge clk) begin
-        if (id_ex.opcode == LOAD_IMMEDIATE) begin
+	if ({id_ex.opcode[6], id_ex.opcode[5], id_ex.opcode[4], id_ex.opcode[1], id_ex[0]} == 4'b00011) begin
             ex_mem.mem_addr <= rs1 + id_ex.immediates.immI;
         end else begin
             ex_mem.mem_addr <= rs1 + id_ex.immediates.immS;

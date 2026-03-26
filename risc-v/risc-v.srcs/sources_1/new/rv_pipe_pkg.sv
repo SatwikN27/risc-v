@@ -59,7 +59,7 @@ package rv_pipe_pkg;
     typedef struct packed {
         logic valid;
         logic [4:0] rd_addr;
-        logic opcode;
+        logic [6:0] opcode;
         logic [2:0] func3;
         //logic [6:0] func7; // turns out we dont need these values. writeback covers them
         logic [31:0] read_data;
@@ -72,5 +72,13 @@ package rv_pipe_pkg;
         logic we;
         logic [31:0] write_value;
     } wb_dec_t;
+
+    typedef struct packed {
+        logic valid;
+        logic [4:0] rd_addr;
+        logic we;
+        logic [31:0] write_value;
+    } wb_out_t;
+
 
 endpackage

@@ -44,10 +44,10 @@ module instruction_memory(
     );
     
     always_ff @ (posedge clk or negedge rst_n) begin
-        if(!rst_n || flush) begin
+        if(!rst_n || flush) begin       //flush and reset
             valid_pr <= 1'b0;
             instr_valid_out <= 1'b0;
-        end else if(!stall) begin
+        end else if(!stall) begin       
             valid_pr <= instr_en && !i_reset;
             instr_valid_out <= valid_pr;
         end

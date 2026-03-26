@@ -15,9 +15,9 @@ module decode_stage (
     // decode is the consumer of the if_id pipeline values (id_ex)
     // decode is the driver/producer of the id_ex pipeline values (if_id)
     input rv_pipe_pkg::if_id_t if_id,
-    output rv_pipe_pkg::id_ex_t id_ex,
+    output rv_pipe_pkg::id_ex_t id_ex
 
-    output logic [31:0] register_file_exposed // expose the register file to prevent vivado from optimizing away
+    //output logic [31:0] register_file_exposed // expose the register file to prevent vivado from optimizing away
 
 
 );
@@ -28,7 +28,7 @@ module decode_stage (
 
     logic [31:0] register_file [0:31];
     
-    always_ff @(posedge clk) register_file_exposed <= register_file[wb_dec.rd_addr];
+    //always_ff @(posedge clk) register_file_exposed <= register_file[wb_dec.rd_addr];
     
     control_t control_bits;
     immediates_t immediates;
@@ -44,7 +44,7 @@ module decode_stage (
         immediates.immU = {instruction[31:12], 12'b0};
         immediates.immJ = {{11{msb}}, instruction[31], instruction[19:12], instruction[20], instruction[30:21]};
     end
-
+    	
     always_ff @(posedge clk) begin // no reset for the RF
         if (wb_dec.we == 1 && wb_dec.valid == 1) begin
             register_file[wb_dec.rd_addr] <= wb_dec.write_value;
@@ -58,7 +58,7 @@ module decode_stage (
             if (!decode_flush) begin
                 id_ex.rs1 <= register_file[instruction[19:15]];
                 id_ex.rs2 <= register_file[instruction[24:20]];
-                id_ex.rd_addr <= if_id[11:7];
+                id_ex.rd_addr <= instruction[11:7];
                 id_ex.pc <= if_id.pc;
                 id_ex.control_bits <= control_bits;
                 id_ex.immediates <= immediates;
