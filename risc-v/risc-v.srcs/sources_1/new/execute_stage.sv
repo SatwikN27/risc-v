@@ -11,10 +11,14 @@ module execute_stage(
     output rv_pipe_pkg::ex_mem_t ex_mem
 );
     import rv_pipe_pkg::*;
-    logic [31:0] rs1 = id_ex.rs1;
-    logic [31:0] rs2 = id_ex.rs2;
+    logic [31:0] rs1;
+    logic [31:0] rs2;
+    
+    assign rs1 = id_ex.rs1;
+    assign rs2 = id_ex.rs2;
 
-    logic [31:0] value2 = {id_ex.opcode[5], id_ex.opcode[4]} == 7'b11 ? rs1 : id_ex.immediates.immI; 
+    logic [31:0] value2;
+    assign value2 = {id_ex.opcode[5], id_ex.opcode[4]} == 2'b11 ? rs2 : id_ex.immediates.immI; 
 
     always_ff @(posedge clk) begin
 	if ({id_ex.opcode[6], id_ex.opcode[5], id_ex.opcode[4], id_ex.opcode[1], id_ex[0]} == 4'b00011) begin

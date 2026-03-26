@@ -23,8 +23,10 @@ module decode_stage (
 );
     import rv_pipe_pkg::*;
 
-    logic [31:0] instruction = if_id.instruction;
-    logic msb = instruction[31];
+    logic [31:0] instruction;
+    assign instruction = if_id.instruction;
+    logic msb;
+    assign msb = instruction[31];
 
     logic [31:0] register_file [0:31];
     

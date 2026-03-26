@@ -73,9 +73,9 @@ module fetch_stage (
     always_ff @(posedge clk) begin
         if(!pc_stall) begin
             if_id.pc             <= PC;
-            if_id.instruction    <= instr_data;
+            if_id.instruction    <= 32'b00000000001000001000000110110011;
             if_id.valid          <= instr_valid_out;
-            if_id.opcode         <= instr_data[6:0];
+            if_id.opcode         <= 7'b0110011;
         
             //instruction          <= instr_data;
         end
