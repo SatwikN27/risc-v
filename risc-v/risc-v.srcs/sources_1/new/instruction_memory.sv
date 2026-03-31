@@ -36,7 +36,7 @@ module instruction_memory(
     
     blk_mem_gen_0 i_mem (       // bram initilization
         .clka       (clk),
-        .rsta       (rst_n),
+        .rsta       (!rst_n),
         .ena        (instr_en),
         .addra      (instr_addr),
         .douta      (instr_data),
