@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../../software/xilinx-2025.1/2025.1/data/rsb/busdef" \
+"tb_top_func_synth.v" \
+
+sv xil_defaultlib  --include "../../../../../../../../../../software/xilinx-2025.1/2025.1/data/rsb/busdef" \
+"../../../../../risc-v.srcs/sources_1/new/tb_top.sv" \
+
+# Do not sort compile order
+nosort

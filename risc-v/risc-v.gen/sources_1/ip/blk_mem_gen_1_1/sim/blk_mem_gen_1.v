@@ -127,8 +127,8 @@ output wire rstb_busy;
     .C_WRITE_MODE_A("WRITE_FIRST"),
     .C_WRITE_WIDTH_A(32),
     .C_READ_WIDTH_A(32),
-    .C_WRITE_DEPTH_A(65536),
-    .C_READ_DEPTH_A(65536),
+    .C_WRITE_DEPTH_A(47104),
+    .C_READ_DEPTH_A(47104),
     .C_ADDRA_WIDTH(32),
     .C_HAS_RSTB(1),
     .C_RST_PRIORITY_B("CE"),
@@ -141,8 +141,8 @@ output wire rstb_busy;
     .C_WRITE_MODE_B("WRITE_FIRST"),
     .C_WRITE_WIDTH_B(32),
     .C_READ_WIDTH_B(32),
-    .C_WRITE_DEPTH_B(65536),
-    .C_READ_DEPTH_B(65536),
+    .C_WRITE_DEPTH_B(47104),
+    .C_READ_DEPTH_B(47104),
     .C_ADDRB_WIDTH(32),
     .C_HAS_MEM_OUTPUT_REGS_A(0),
     .C_HAS_MEM_OUTPUT_REGS_B(1),
@@ -168,9 +168,9 @@ output wire rstb_busy;
     .C_EN_SHUTDOWN_PIN(0),
     .C_EN_SAFETY_CKT(1),
     .C_DISABLE_WARN_BHV_RANGE(0),
-    .C_COUNT_36K_BRAM("64"),
+    .C_COUNT_36K_BRAM("46"),
     .C_COUNT_18K_BRAM("0"),
-    .C_EST_POWER_SUMMARY("Estimated Power for IP     :     18.573258 mW")
+    .C_EST_POWER_SUMMARY("Estimated Power for IP     :     18.189974 mW")
   ) inst (
     .clka(clka),
     .rsta(1'D0),
