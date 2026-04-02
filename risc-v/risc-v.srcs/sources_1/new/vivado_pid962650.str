@@ -1124,3 +1124,4 @@ typeControlKey((HResource) null, "execute_stage.sv", 'c'); // ae (execute_stage.
 typeControlKey((HResource) null, "execute_stage.sv", 'c'); // ae (execute_stage.sv)
 typeControlKey((HResource) null, "execute_stage.sv", 'c'); // ae (execute_stage.sv)
 selectCodeEditor("execute_stage.sv", 165, 80); // ae (execute_stage.sv)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,602 MB. GUI used memory: 102 MB. Current time: 4/2/26, 12:58:48 AM CDT
