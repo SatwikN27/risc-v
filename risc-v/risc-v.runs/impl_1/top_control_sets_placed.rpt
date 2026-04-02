@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Thu Mar 26 03:06:14 2026
-| Host         : gelib-4e-37.ews.illinois.edu running 64-bit Red Hat Enterprise Linux 9.7 (Plow)
+| Date         : Thu Apr  2 00:30:35 2026
+| Host         : gelib-4e-42.ews.illinois.edu running 64-bit Red Hat Enterprise Linux 9.7 (Plow)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
 | Device       : xc7s50
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     4 |
-|    Minimum number of control sets                        |     4 |
+| Total control sets                                       |     7 |
+|    Minimum number of control sets                        |     7 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    18 |
+| Unused register locations in slices containing registers |    28 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     4 |
+| Total control sets |     7 |
 | >= 0 to < 4        |     1 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     0 |
+| >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     3 |
+| >= 16              |     5 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,25 +58,28 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              36 |           12 |
-| No           | No                    | Yes                    |               1 |            1 |
-| No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              65 |           19 |
+| No           | No                    | No                     |             505 |          213 |
+| No           | No                    | Yes                    |              47 |           27 |
+| No           | Yes                   | No                     |              33 |           20 |
+| Yes          | No                    | No                     |             154 |           55 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | Yes                   | No                     |               1 |            1 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+---------------+------------------+------------------+----------------+--------------+
-|  Clock Signal  | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+---------------+------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG |               | u_fetch/rst_n    |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG | rst_n_IBUF    |                  |                5 |             34 |         6.80 |
-|  clk_IBUF_BUFG |               |                  |               12 |             36 |         3.00 |
-|  clk_IBUF_BUFG | u_memory/E[0] |                  |               18 |             64 |         3.56 |
-+----------------+---------------+------------------+------------------+----------------+--------------+
++----------------+----------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |              Enable Signal             |                   Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+----------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | u_memory/mem_wb_reg[opcode][4]__0_0    | u_memory/mem_wb_reg[valid]_1                         |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | u_memory/mem_wb_reg[opcode][4]__0_1[0] |                                                      |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG |                                        | u_decode/register_file_reg_async_reset_b__0_rep__0_0 |               20 |             33 |         1.65 |
+|  clk_IBUF_BUFG |                                        | u_decode/rst_n                                       |               27 |             47 |         1.74 |
+|  clk_IBUF_BUFG | u_memory/E[0]                          |                                                      |               27 |             64 |         2.37 |
+|  clk_IBUF_BUFG | rst_n_IBUF                             |                                                      |               25 |            127 |         5.08 |
+|  clk_IBUF_BUFG |                                        |                                                      |              213 |            508 |         2.38 |
++----------------+----------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
 
 

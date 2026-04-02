@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Thu Mar 26 03:02:55 2026
-| Host         : gelib-4e-37.ews.illinois.edu running 64-bit Red Hat Enterprise Linux 9.7 (Plow)
+| Date         : Thu Apr  2 00:29:32 2026
+| Host         : gelib-4e-42.ews.illinois.edu running 64-bit Red Hat Enterprise Linux 9.7 (Plow)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
 | Device       : xc7s50csga324-1IL
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                |  103 |     0 |          0 |     32600 |  0.32 |
-|   LUT as Logic             |   70 |     0 |          0 |     32600 |  0.21 |
-|   LUT as Memory            |   33 |     0 |          0 |      9600 |  0.34 |
+| Slice LUTs*                |  905 |     0 |          0 |     32600 |  2.78 |
+|   LUT as Logic             |  858 |     0 |          0 |     32600 |  2.63 |
+|   LUT as Memory            |   47 |     0 |          0 |      9600 |  0.49 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
-|     LUT as Shift Register  |   33 |     0 |            |           |       |
-| Slice Registers            |  227 |     0 |          0 |     65200 |  0.35 |
-|   Register as Flip Flop    |  227 |     0 |          0 |     65200 |  0.35 |
+|     LUT as Shift Register  |   47 |     0 |            |           |       |
+| Slice Registers            |  720 |     0 |          0 |     65200 |  1.10 |
+|   Register as Flip Flop    |  720 |     0 |          0 |     65200 |  1.10 |
 |   Register as Latch        |    0 |     0 |          0 |     65200 |  0.00 |
 | F7 Muxes                   |    0 |     0 |          0 |     16300 |  0.00 |
 | F8 Muxes                   |    0 |     0 |          0 |      8150 |  0.00 |
@@ -60,9 +60,9 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 1     |          Yes |           - |        Reset |
-| 2     |          Yes |         Set |            - |
-| 224   |          Yes |       Reset |            - |
+| 47    |          Yes |           - |        Reset |
+| 1     |          Yes |         Set |            - |
+| 672   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -151,17 +151,20 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  224 |        Flop & Latch |
-| LUT2     |   65 |                 LUT |
+| FDRE     |  672 |        Flop & Latch |
+| LUT6     |  533 |                 LUT |
+| LUT5     |  178 |                 LUT |
+| LUT2     |  132 |                 LUT |
+| LUT3     |  112 |                 LUT |
+| CARRY4   |   48 |          CarryLogic |
+| SRL16E   |   47 |  Distributed Memory |
+| FDCE     |   47 |        Flop & Latch |
 | OBUF     |   39 |                  IO |
-| SRL16E   |   33 |  Distributed Memory |
-| LUT3     |   31 |                 LUT |
-| CARRY4   |   24 |          CarryLogic |
+| LUT4     |    6 |                 LUT |
 | LUT1     |    4 |                 LUT |
 | RAMB18E1 |    2 |        Block Memory |
 | IBUF     |    2 |                  IO |
-| FDSE     |    2 |        Flop & Latch |
-| FDCE     |    1 |        Flop & Latch |
+| FDSE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

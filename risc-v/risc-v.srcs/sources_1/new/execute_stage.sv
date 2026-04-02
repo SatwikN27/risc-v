@@ -30,7 +30,10 @@ module execute_stage(
     logic [31:0] sra;      // SRA
     logic [31:0] or_res;   // OR
     logic [31:0] and_res;  // AND
+    logic [31:0] jal;      // JAL
 
+    logic [31:0] jal_last_stage; //Set valid bit for rst 
+ 
     // ── mem_addr Stage 1: compute both address candidates ────────────────────
     always_ff @(posedge clk) begin
         mem_addr_I <= rs1 + id_ex.immediates.immI;
@@ -60,60 +63,79 @@ module execute_stage(
         sra     <= 32'($signed(rs1) >>> value2[4:0]);
         or_res  <= rs1 | value2;
         and_res <= rs1 & value2;
+        jal     <= rs1 + id_ex.immediates.immJ;
     end
 
     // ── execute Stage 2: select correct result ───────────────────────────────
     always_ff @(posedge clk) begin
-        case (id_ex_s1.func3)
-            3'h0: begin // ADD & SUB
-                if (id_ex_s1.func7 == 7'h20) begin // SUB
-                    ex_mem.execute_out <= sub;
-                end else begin // ADD
-                    ex_mem.execute_out <= add;
+       
+        if (id_ex_s1.opcode == JAL) begin
+            jal_last_stage <= 1;
+        end else begin
+            jal_last_stage <= 0;
+        end
+        
+        if (id_ex_s1.opcode != JAL) begin
+            case (id_ex_s1.func3)
+                3'h0: begin // ADD & SUB
+                    if (id_ex_s1.func7 == 7'h20) begin // SUB
+                        ex_mem.execute_out <= sub;
+                    end else begin // ADD
+                        ex_mem.execute_out <= add;
+                    end
+                    ex_mem.valid <= 1;
                 end
-                ex_mem.valid <= 1;
-            end
-            3'h1: begin // SLL
-                ex_mem.execute_out <= sll;
-                ex_mem.valid <= 1;
-            end
-            3'h2: begin // SLT
-                ex_mem.execute_out <= slt;
-                ex_mem.valid <= 1;
-            end
-            3'h3: begin // SLTU
-                ex_mem.execute_out <= sltu;
-                ex_mem.valid <= 1;
-            end
-            3'h4: begin // XOR
-                ex_mem.execute_out <= xor_res;
-                ex_mem.valid <= 1;
-            end
-            3'h5: begin // SRL & SRA
-                if (id_ex_s1.func7 == 7'h20) begin // SRA
-                    ex_mem.execute_out <= sra;
-                end else begin // SRL
-                    ex_mem.execute_out <= srl;
+                3'h1: begin // SLL
+                    ex_mem.execute_out <= sll;
+                    ex_mem.valid <= 1;
                 end
-                ex_mem.valid <= 1;
-            end
-            3'h6: begin // OR
-                ex_mem.execute_out <= or_res;
-                ex_mem.valid <= 1;
-            end
-            3'h7: begin // AND
-                ex_mem.execute_out <= and_res;
-                ex_mem.valid <= 1;
-            end
-            default: begin
-                ex_mem.valid <= 0;
-            end
-        endcase
-
+                3'h2: begin // SLT
+                    ex_mem.execute_out <= slt;
+                    ex_mem.valid <= 1;
+                end
+                3'h3: begin // SLTU
+                    ex_mem.execute_out <= sltu;
+                    ex_mem.valid <= 1;
+                end
+                3'h4: begin // XOR
+                    ex_mem.execute_out <= xor_res;
+                    ex_mem.valid <= 1;
+                end
+                3'h5: begin // SRL & SRA
+                    if (id_ex_s1.func7 == 7'h20) begin // SRA
+                        ex_mem.execute_out <= sra;
+                    end else begin // SRL
+                        ex_mem.execute_out <= srl;
+                    end
+                    ex_mem.valid <= 1;
+                end
+                3'h6: begin // OR
+                    ex_mem.execute_out <= or_res;
+                    ex_mem.valid <= 1;
+                end
+                3'h7: begin // AND
+                    ex_mem.execute_out <= and_res;
+                    ex_mem.valid <= 1;
+                end
+                default: begin
+                    ex_mem.valid <= 0;
+                end
+            endcase
+        end else begin
+            ex_mem.execute_out <= jal;
+        end
+    
         ex_mem.opcode  <= id_ex_s1.opcode;
         ex_mem.rd_addr <= id_ex_s1.rd_addr;
         ex_mem.rs2     <= id_ex_s1.rs2;
         ex_mem.func3   <= id_ex_s1.func3;
+        
+        if (id_ex_s1.opcode == JAL) begin
+            ex_mem.valid <= 0;
+        end else begin
+            ex_mem.valid <= id_ex_s1.valid;
+        end
+        
     end
 
 endmodule

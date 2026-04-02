@@ -1,0 +1,1106 @@
+/*
+
+AMD Vivado v2025.1 (64-bit) [Major: 2025, Minor: 1]
+SW Build: 6140274 on Wed May 21 22:58:25 MDT 2025
+IP Build: 6138677 on Thu May 22 03:10:11 MDT 2025
+IP Build: 6138677 on Thu May 22 03:10:11 MDT 2025
+
+Process ID (PID): 962650
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Apr 01 22:42:57 CDT 2026
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Red Hat Enterprise Linux release 9.7 (Plow)
+OS Version: 5.14.0-611.45.1.el9_7.x86_64
+OS Architecture: amd64
+Available processors (cores): 12
+LSB Release Description: NAME=Red Hat Enterprise Linux
+
+Display: 0
+Screen size: 1920x1080
+Local screen bounds: x = 0, y = 32, width = 1920, height = 1012
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.1 64-bit
+
+Java home: 	/software/xilinx-2025.1/2025.1/tps/lnx64/jre21.0.1_12
+Java executable: 	/software/xilinx-2025.1/2025.1/tps/lnx64/jre21.0.1_12/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:ParallelGCThreads=4, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms812m, -Xmx6144m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	812 MB
+Java maximum memory (-Xmx):	 6 GB
+
+User name: 	leopm2
+User home directory: /home/leopm2
+User working directory: /home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /software/xilinx-2025.1/2025.1
+HDI_APPROOT: /software/xilinx-2025.1/2025.1/Vivado
+RDI_DATADIR: /software/xilinx-2025.1/2025.1/SharedData/data:/software/xilinx-2025.1/2025.1/Vivado/data
+RDI_BINDIR: /software/xilinx-2025.1/2025.1/Vivado/bin
+
+Vivado preferences file: /home/leopm2/.Xilinx/Vivado/2025.1/vivado.xml
+Vivado preferences directory: /home/leopm2/.Xilinx/Vivado/2025.1/
+Vivado layouts directory: /home/leopm2/.Xilinx/Vivado/2025.1/data/layouts
+PlanAhead jar file: 	/software/xilinx-2025.1/2025.1/Vivado/lib/classes/planAhead.jar
+Vivado log file: 	/home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/vivado.log
+Vivado journal file: 	/home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-962650-gelib-4e-42.ews.illinois.edu
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: /software/xilinx-2025.1/2025.1/Vivado
+RDI_BASEROOT: /software/xilinx-2025.1/2025.1
+RDI_BINROOT: /software/xilinx-2025.1/2025.1/Vivado/bin
+RDI_BUILD: yes
+RDI_DATADIR: /software/xilinx-2025.1/2025.1/SharedData/data:/software/xilinx-2025.1/2025.1/Vivado/data
+RDI_INSTALLROOT: /software/xilinx-2025.1
+RDI_INSTALLVER: Vivado
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: /software/xilinx-2025.1/2025.1/Vivado/lib/lnx64.o/Rhel/9:/software/xilinx-2025.1/2025.1/Vivado/lib/lnx64.o/Rhel:/software/xilinx-2025.1/2025.1/Vivado/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /software/xilinx-2025.1/2025.1/Vitis/bin:/software/xilinx-2025.1/2025.1/Vivado/ids_lite/ISE/bin/lin64
+RDI_PROG: /software/xilinx-2025.1/2025.1/Vivado/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new:gelib-4e-42.ews.illinois.edu_1775101356_962573
+RDI_SHARED_DATA: /software/xilinx-2025.1/2025.1/SharedData/data
+RDI_TPS_ROOT: /software/xilinx-2025.1/2025.1/Vivado/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /bin/bash
+XILINX: /software/xilinx-2025.1/2025.1/Vivado/ids_lite/ISE
+XILINX_DSP: /software/xilinx-2025.1/2025.1/Vivado/ids_lite/ISE
+XILINX_HLS: /software/xilinx-2025.1/2025.1/Vitis
+XILINX_PLANAHEAD: /software/xilinx-2025.1/2025.1/Vivado
+XILINX_SDK: /software/xilinx-2025.1/2025.1/Vitis
+XILINX_VITIS: /software/xilinx-2025.1/2025.1/Vitis
+XILINX_VIVADO: /software/xilinx-2025.1/2025.1/Vivado
+
+
+GUI allocated memory:	812 MB
+GUI max memory:		6,144 MB
+Engine allocated memory: 1,919 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,919 MB. GUI used memory: 65 MB. Current time: 4/1/26, 10:42:58 PM CDT
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // t (PAResourceEtoH.GettingStartedView_OPEN_PROJECT)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+selectComboBox(RDIResource.HJFileChooserRecentListPreviewHelper_RECENT_DIRECTORIES, "/home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new", 0); // ac.b (RDIResource.HJFileChooserRecentListPreviewHelper_RECENT_DIRECTORIES)
+// Elapsed time: 10 seconds
+selectButton((HResource) null, "FileChooser.upFolderIcon", "Open Project"); // JButton (FileChooser.upFolderIcon)
+selectButton((HResource) null, "FileChooser.upFolderIcon", "Open Project"); // JButton (FileChooser.upFolderIcon)
+selectButton((HResource) null, "FileChooser.upFolderIcon", "Open Project"); // JButton (FileChooser.upFolderIcon)
+// Elapsed time: 12 seconds
+selectButton((HResource) null, "FileChooser.upFolderIcon", "Open Project"); // JButton (FileChooser.upFolderIcon)
+// Elapsed time: 26 seconds
+setFileChooser("/home/leopm2/risc-v/risc-v/risc-v.xpr");
+// [GUI Memory]: 126 MB (+129271kb) [00:01:36]
+// [Engine Memory]: 1,921 MB (+1863117kb) [00:01:36]
+// Opening Vivado Project: /home/leopm2/risc-v/risc-v/risc-v.xpr. Version: Vivado v2025.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 2,162 MB (+151684kb) [00:01:39]
+// WARNING: HEventQueue.dispatchEvent() is taking  1640 ms.
+// Tcl Message: open_project /home/leopm2/risc-v/risc-v/risc-v.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/srn6/pprojs/risc-v/risc-v' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/software/xilinx-2025.1/2025.1/Vivado/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,183 MB. GUI used memory: 74 MB. Current time: 4/1/26, 10:44:24 PM CDT
+// Project name: risc-v; location: /home/leopm2/risc-v/risc-v; part: xc7s50csga324-1IL
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 10401.707 ; gain = 265.547 ; free physical = 1074 ; free virtual = 13741 
+dismissDialog("Open Project"); // bk (Open Project Progress)
+// [GUI Memory]: 136 MB (+4489kb) [00:01:44]
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 99 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), u_execute : execute_stage (execute_stage.sv)]", 4, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), u_execute : execute_stage (execute_stage.sv)]", 4, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), u_execute : execute_stage (execute_stage.sv)]", 4, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,253 MB. GUI used memory: 76 MB. Current time: 4/1/26, 10:46:23 PM CDT
+// Elapsed time: 10 seconds
+selectCodeEditor("execute_stage.sv", 85, 321); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 166, 394); // ae (execute_stage.sv)
+// [GUI Memory]: 152 MB (+9839kb) [00:05:01]
+// Elapsed time: 73 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 18, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", true); // f (RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN): TRUE
+selectButton(RDIResource.BaseDialog_YES, "Yes", "Out-of-Context module run and Synthesis run are Out-of-date"); // f (RDIResource.BaseDialog_YES)
+// 'a' command handler elapsed time: 3 seconds
+dismissDialog("Out-of-Context module run and Synthesis run are Out-of-date"); // x (dialog1)
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run blk_mem_gen_0_synth_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/leopm2/risc-v/risc-v/risc-v.srcs/utils_1/imports/synth_1/instruction_memory.dcp with file /home/leopm2/risc-v/risc-v/risc-v.runs/synth_1/top.dcp 
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK", "Launch Runs"); // f (RDIResource.BaseDialog_OK)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,261 MB. GUI used memory: 79 MB. Current time: 4/1/26, 10:47:54 PM CDT
+dismissDialog("Launch Runs"); // g (dialog2)
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: LOAD_FEATURE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// [Engine Memory]: 2,272 MB (+2211kb) [00:05:10]
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: [Wed Apr  1 22:47:55 2026] Launched blk_mem_gen_0_synth_1, synth_1... Run output will be captured here: blk_mem_gen_0_synth_1: /home/leopm2/risc-v/risc-v/risc-v.runs/blk_mem_gen_0_synth_1/runme.log synth_1: /home/leopm2/risc-v/risc-v/risc-v.runs/synth_1/runme.log [Wed Apr  1 22:47:55 2026] Launched impl_1... Run output will be captured here: /home/leopm2/risc-v/risc-v/risc-v.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bk (Starting Design Runs Progress)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 03m:34s
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 03m:36s
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HEventQueue.dispatchEvent() is taking  27360 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,329 MB. GUI used memory: 79 MB. Current time: 4/1/26, 10:49:02 PM CDT
+// Elapsed time: 75 seconds
+selectCodeEditor("execute_stage.sv", 435, 126); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 359, 139); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 330, 166); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 434, 192); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 419, 226); // ae (execute_stage.sv)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 89 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK", "Implementation Completed"); // f (RDIResource.BaseDialog_OK)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// Tcl Message: open_run impl_1 
+// [Engine Memory]: 2,399 MB (+13446kb) [00:08:03]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,410 MB. GUI used memory: 81 MB. Current time: 4/1/26, 10:50:48 PM CDT
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,037 MB. GUI used memory: 81 MB. Current time: 4/1/26, 10:50:55 PM CDT
+// [Engine Memory]: 3,037 MB (+543597kb) [00:08:10]
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 0.5s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 3,339 MB (+156942kb) [00:08:13]
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  1023 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7s50csga324-1IL 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 10654.531 ; gain = 0.000 ; free physical = 263 ; free virtual = 11784 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 152 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2025.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Read ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 10711.406 ; gain = 1.000 ; free physical = 285 ; free virtual = 11707 
+// Tcl Message: INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. INFO: [Designutils 20-5722] Start Reading Physical Databases. 
+// Tcl Message: Reading placement. 
+// Tcl Message: Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11217.293 ; gain = 0.000 ; free physical = 271 ; free virtual = 11296 
+// Tcl Message: Reading placer database... 
+// Tcl Message: Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11217.293 ; gain = 0.000 ; free physical = 271 ; free virtual = 11296 Read PlaceDB: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 11217.293 ; gain = 0.000 ; free physical = 269 ; free virtual = 11294 Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11217.293 ; gain = 0.000 ; free physical = 269 ; free virtual = 11294 
+// Tcl Message: Reading routing. 
+// Tcl Message: Read RouteStorage: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.02 . Memory (MB): peak = 11217.293 ; gain = 0.000 ; free physical = 269 ; free virtual = 11294 Read Physdb Files: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.11 . Memory (MB): peak = 11217.293 ; gain = 0.000 ; free physical = 269 ; free virtual = 11294 
+// Tcl Message: Restored from archive | CPU: 0.130000 secs | Memory: 3.593956 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.11 . Memory (MB): peak = 11217.293 ; gain = 0.000 ; free physical = 269 ; free virtual = 11294 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11217.293 ; gain = 0.000 ; free physical = 269 ; free virtual = 11294 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// TclEventType: CURR_DESIGN_SET
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 11532.668 ; gain = 1000.254 ; free physical = 252 ; free virtual = 10984 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// [GUI Memory]: 161 MB (+1206kb) [00:08:14]
+// [GUI Memory]: 171 MB (+1257kb) [00:08:14]
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dX' command handler elapsed time: 13 seconds
+// Elapsed time: 13 seconds
+dismissDialog("Open Implemented Design"); // bk (Open Implemented Design Progress)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // J (dialog4)
+// [GUI Memory]: 199 MB (+21113kb) [00:08:26]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design, Edit Timing Constraints]", 22, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_TIMING_CONSTRAINTS_WINDOW
+// Elapsed time: 19 seconds
+selectButton(PAResourceAtoD.DesignTimingSumSectionPanel_WORST_NEGATIVE_SLACK, "-0.036 ns"); // h (PAResourceAtoD.DesignTimingSumSectionPanel_WORST_NEGATIVE_SLACK)
+// PAPropertyPanels.initPanels (Path 1) elapsed time: 0.3s
+// Elapsed time: 13 seconds
+selectButton(PAResourceCommand.PACommandNames_SCHEMATIC, "TimingPathsResultPanel_run_schematic"); // C (PAResourceCommand.PACommandNames_SCHEMATIC, TimingPathsResultPanel_run_schematic)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 56 seconds
+runTclCommand (PAResourceOtoP.PAViews_SCHEMATIC, "unselect_objects"); // j (PAResourceOtoP.PAViews_SCHEMATIC, PlanAheadTabSchematic)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // ab
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, PAResourceEtoH.FileSetView_ADD_TAB, "Libraries", 2); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, decode_stage.sv]", 7, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, decode_stage.sv]", 7, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 3,414 MB. GUI used memory: 126 MB. Current time: 4/1/26, 10:52:58 PM CDT
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, rv_pipe_pkg.sv]", 3, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, rv_pipe_pkg.sv]", 3, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// Elapsed time: 30 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "id_ex"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 82 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "decode_stage.sv", 5); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 13 seconds
+selectCodeEditor("decode_stage.sv", 207, 106); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 207, 106, false, false, false, false, true); // ae (decode_stage.sv) - Double Click
+selectCodeEditor("decode_stage.sv", 197, 101); // ae (decode_stage.sv)
+// Elapsed time: 37 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rs1"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+selectCodeEditor("decode_stage.sv", 461, 263); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 195, 269); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 207, 271); // ae (decode_stage.sv)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+runTclCommand (PAResourceOtoP.PAViews_SCHEMATIC, "select_objects [get_cells u_execute/srl_reg[17]]"); // j (PAResourceOtoP.PAViews_SCHEMATIC, PlanAheadTabSchematic)
+runTclCommand (PAResourceOtoP.PAViews_SCHEMATIC, "select_objects [get_cells u_execute/srl_reg[17]]"); // j (PAResourceOtoP.PAViews_SCHEMATIC, PlanAheadTabSchematic)
+// Elapsed time: 31 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Timing Constraints", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "decode_stage.sv", 5); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("decode_stage.sv", 54, 219); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 58, 247); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 86, 269); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 146, 296); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 467, 277); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 467, 277, false, false, false, false, true); // ae (decode_stage.sv) - Double Click
+selectCodeEditor("decode_stage.sv", 108, 253); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 108, 253, false, false, false, false, true); // ae (decode_stage.sv) - Double Click
+selectCodeEditor("decode_stage.sv", 446, 273); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 135, 283); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 252, 175); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 49, 167); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 64, 162); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 64, 162, false, false, false, false, true); // ae (decode_stage.sv) - Double Click
+selectCodeEditor("decode_stage.sv", 262, 190); // ae (decode_stage.sv)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Run Command: RDIResourceCommand.RDICommands_FIND
+dismissDialog("Find"); // f (dialog5)
+selectCodeEditor("execute_stage.sv", 290, 162); // ae (execute_stage.sv)
+// Elapsed time: 20 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "srl"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "decode_stage.sv", 5); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 19 seconds
+selectCodeEditor("execute_stage.sv", 87, 209); // ae (execute_stage.sv)
+// Elapsed time: 15 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, (String) null); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+selectCodeEditor("execute_stage.sv", 117, 254); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 109, 249); // ae (execute_stage.sv)
+// Elapsed time: 28 seconds
+selectCodeEditor("execute_stage.sv", 43, 210); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 275, 206); // ae (execute_stage.sv)
+// Elapsed time: 29 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "srl"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+selectCodeEditor("execute_stage.sv", 322, 306); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 147, 313); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 145, 308); // ae (execute_stage.sv)
+// Elapsed time: 12 seconds
+selectCodeEditor("execute_stage.sv", 112, 292); // ae (execute_stage.sv)
+// Elapsed time: 85 seconds
+selectCodeEditor("execute_stage.sv", 140, 278); // ae (execute_stage.sv)
+// Elapsed time: 16 seconds
+selectCodeEditor("execute_stage.sv", 305, 266); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 331, 265); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 331, 265); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 331, 265, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 331, 265); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 306, 261); // ae (execute_stage.sv)
+// Elapsed time: 11 seconds
+selectCodeEditor("execute_stage.sv", 358, 276); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 257, 265); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 257, 265, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 257, 265); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 241, 306); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 328, 306); // ae (execute_stage.sv)
+// Elapsed time: 30 seconds
+selectCodeEditor("execute_stage.sv", 325, 171); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 143, 170); // ae (execute_stage.sv)
+// Elapsed time: 239 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, fetch_stage.sv]", 5, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, fetch_stage.sv]", 5, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, fetch_stage.sv]", 5, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 3,523 MB. GUI used memory: 130 MB. Current time: 4/1/26, 11:06:58 PM CDT
+// [Engine Memory]: 3,523 MB (+18723kb) [00:24:14]
+selectCodeEditor("fetch_stage.sv", 283, 146); // ae (fetch_stage.sv)
+selectCodeEditor("fetch_stage.sv", 146, 118); // ae (fetch_stage.sv)
+selectCodeEditor("fetch_stage.sv", 216, 139); // ae (fetch_stage.sv)
+selectCodeEditor("fetch_stage.sv", 237, 129); // ae (fetch_stage.sv)
+// Elapsed time: 277 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "decode_stage.sv", 5); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 22 seconds
+selectCodeEditor("decode_stage.sv", 170, 99); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 184, 127); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 184, 127, false, false, false, false, true); // ae (decode_stage.sv) - Double Click
+selectCodeEditor("decode_stage.sv", 184, 127); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 53, 108); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 157, 113); // ae (decode_stage.sv)
+// Elapsed time: 19 seconds
+selectCodeEditor("decode_stage.sv", 567, 247); // ae (decode_stage.sv)
+// Elapsed time: 76 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, (String) null); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+selectButton(RDIResource.HCodeEditor_CLOSE, (String) null); // k (RDIResource.HCodeEditor_CLOSE)
+selectCodeEditor("decode_stage.sv", 258, 189); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 253, 208); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 227, 227); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 266, 309); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 262, 175); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 141, 157); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 250, 321); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 252, 296); // ae (decode_stage.sv)
+// Elapsed time: 73 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Timing Constraints", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv_pipe_pkg.sv", 6); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fetch_stage.sv", 7); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, execute_stage.sv]", 8, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, execute_stage.sv]", 8, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectCodeEditor("execute_stage.sv", 38, 225); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 207, 94); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 272, 134); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 339, 119); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 344, 127); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 352, 129); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 352, 129); // ae (execute_stage.sv)
+// Elapsed time: 197 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, (String) null); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+selectButton(RDIResource.HCodeEditor_CLOSE, (String) null); // k (RDIResource.HCodeEditor_CLOSE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, rv_pipe_pkg.sv]", 3, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, rv_pipe_pkg.sv]", 3, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// Elapsed time: 39 seconds
+selectCodeEditor("rv_pipe_pkg.sv", 316, 183); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 246, 84); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 118, 96); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 55, 69); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 272, 69); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 140, 272); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 382, 202); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 32, 122); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 157, 223); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 191, 210); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 61, 207); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 57, 198); // ae (rv_pipe_pkg.sv)
+// Elapsed time: 10 seconds
+selectCodeEditor("rv_pipe_pkg.sv", 161, 140); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 233, 145); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 155, 142); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 182, 203); // ae (rv_pipe_pkg.sv)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 20 seconds
+selectCodeEditor("execute_stage.sv", 148, 261); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 400, 267); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 152, 60); // ae (execute_stage.sv)
+// Elapsed time: 38 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, fetch_stage.sv]", 5, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, fetch_stage.sv]", 5, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, instruction_memory.sv]", 6, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, execute_stage.sv]", 8, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, decode_stage.sv]", 7, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, decode_stage.sv]", 7, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+selectCodeEditor("decode_stage.sv", 128, 150); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 415, 187); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 97, 141); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 97, 141, false, false, false, false, true); // ae (decode_stage.sv) - Double Click
+selectCodeEditor("decode_stage.sv", 490, 200); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 63, 131); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 317, 174); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 157, 201); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 157, 201, false, false, false, false, true); // ae (decode_stage.sv) - Double Click
+selectCodeEditor("decode_stage.sv", 156, 209); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 195, 202); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 198, 205, false, false, false, false, true); // ae (decode_stage.sv) - Double Click
+selectCodeEditor("decode_stage.sv", 169, 204); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 189, 200); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 227, 196); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 227, 196, false, false, false, false, true); // ae (decode_stage.sv) - Double Click
+selectCodeEditor("decode_stage.sv", 230, 197); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 230, 197, false, false, false, false, true); // ae (decode_stage.sv) - Double Click
+selectCodeEditor("decode_stage.sv", 230, 206); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 230, 206, false, false, false, false, true); // ae (decode_stage.sv) - Double Click
+selectCodeEditor("decode_stage.sv", 240, 202); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 252, 199); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 197, 199); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 197, 199, false, false, false, false, true); // ae (decode_stage.sv) - Double Click
+selectCodeEditor("decode_stage.sv", 231, 204); // ae (decode_stage.sv)
+selectCodeEditor("decode_stage.sv", 231, 204, false, false, false, false, true); // ae (decode_stage.sv) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv_pipe_pkg.sv", 6); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("execute_stage.sv", 402, 92); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 327, 122); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 326, 114); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 306, 299); // ae (execute_stage.sv)
+// Elapsed time: 18 seconds
+selectCodeEditor("execute_stage.sv", 156, 309); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 156, 309); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 144, 307); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 140, 309); // ae (execute_stage.sv)
+// Elapsed time: 14 seconds
+selectCodeEditor("execute_stage.sv", 235, 315); // ae (execute_stage.sv)
+// Elapsed time: 16 seconds
+selectCodeEditor("execute_stage.sv", 230, 281); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 230, 281, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 281, 176); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 187, 175); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 189, 171); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 189, 171, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("execute_stage.sv", 138, 150); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 34, 141); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 34, 141, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 661, 141); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 661, 141); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 88, 142); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 241, 197); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 204, 170); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 204, 170, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 207, 158); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 207, 158, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 228, 146); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 228, 146, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 210, 188); // ae (execute_stage.sv)
+// Elapsed time: 18 seconds
+selectCodeEditor("execute_stage.sv", 228, 239); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 228, 239, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 233, 227); // ae (execute_stage.sv)
+// Elapsed time: 37 seconds
+selectCodeEditor("execute_stage.sv", 149, 234); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 149, 234, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 318, 232); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 69, 251); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 306, 233); // ae (execute_stage.sv)
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv_pipe_pkg.sv", 6); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv_pipe_pkg.sv", 6); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 46 seconds
+selectCodeEditor("execute_stage.sv", 135, 238); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 85, 145); // ae (execute_stage.sv)
+// Elapsed time: 13 seconds
+selectCodeEditor("execute_stage.sv", 161, 124); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 123, 129); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 123, 129, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 221, 118); // ae (execute_stage.sv)
+// Elapsed time: 135 seconds
+selectCodeEditor("execute_stage.sv", 196, 116); // ae (execute_stage.sv)
+// Elapsed time: 29 seconds
+selectCodeEditor("execute_stage.sv", 219, 116); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 101, 111); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 217, 112); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 258, 98); // ae (execute_stage.sv)
+// Elapsed time: 12 seconds
+selectCodeEditor("execute_stage.sv", 136, 335); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 131, 156); // ae (execute_stage.sv)
+// Elapsed time: 28 seconds
+selectCodeEditor("execute_stage.sv", 92, 155); // ae (execute_stage.sv)
+// Elapsed time: 48 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv_pipe_pkg.sv", 6); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("rv_pipe_pkg.sv", 300, 92); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 172, 178); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 170, 173); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 221, 172); // ae (rv_pipe_pkg.sv)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 32 seconds
+selectCodeEditor("execute_stage.sv", 144, 118); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 138, 113); // ae (execute_stage.sv)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv_pipe_pkg.sv", 6); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 10 seconds
+selectCodeEditor("rv_pipe_pkg.sv", 304, 157); // ae (rv_pipe_pkg.sv)
+// Elapsed time: 16 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("rv_pipe_pkg.sv", 99, 146); // ae (rv_pipe_pkg.sv)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "decode_stage.sv", 5); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Timing Constraints", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Timing Constraints", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("execute_stage.sv", 169, 327); // ae (execute_stage.sv)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("execute_stage.sv", 287, 158); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 141, 344); // ae (execute_stage.sv)
+// Elapsed time: 21 seconds
+selectCodeEditor("execute_stage.sv", 89, 345); // ae (execute_stage.sv)
+// Elapsed time: 11 seconds
+selectCodeEditor("execute_stage.sv", 157, 146); // ae (execute_stage.sv)
+// Elapsed time: 11 seconds
+selectCodeEditor("execute_stage.sv", 141, 216); // ae (execute_stage.sv)
+// Elapsed time: 46 seconds
+selectCodeEditor("execute_stage.sv", 245, 221); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 289, 220); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 168, 228); // ae (execute_stage.sv)
+// Elapsed time: 23 seconds
+selectCodeEditor("execute_stage.sv", 29, 96); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 58, 114); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 57, 193); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 83, 175); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 60, 247); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 58, 278); // ae (execute_stage.sv)
+// Elapsed time: 13 seconds
+selectCodeEditor("execute_stage.sv", 315, 310); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 163, 127); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 103, 309); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 97, 318); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 81, 197); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 113, 215); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 82, 233); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 84, 260); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 81, 281); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 85, 294); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 85, 308); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 432, 180); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 60, 280); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 304, 242); // ae (execute_stage.sv)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,524 MB. GUI used memory: 130 MB. Current time: 4/1/26, 11:36:58 PM CDT
+selectCodeEditor("execute_stage.sv", 279, 150); // ae (execute_stage.sv)
+// Elapsed time: 77 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "decode_stage.sv", 5); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, (String) null); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+selectButton(RDIResource.HCodeEditor_CLOSE, (String) null); // k (RDIResource.HCodeEditor_CLOSE)
+selectCodeEditor("decode_stage.sv", 346, 122); // ae (decode_stage.sv)
+// Elapsed time: 156 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv_pipe_pkg.sv", 6); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("rv_pipe_pkg.sv", 175, 171); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 180, 158); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 180, 157, false, false, false, false, true); // ae (rv_pipe_pkg.sv) - Double Click
+selectCodeEditor("rv_pipe_pkg.sv", 221, 228); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 221, 228, false, false, false, false, true); // ae (rv_pipe_pkg.sv) - Double Click
+selectCodeEditor("rv_pipe_pkg.sv", 159, 180); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 159, 180, false, false, false, false, true); // ae (rv_pipe_pkg.sv) - Double Click
+selectCodeEditor("rv_pipe_pkg.sv", 165, 164); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 165, 164, false, false, false, false, true); // ae (rv_pipe_pkg.sv) - Double Click
+selectCodeEditor("rv_pipe_pkg.sv", 161, 168); // ae (rv_pipe_pkg.sv)
+selectCodeEditor("rv_pipe_pkg.sv", 161, 168, false, false, false, false, true); // ae (rv_pipe_pkg.sv) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, memory_stage.sv]", 9, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, memory_stage.sv]", 9, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 3,564 MB. GUI used memory: 131 MB. Current time: 4/1/26, 11:41:23 PM CDT
+// Elapsed time: 40 seconds
+selectCodeEditor("memory_stage.sv", 43, 105); // ae (memory_stage.sv)
+selectCodeEditor("memory_stage.sv", 381, 278); // ae (memory_stage.sv)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv_pipe_pkg.sv", 6); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 277 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("execute_stage.sv", 293, 310); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 348, 323); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 348, 308); // ae (execute_stage.sv)
+// Elapsed time: 313 seconds
+selectCodeEditor("execute_stage.sv", 133, 212); // ae (execute_stage.sv)
+// Elapsed time: 20 seconds
+selectCodeEditor("execute_stage.sv", 90, 225); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 84, 288); // ae (execute_stage.sv)
+// Elapsed time: 13 seconds
+selectCodeEditor("execute_stage.sv", 255, 299); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 58, 290); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 58, 161); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 85, 242); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 194, 265); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 284, 263); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 196, 261); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 66, 229); // ae (execute_stage.sv)
+// Elapsed time: 11 seconds
+selectCodeEditor("execute_stage.sv", 57, 61); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 37, 107); // ae (execute_stage.sv)
+// Elapsed time: 13 seconds
+selectCodeEditor("execute_stage.sv", 49, 109); // ae (execute_stage.sv)
+typeControlKey((HResource) null, "execute_stage.sv", 'c'); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 69, 208); // ae (execute_stage.sv)
+typeControlKey((HResource) null, "execute_stage.sv", 'v'); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 81, 331); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 84, 324); // ae (execute_stage.sv)
+typeControlKey((HResource) null, "execute_stage.sv", 'v'); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 320, 252); // ae (execute_stage.sv)
+// Elapsed time: 53 seconds
+selectCodeEditor("execute_stage.sv", 119, 204); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 190, 200); // ae (execute_stage.sv)
+// Elapsed time: 13 seconds
+selectCodeEditor("execute_stage.sv", 81, 147); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 90, 147); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 90, 147, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+// Elapsed time: 16 seconds
+selectCodeEditor("execute_stage.sv", 202, 159); // ae (execute_stage.sv)
+// Elapsed time: 20 seconds
+selectCodeEditor("execute_stage.sv", 205, 190); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 130, 204); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 84, 67); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 236, 86); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 230, 119); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 95, 86); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 112, 142); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 243, 127); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 237, 93); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 172, 115); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 86, 113); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 164, 143); // ae (execute_stage.sv)
+// Elapsed time: 15 seconds
+selectCodeEditor("execute_stage.sv", 119, 162); // ae (execute_stage.sv)
+// Elapsed time: 37 seconds
+selectCodeEditor("execute_stage.sv", 206, 233); // ae (execute_stage.sv)
+// Elapsed time: 11 seconds
+selectCodeEditor("execute_stage.sv", 22, 195); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 26, 191); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 26, 191); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 22, 193); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 121, 183); // ae (execute_stage.sv)
+// Elapsed time: 20 seconds
+selectCodeEditor("execute_stage.sv", 259, 142); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 219, 98); // ae (execute_stage.sv)
+// Elapsed time: 10 seconds
+selectCodeEditor("execute_stage.sv", 53, 172); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 200, 278); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 197, 283); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 197, 283); // ae (execute_stage.sv)
+// Elapsed time: 22 seconds
+selectCodeEditor("execute_stage.sv", 220, 244); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 236, 187); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 140, 186); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 69, 249); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 122, 201); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 167, 203); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 309, 209); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 312, 222); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 294, 213); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 253, 220); // ae (execute_stage.sv)
+// Elapsed time: 23 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv_pipe_pkg.sv", 6); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("execute_stage.sv", 83, 203); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 214, 180); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 295, 219); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 79, 218); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 180, 220); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 252, 211); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 306, 219); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 233, 222); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 127, 223); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 358, 218); // ae (execute_stage.sv)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fetch_stage.sv", 7); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv_pipe_pkg.sv", 6); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 116 seconds
+selectCodeEditor("execute_stage.sv", 307, 246); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 311, 320); // ae (execute_stage.sv)
+// Elapsed time: 58 seconds
+selectCodeEditor("execute_stage.sv", 253, 251); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 253, 251, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 313, 283); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 319, 236); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 312, 280); // ae (execute_stage.sv)
+// Elapsed time: 22 seconds
+selectCodeEditor("execute_stage.sv", 87, 283); // ae (execute_stage.sv)
+// Elapsed time: 30 seconds
+selectCodeEditor("execute_stage.sv", 189, 331); // ae (execute_stage.sv)
+// Elapsed time: 70 seconds
+selectCodeEditor("execute_stage.sv", 285, 201); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 299, 259); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 300, 247); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 289, 279); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 310, 295); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 281, 281); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 310, 265); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 306, 249); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 306, 261); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 304, 277); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 299, 293); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 295, 316); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 293, 335); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 324, 374); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 18, 152); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 472, 158); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 231, 223); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 231, 223, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 197, 218); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 163, 233); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 163, 233, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 233, 233); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 234, 263); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 160, 246); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 160, 246, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 84, 249); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 111, 228); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 141, 252); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 198, 249); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 198, 249, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 209, 250); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 172, 232); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 172, 232, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 229, 231); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 229, 231, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 225, 249); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 140, 253); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 140, 253, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 216, 241); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 129, 243); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 194, 283); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 97, 284); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 365, 217); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 308, 263); // ae (execute_stage.sv)
+// Elapsed time: 123 seconds
+selectCodeEditor("execute_stage.sv", 219, 150); // ae (execute_stage.sv)
+// Elapsed time: 10 seconds
+selectCodeEditor("execute_stage.sv", 307, 217); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 94, 216); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 146, 220); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 227, 234); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 217, 234); // ae (execute_stage.sv)
+// Elapsed time: 11 seconds
+selectCodeEditor("execute_stage.sv", 52, 172); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 56, 36); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 321, 42); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 37, 35); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 188, 242); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 257, 267); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 315, 218); // ae (execute_stage.sv)
+// Elapsed time: 15 seconds
+selectCodeEditor("execute_stage.sv", 308, 205); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 200, 235); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 200, 235); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 200, 235, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 139, 202); // ae (execute_stage.sv)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,565 MB. GUI used memory: 131 MB. Current time: 4/2/26, 12:11:23 AM CDT
+// Elapsed time: 214 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 18, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// 'a' command handler elapsed time: 4 seconds
+dismissDialog("Save Project"); // ac.d (dialog6)
+// Elapsed time: 26 seconds
+selectCodeEditor("execute_stage.sv", 259, 215); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 604, 220); // ae (execute_stage.sv)
+// Elapsed time: 534 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 18, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save", "Save Project"); // f (PAResourceQtoS.SaveProjectUtils_SAVE)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Project"); // ac.d (dialog7)
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RUN_MODIFY
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run impl_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+selectButton(RDIResource.BaseDialog_OK, "OK", "Launch Runs"); // f (RDIResource.BaseDialog_OK)
+// HOptionPane Warning: 'A background task is running. Please wait until it completes and try again. (Background Task)'
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:39m:48s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,584 MB. GUI used memory: 117 MB. Current time: 4/2/26, 12:24:13 AM CDT
+// TclEventType: DG_GRAPH_GENERATED
+selectButton("OptionPane.button", "OK", "Background Task"); // JButton (OptionPane.button)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:39m:54s
+selectButton(RDIResource.BaseDialog_OK, "OK", "Launch Runs"); // f (RDIResource.BaseDialog_OK)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,592 MB. GUI used memory: 116 MB. Current time: 4/2/26, 12:24:23 AM CDT
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+dismissDialog("Launch Runs"); // g (dialog8)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: [Thu Apr  2 00:24:24 2026] Launched impl_1... Run output will be captured here: /home/leopm2/risc-v/risc-v/risc-v.runs/impl_1/runme.log 
+// 'a' command handler elapsed time: 15 seconds
+dismissDialog("Starting Design Runs"); // bk (Starting Design Runs Progress)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 21 seconds
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // h (PAResourceOtoP.ProjectTab_CLOSE_DESIGN)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,595 MB. GUI used memory: 106 MB. Current time: 4/2/26, 12:24:46 AM CDT
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 3,595 MB. GUI used memory: 106 MB. Current time: 4/2/26, 12:24:46 AM CDT
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bk (Closing Progress)
+selectCodeEditor("execute_stage.sv", 183, 188); // ae (execute_stage.sv)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 43 seconds
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", true); // f (RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK", "Implementation Completed"); // f (RDIResource.BaseDialog_OK)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// Tcl Message: open_run impl_1 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,595 MB. GUI used memory: 88 MB. Current time: 4/2/26, 12:25:41 AM CDT
+// TclEventType: DESIGN_NEW
+// Xgd.load filename: /home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/./.Xil/Vivado-962650-gelib-4e-42.ews.illinois.edu/xc7s50_detail.xgd_307FB445 elapsed time: 0.5s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 0.8s
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 11754.930 ; gain = 0.000 ; free physical = 270 ; free virtual = 10778 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 152 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2025.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 11754.930 ; gain = 0.000 ; free physical = 276 ; free virtual = 10783 
+// Tcl Message: INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. INFO: [Designutils 20-5722] Start Reading Physical Databases. 
+// Tcl Message: Reading placement. 
+// Tcl Message: Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11754.930 ; gain = 0.000 ; free physical = 275 ; free virtual = 10783 
+// Tcl Message: Reading placer database... 
+// Tcl Message: Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 11754.930 ; gain = 0.000 ; free physical = 275 ; free virtual = 10783 Read PlaceDB: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 11754.930 ; gain = 0.000 ; free physical = 275 ; free virtual = 10783 Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11754.930 ; gain = 0.000 ; free physical = 275 ; free virtual = 10783 
+// Tcl Message: Reading routing. 
+// Tcl Message: Read RouteStorage: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 11754.930 ; gain = 0.000 ; free physical = 275 ; free virtual = 10783 Read Physdb Files: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.1 . Memory (MB): peak = 11754.930 ; gain = 0.000 ; free physical = 275 ; free virtual = 10783 
+// Tcl Message: Restored from archive | CPU: 0.120000 secs | Memory: 3.592033 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.1 . Memory (MB): peak = 11754.930 ; gain = 0.000 ; free physical = 275 ; free virtual = 10783 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11754.930 ; gain = 0.000 ; free physical = 275 ; free virtual = 10783 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// TclEventType: CURR_DESIGN_SET
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: open_run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 11790.988 ; gain = 36.059 ; free physical = 268 ; free virtual = 10780 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// TclEventType: METHODOLOGY_ADDED
+// Device view-level: 0.0
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// [Engine Memory]: 4,329 MB (+660396kb) [01:42:59]
+// 'dX' command handler elapsed time: 6 seconds
+dismissDialog("Open Implemented Design"); // bk (Open Implemented Design Progress)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // J (dialog10)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 18, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// Device view-level: 0.0
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,304 MB. GUI used memory: 123 MB. Current time: 4/2/26, 12:25:55 AM CDT
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/leopm2/risc-v/risc-v/risc-v.srcs/utils_1/imports/synth_1/instruction_memory.dcp with file /home/leopm2/risc-v/risc-v/risc-v.runs/synth_1/top.dcp 
+selectButton(RDIResource.BaseDialog_OK, "OK", "Launch Runs"); // f (RDIResource.BaseDialog_OK)
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,586 MB. GUI used memory: 123 MB. Current time: 4/2/26, 12:25:57 AM CDT
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+dismissDialog("Launch Runs"); // g (dialog11)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// Tcl Message: [Thu Apr  2 00:25:57 2026] Launched synth_1... Run output will be captured here: /home/leopm2/risc-v/risc-v/risc-v.runs/synth_1/runme.log [Thu Apr  2 00:25:58 2026] Launched impl_1... Run output will be captured here: /home/leopm2/risc-v/risc-v/risc-v.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bk (Starting Design Runs Progress)
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // h (PAResourceOtoP.ProjectTab_CLOSE_DESIGN)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,595 MB. GUI used memory: 112 MB. Current time: 4/2/26, 12:26:03 AM CDT
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 3,595 MB. GUI used memory: 113 MB. Current time: 4/2/26, 12:26:03 AM CDT
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: DESIGN_CLOSE
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory_stage.sv", 5); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fetch_stage.sv", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv_pipe_pkg.sv", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "decode_stage.sv", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 23 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK", "Synthesis Failed"); // f (RDIResource.BaseDialog_OK)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // W.a (dialog12)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-660] unable to resolve 'id_ex_sl' [/home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:72]. ]", 2, false); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-660] unable to resolve 'id_ex_sl' [/home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:72]. ]", 2, false, false, false, false, false, true); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 28 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv_pipe_pkg.sv", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("rv_pipe_pkg.sv", 435, 70); // ae (rv_pipe_pkg.sv)
+// Elapsed time: 21 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "id_ex_"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("execute_stage.sv", 182, 274); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 129, 168); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 159, 263); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 188, 265); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 189, 173); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 140, 168); // ae (execute_stage.sv)
+// Elapsed time: 10 seconds
+selectCodeEditor("execute_stage.sv", 245, 257); // ae (execute_stage.sv)
+// Elapsed time: 12 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "sl"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+selectButton(RDIResource.HCodeEditor_CLOSE, (String) null); // k (RDIResource.HCodeEditor_CLOSE)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 18, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton("OptionPane.button", "OK", "Missing Synthesis Results"); // JButton (OptionPane.button)
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: reset_run synth_1 
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save", "Save Project"); // f (PAResourceQtoS.SaveProjectUtils_SAVE)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Project"); // ac.d (dialog13)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:44m:22s
+selectButton(RDIResource.BaseDialog_OK, "OK", "Launch Runs"); // f (RDIResource.BaseDialog_OK)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,622 MB. GUI used memory: 94 MB. Current time: 4/2/26, 12:28:47 AM CDT
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+dismissDialog("Launch Runs"); // g (dialog14)
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: [Thu Apr  2 00:28:48 2026] Launched synth_1... Run output will be captured here: /home/leopm2/risc-v/risc-v/risc-v.runs/synth_1/runme.log [Thu Apr  2 00:28:48 2026] Launched impl_1... Run output will be captured here: /home/leopm2/risc-v/risc-v/risc-v.runs/impl_1/runme.log 
+// 'a' command handler elapsed time: 6 seconds
+dismissDialog("Starting Design Runs"); // bk (Starting Design Runs Progress)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:44m:26s
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 79 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_fetch/PC_reg[31]__0/Q' [/home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:35]. ]", 2, true); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE) - Node
+// TclEventType: RUN_STEP_COMPLETED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fetch_stage.sv", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 14 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_fetch/PC_reg[31]__0/Q' [/home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:35]. ]", 2); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_fetch/PC_reg[31]__0/Q' [/home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:35]. ]", 2); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+// Elapsed time: 20 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_fetch/PC_reg[31]__0/Q' [/home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:35]. ]", 2, true); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_fetch/PC_reg[31]__0/Q' [/home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:35]. ]", 2, true, false, false, false, true, false); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE) - Popup Trigger - Node
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // am (PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, Message Severity)
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // am (PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, Message Severity)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 13 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:35]. ]", 3, true); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE) - Node
+// Elapsed time: 19 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Route Design, [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.. ]", 6, false); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:35]. ]", 3, true); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE) - Node
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:35]. ]", 3); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_fetch/PC_reg[31]__0/Q' [/home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:35]. ]", 2); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+// Elapsed time: 14 seconds
+selectCodeEditor("fetch_stage.sv", 56, 177); // ae (fetch_stage.sv)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 13 seconds
+selectCodeEditor("execute_stage.sv", 336, 187); // ae (execute_stage.sv)
+// Elapsed time: 12 seconds
+selectCodeEditor("execute_stage.sv", 346, 190); // ae (execute_stage.sv)

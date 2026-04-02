@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/srn6/pprojs/risc-v/risc-v/risc-v.runs/synth_1/top.tcl"
+  variable script "/home/leopm2/risc-v/risc-v/risc-v.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,12 +56,8 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 3
 set_param general.usePosixSpawnForFork 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-956279-gelib-4e-37.ews.illinois.edu/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1IL
 
@@ -69,32 +65,32 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/srn6/pprojs/risc-v/risc-v/risc-v.cache/wt [current_project]
-set_property parent.project_path /home/srn6/pprojs/risc-v/risc-v/risc-v.xpr [current_project]
+set_property webtalk.parent_dir /home/leopm2/risc-v/risc-v/risc-v.cache/wt [current_project]
+set_property parent.project_path /home/leopm2/risc-v/risc-v/risc-v.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/srn6/pprojs/risc-v/risc-v/risc-v.cache/ip [current_project]
+set_property ip_output_repo /home/leopm2/risc-v/risc-v/risc-v.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/ip/blk_mem_gen_0_1/prog.coe
+add_files /home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/ip/blk_mem_gen_0_1/prog.coe
 read_verilog -library xil_defaultlib -sv {
-  /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/rv_pipe_pkg.sv
-  /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/top.sv
-  /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv
-  /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/instruction_memory.sv
-  /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv
-  /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv
-  /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/memory_stage.sv
-  /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/main_memory.sv
-  /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/new/writeback_stage.sv
+  /home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/rv_pipe_pkg.sv
+  /home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/top.sv
+  /home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv
+  /home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/instruction_memory.sv
+  /home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv
+  /home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv
+  /home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/memory_stage.sv
+  /home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/main_memory.sv
+  /home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/new/writeback_stage.sv
 }
-read_ip -quiet /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/ip/blk_mem_gen_1_1/blk_mem_gen_1.xci
-set_property used_in_implementation false [get_files -all /home/srn6/pprojs/risc-v/risc-v/risc-v.gen/sources_1/ip/blk_mem_gen_1_1/blk_mem_gen_1_ooc.xdc]
+read_ip -quiet /home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/ip/blk_mem_gen_1_1/blk_mem_gen_1.xci
+set_property used_in_implementation false [get_files -all /home/leopm2/risc-v/risc-v/risc-v.gen/sources_1/ip/blk_mem_gen_1_1/blk_mem_gen_1_ooc.xdc]
 
-read_ip -quiet /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all /home/srn6/pprojs/risc-v/risc-v/risc-v.gen/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0_ooc.xdc]
+read_ip -quiet /home/leopm2/risc-v/risc-v/risc-v.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all /home/leopm2/risc-v/risc-v/risc-v.gen/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -105,12 +101,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/constrs_1/new/constraints.xdc
-set_property used_in_implementation false [get_files /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/constrs_1/new/constraints.xdc]
+read_xdc /home/leopm2/risc-v/risc-v/risc-v.srcs/constrs_1/new/constraints.xdc
+set_property used_in_implementation false [get_files /home/leopm2/risc-v/risc-v/risc-v.srcs/constrs_1/new/constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/srn6/pprojs/risc-v/risc-v/risc-v.srcs/utils_1/imports/synth_1/instruction_memory.dcp
+read_checkpoint -auto_incremental -incremental /home/leopm2/risc-v/risc-v/risc-v.srcs/utils_1/imports/synth_1/instruction_memory.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

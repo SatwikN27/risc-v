@@ -7,8 +7,9 @@ package rv_pipe_pkg;
         LOAD_IMMEDIATE  =7'b0000011,
         STORE           =7'b0100011,
         BRANCH          =7'b1100011,
-        JUMP            =7'b1101111,
+        JAL             =7'b1101111,
         JALR            =7'b1100111
+
     } opcodes_t;
 
     typedef struct packed {
