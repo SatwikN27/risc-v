@@ -1104,3 +1104,23 @@ selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute
 selectCodeEditor("execute_stage.sv", 336, 187); // ae (execute_stage.sv)
 // Elapsed time: 12 seconds
 selectCodeEditor("execute_stage.sv", 346, 190); // ae (execute_stage.sv)
+// Elapsed time: 135 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fetch_stage.sv", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+typeControlKey((HResource) null, "execute_stage.sv", 'c'); // ae (execute_stage.sv)
+typeControlKey((HResource) null, "execute_stage.sv", 'c'); // ae (execute_stage.sv)
+typeControlKey((HResource) null, "execute_stage.sv", 'c'); // ae (execute_stage.sv)
+typeControlKey((HResource) null, "execute_stage.sv", 'c'); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 213, 240); // ae (execute_stage.sv)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "decode_stage.sv", 2); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv_pipe_pkg.sv", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 45 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fetch_stage.sv", 4); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("fetch_stage.sv", 298, 238); // ae (fetch_stage.sv)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("execute_stage.sv", 158, 64); // ae (execute_stage.sv)
+typeControlKey((HResource) null, "execute_stage.sv", 'c'); // ae (execute_stage.sv)
+typeControlKey((HResource) null, "execute_stage.sv", 'c'); // ae (execute_stage.sv)
+typeControlKey((HResource) null, "execute_stage.sv", 'c'); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 165, 80); // ae (execute_stage.sv)
