@@ -74,10 +74,15 @@ module execute_stage(
     // ── execute Stage 2: select correct result ───────────────────────────────
     always_ff @(posedge clk) begin
        
-        if (id_ex_s1.opcode == JAL && !jal_last_stage) begin
-            jal_last_stage <= 1;
-        end else begin
+        if (id_ex_s1.opcode == JAL) begin
+            ex_mem.valid <= 0;      //clear output valid bit
+            if (id_ex_s1.JAL_taken) begin
             jal_last_stage <= 0;
+        end else if(!jal_last_stage) begin
+            jal_last_stage <= 1;
+        end
+        end else begin
+            ex_mem.valid        <= id_ex_s1.valid;
         end
         
         if (id_ex_s1.opcode != JAL) begin
@@ -92,6 +97,9 @@ module execute_stage(
                 3'h7: valid_and_execute_out <= {1, and_res}; // AND
                 default: valid_and_execute_out <= 32'b0;
             endcase
+            begin
+                execute_pc_JAL_MUX  <= 1'b0;
+            end
         end else begin
             valid_and_execute_out[31:0]  <= jal;
             execute_pc_JAL_addr <= jal;
@@ -103,6 +111,8 @@ module execute_stage(
         ex_mem.rs2     <= id_ex_s1.rs2;
         ex_mem.func3   <= id_ex_s1.func3;
         
+<<<<<<< HEAD
+=======
         if(jal_last_stage) begin    //check if instruction reaches end of pipeline and branch is not yet taken
             valid_and_execute_out <= 32'b0;      //clear output valid bit
             if(id_ex_s1.JAL_taken) begin
@@ -111,5 +121,6 @@ module execute_stage(
         end else begin
             valid_and_execute_out[32]        <= id_ex_s1.valid;
         end
+>>>>>>> 64a6a07accd82247929877677383ed4125f224a6
     end
 endmodule
