@@ -34,7 +34,10 @@ module execute_stage(
     logic [31:0] and_res;  // AND
     logic [31:0] jal;      // JAL
 
-    logic [31:0] jal_last_stage; //Set valid bit for rst 
+    logic [31:0] jal_last_stage; //Set valid bit for rst
+	logic [32:0] valid_and_execute_out; // {1, execute_out} for simplifying switch case
+
+	assign {ex_mem.valid, ex_mem.execute_out} = valid_and_execute_out;
  
     // ── mem_addr Stage 1: compute both address candidates ────────────────────
     always_ff @(posedge clk) begin
@@ -78,55 +81,21 @@ module execute_stage(
         end
         
         if (id_ex_s1.opcode != JAL) begin
-            case (id_ex_s1.func3)
-                3'h0: begin // ADD & SUB
-                    if (id_ex_s1.func7 == 7'h20) begin // SUB
-                        ex_mem.execute_out <= sub;
-                    end else begin // ADD
-                        ex_mem.execute_out <= add;
-                    end
-                    ex_mem.valid <= 1;
-                end
-                3'h1: begin // SLL
-                    ex_mem.execute_out <= sll;
-                    ex_mem.valid <= 1;
-                end
-                3'h2: begin // SLT
-                    ex_mem.execute_out <= slt;
-                    ex_mem.valid <= 1;
-                end
-                3'h3: begin // SLTU
-                    ex_mem.execute_out <= sltu;
-                    ex_mem.valid <= 1;
-                end
-                3'h4: begin // XOR
-                    ex_mem.execute_out <= xor_res;
-                    ex_mem.valid <= 1;
-                end
-                3'h5: begin // SRL & SRA
-                    if (id_ex_s1.func7 == 7'h20) begin // SRA
-                        ex_mem.execute_out <= sra;
-                    end else begin // SRL
-                        ex_mem.execute_out <= srl;
-                    end
-                    ex_mem.valid <= 1;
-                end
-                3'h6: begin // OR
-                    ex_mem.execute_out <= or_res;
-                    ex_mem.valid <= 1;
-                end
-                3'h7: begin // AND
-                    ex_mem.execute_out <= and_res;
-                    ex_mem.valid <= 1;
-                end
-                default: begin
-                    ex_mem.valid <= 0;
-                end
+            unique case (id_ex_s1.func3)
+                3'h0: valid_and_execute_out <= {1, id_ex_s1.func7 == 7'h20 ? sub : add}; // SUB & ADD
+                3'h1: valid_and_execute_out <= {1, sll};
+                3'h2: valid_and_execute_out <= {1, slt}; // SLT
+                3'h3: valid_and_execute_out <= {1, sltu}; // SLTU
+                3'h4: valid_and_execute_out <= {1, xor_res}; // XOR
+                3'h5: valid_and_execute_out <= {1, id_ex_s1.func7 = 7'h20 ? sra : srl}; // SRL & SRA
+                3'h6: valid_and_execute_out <= {1, or_res}; // OR
+                3'h7: valid_and_execute_out <= {1, and_res}; // AND
+                default: ex_mem.valid <= 0;
             endcase
         end else begin
             ex_mem.execute_out  <= jal;
-            execute_pc_JAL_MUX  <= 1; //if JAL, set PC JAL mux control bit
             execute_pc_JAL_addr <= jal;
+            execute_pc_JAL_MUX  <= 1'b1; //if JAL, set PC JAL mux control bit
         end
     
         ex_mem.opcode  <= id_ex_s1.opcode;
@@ -142,7 +111,5 @@ module execute_stage(
         end else begin
             ex_mem.valid        <= id_ex_s1.valid;
         end
-        
     end
-
 endmodule
