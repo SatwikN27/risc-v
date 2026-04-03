@@ -15,8 +15,9 @@ module fetch_stage (
     input logic [31:0]  execute_pc_JAL_addr,
 
     // output is a 
-    output rv_pipe_pkg::if_id_t if_id
+    output rv_pipe_pkg::if_id_t if_id,
     //output logic [31:0] instruction
+    output logic        JAL_taken    //set to 1 when PC is set to JAL_addr
 );
     import rv_pipe_pkg::*;
 
@@ -46,7 +47,7 @@ module fetch_stage (
     
     logic [15:0] PC_pipe_1_lower;
     logic [15:0] PC_pipe_1_upper;
-    
+    logic JAL_taken_pipe;
 
     always_ff @ (posedge clk) begin
         if(!rst_n) begin
@@ -57,8 +58,9 @@ module fetch_stage (
             
         end else if (pc_flush) begin
             {PC_pipe_0_lower, PC_pipe_0_upper} <= pc_flush_addr;
-        end else if (pc_JAL_MUX) begin
-            {PC_pipe_0_lower, PC_pipe_0_upper} <= pc_JAL_addr;
+        end else if (execute_pc_JAL_MUX) begin
+            {PC_pipe_0_lower, PC_pipe_0_upper} <= execute_pc_JAL_addr;
+            JAL_taken                          <= 1'b1;
         end
         else begin
             PC_pipe_0_upper <= PC[31:16];
@@ -81,6 +83,8 @@ module fetch_stage (
             if_id.instruction    <= instr_data;
             if_id.valid          <= instr_valid_out;
             if_id.opcode         <= instr_data[6:0];
+            if_id.JAL_taken      <= JAL_taken_pipe;
+            JAL_taken_pipe       <= JAL_taken;
         
             //instruction          <= instr_data;
         end

@@ -71,7 +71,7 @@ module execute_stage(
     // ── execute Stage 2: select correct result ───────────────────────────────
     always_ff @(posedge clk) begin
        
-        if (id_ex_s1.opcode == JAL) begin
+        if (id_ex_s1.opcode == JAL && !jal_last_stage) begin
             jal_last_stage <= 1;
         end else begin
             jal_last_stage <= 0;
@@ -124,7 +124,9 @@ module execute_stage(
                 end
             endcase
         end else begin
-            ex_mem.execute_out <= jal;
+            ex_mem.execute_out  <= jal;
+            execute_pc_JAL_MUX  <= 1; //if JAL, set PC JAL mux control bit
+            execute_pc_JAL_addr <= jal;
         end
     
         ex_mem.opcode  <= id_ex_s1.opcode;
@@ -132,10 +134,13 @@ module execute_stage(
         ex_mem.rs2     <= id_ex_s1.rs2;
         ex_mem.func3   <= id_ex_s1.func3;
         
-        if(jal_last_stage) begin //check if instruction reaches end of pipeline and JAL is not yet taken
-            ex_mem.valid <= 0;
+        if(jal_last_stage) begin    //check if instruction reaches end of pipeline and branch is not yet taken
+            ex_mem.valid <= 0;      //clear output valid bit
+            if(id_ex_s1.JAL_taken) begin
+                jal_last_stage <= 0;
+            end
         end else begin
-            ex_mem.valid <= id_ex_s1.valid;
+            ex_mem.valid        <= id_ex_s1.valid;
         end
         
     end

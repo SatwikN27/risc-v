@@ -30,6 +30,7 @@ package rv_pipe_pkg;
         logic [31:0]    instruction;
         logic [6:0]     opcode;
         logic           valid;
+        logic           JAL_taken;
     } if_id_t;
 
     // ID/EX payload
@@ -44,6 +45,7 @@ package rv_pipe_pkg;
         logic [2:0]         func3;
         logic [6:0]         func7;
         logic               valid;
+        logic           JAL_taken;
     } id_ex_t;
 
     typedef struct packed {

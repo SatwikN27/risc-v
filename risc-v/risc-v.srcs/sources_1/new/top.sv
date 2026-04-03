@@ -55,6 +55,7 @@ module top(
 
     logic [31:0] execute_pc_JAL_addr;
     logic        execute_pc_JAL_MUX;
+    logic        JAL_taken;
 
     mem_wb_t mem_wb;
     
