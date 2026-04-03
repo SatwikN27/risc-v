@@ -55,12 +55,12 @@ module memory_stage(
     logic [3:0]     write_en;
     logic [31:0]    write_addr;
     logic [31:0]    write_data;
-    logic           read_chip_en = 1'b1;
+    logic           read_chip_en = 1'b1;    //hardcoded for now... turn off for power efficiency, but read takes 2 cycles so must keep it on for longer than one pipeline stage??
     logic           read_valid_in;
     logic [31:0]    read_addr;
     logic [31:0]    read_data;
-
     
+    logic [31:0]     read_data_out;
     //opcode decode stage. Replace with control bits
     always_comb begin
         if(ex_mem.opcode == LOAD_IMMEDIATE) begin
@@ -69,11 +69,20 @@ module memory_stage(
             write_addr = 32'bx;
             write_data = 32'bx;
             
+            
         end else if(ex_mem.opcode == STORE) begin
-            write_en = 4'b1111;
+            if(ex_mem.func3 == 3'b000) begin    //store byte
+                write_en = 4'b0001;
+            end else if(ex_mem.func3 == 3'b001) begin   //store half
+                write_en = 4'b0011;
+            end else if(ex_mem.func3 == 3'b100) begin   //store word
+                write_en = 4'b1111;
+            end
+            
+            write_data = ex_mem.rs2;
             read_addr = 32'bx;
             write_addr = ex_mem.mem_addr;
-            write_data = ex_mem.rs2;
+                
             
         end else begin
             write_en = 4'b0000;
@@ -93,7 +102,7 @@ module memory_stage(
   
         end else if(!memory_stall) begin
             mem_wb.valid <= valid_pr2;
-            mem_wb.read_data <= read_data; 
+            mem_wb.read_data <= read_data_out; 
             mem_wb.opcode <= opcode_pr2;
             mem_wb.func3 <= func3_pr2;
             //mem_wb.func7 <= func7_pr2;
@@ -103,7 +112,7 @@ module memory_stage(
             valid_pr2 <= valid_pr1;
             opcode_pr2 <= opcode_pr1;
             func3_pr2 <= func3_pr1;
-            func7_pr2 <= func7_pr1;
+            //func7_pr2 <= func7_pr1;
             rd_addr_pr2 <= rd_addr_pr1;
             execute_out_pr2 <= execute_out_pr1;
             
