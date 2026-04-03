@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/leopm2/risc-v/risc-v/risc-v.runs/impl_1'
+HD_PWD='/home/srn6/pprojs/risc-v/risc-v/risc-v.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

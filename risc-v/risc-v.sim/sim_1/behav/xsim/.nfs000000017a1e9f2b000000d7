@@ -1,0 +1,22 @@
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_top.dut.u_fetch.instr_mem.i_mem.inst.native_mem_mapped_module.blk_mem_gen_v8_4_11_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module tb_top.dut.u_memory.main_mem.main_mem_block.inst.native_mem_mapped_module.blk_mem_gen_v8_4_11_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+cycle=0 pc=         x if_id_instr=xxxxxxxx if_instr_addr=xxxxxxxx if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+cycle=2 pc=         x if_id_instr=00000000 if_instr_addr=00000000 if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+cycle=3 pc=         0 if_id_instr=00000000 if_instr_addr=00000004 if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+cycle=4 pc=         4 if_id_instr=00000000 if_instr_addr=00000008 if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+cycle=5 pc=         8 if_id_instr=00000000 if_instr_addr=0000000c if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+cycle=6 pc=        12 if_id_instr=00000000 if_instr_addr=00000010 if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+cycle=7 pc=        16 if_id_instr=00000000 if_instr_addr=00000014 if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+cycle=8 pc=        20 if_id_instr=00000000 if_instr_addr=00000018 if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+cycle=9 pc=        24 if_id_instr=00000000 if_instr_addr=0000001c if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+cycle=10 pc=        28 if_id_instr=00000000 if_instr_addr=00000020 if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+cycle=11 pc=        32 if_id_instr=00000000 if_instr_addr=00000024 if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+cycle=12 pc=        36 if_id_instr=00000000 if_instr_addr=00000028 if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+cycle=13 pc=        40 if_id_instr=00000000 if_instr_addr=0000002c if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+cycle=14 pc=        44 if_id_instr=00000000 if_instr_addr=00000030 if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+cycle=15 pc=        48 if_id_instr=00000000 if_instr_addr=00000034 if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+cycle=16 pc=        52 if_id_instr=00000000 if_instr_addr=00000038 if_instr_data=00000000 if_rst_en=1 if_pc_stall=0 
+INFO: xsimkernel Simulation Memory Usage: 488516 KB (Peak: 532776 KB), Simulation CPU Usage: 990 ms

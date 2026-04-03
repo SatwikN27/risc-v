@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Thu Apr  2 00:31:09 2026
-| Host         : gelib-4e-42.ews.illinois.edu running 64-bit Red Hat Enterprise Linux 9.7 (Plow)
+| Date         : Thu Apr  2 23:57:58 2026
+| Host         : gelib-4e-30.ews.illinois.edu running 64-bit Red Hat Enterprise Linux 9.7 (Plow)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
 | Device       : xc7s50csga324-1IL
@@ -23,26 +23,15 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 42
-+-----------+----------+--------------------------------------------+--------+
-| Rule      | Severity | Description                                | Checks |
-+-----------+----------+--------------------------------------------+--------+
-| SYNTH-6   | Warning  | Timing of a RAM block might be sub-optimal | 2      |
-| TIMING-18 | Warning  | Missing input or output delay              | 40     |
-+-----------+----------+--------------------------------------------+--------+
+             Checks found: 40
++-----------+----------+-------------------------------+--------+
+| Rule      | Severity | Description                   | Checks |
++-----------+----------+-------------------------------+--------+
+| TIMING-18 | Warning  | Missing input or output delay | 40     |
++-----------+----------+-------------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
-SYNTH-6#1 Warning
-Timing of a RAM block might be sub-optimal  
-The timing for the instance u_decode/register_file_reg_1, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
-Related violations: <none>
-
-SYNTH-6#2 Warning
-Timing of a RAM block might be sub-optimal  
-The timing for the instance u_decode/register_file_reg_2, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
-Related violations: <none>
-
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on rst_n relative to the rising and/or falling clock edge(s) of clk.

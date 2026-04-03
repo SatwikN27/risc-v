@@ -28,7 +28,7 @@ module decode_stage (
     logic msb;
     assign msb = instruction[31];
 
-    logic [31:0] register_file [0:31];
+    (* ram_style = "distributed" *) reg  [31:0] register_file [0:31];
     
     //always_ff @(posedge clk) register_file_exposed <= register_file[wb_dec.rd_addr];
     

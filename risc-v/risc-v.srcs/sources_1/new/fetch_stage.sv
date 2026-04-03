@@ -55,19 +55,21 @@ module fetch_stage (
             {PC_pipe_1_upper, PC_pipe_1_lower} <= 32'd4;
             PC_pipe_0_cout <= 1'b0;
             {PC_pipe_0_upper, PC_pipe_0_lower} <= 32'd8;
-            
+            JAL_taken                          <= 1'b0;
         end else if (pc_flush) begin
             {PC_pipe_0_lower, PC_pipe_0_upper} <= pc_flush_addr;
-        end else if (execute_pc_JAL_MUX) begin
-            {PC_pipe_0_lower, PC_pipe_0_upper} <= execute_pc_JAL_addr;
-            JAL_taken                          <= 1'b1;
-        end
+            JAL_taken                          <= 1'b0;
+        end //else if (execute_pc_JAL_MUX) begin
+//            {PC_pipe_0_lower, PC_pipe_0_upper} <= execute_pc_JAL_addr;
+//            JAL_taken                          <= 1'b1;
+//        end 
         else begin
             PC_pipe_0_upper <= PC[31:16];
             {PC_pipe_0_cout, PC_pipe_0_lower} <= PC[15:0] + 12;
                 
             PC_pipe_1_lower <= PC_pipe_0_lower;
             PC_pipe_1_upper <= PC_pipe_0_upper + PC_pipe_0_cout;
+            JAL_taken                          <= 1'b0;
         end 
     end
     
