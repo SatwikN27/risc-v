@@ -3,7 +3,9 @@ module execute_stage(
     input clk,
     input rst_n,
     input rv_pipe_pkg::id_ex_t id_ex,
-    output rv_pipe_pkg::ex_mem_t ex_mem
+    output rv_pipe_pkg::ex_mem_t ex_mem,
+    output logic [31:0] execute_pc_JAL_addr,
+    output logic execute_pc_JAL_MUX
 );
     import rv_pipe_pkg::*;
 
@@ -63,7 +65,7 @@ module execute_stage(
         sra     <= 32'($signed(rs1) >>> value2[4:0]);
         or_res  <= rs1 | value2;
         and_res <= rs1 & value2;
-        jal     <= rs1 + id_ex.immediates.immJ;
+        jal     <= id_ex.pc + id_ex.immediates.immJ;
     end
 
     // ── execute Stage 2: select correct result ───────────────────────────────
@@ -130,7 +132,7 @@ module execute_stage(
         ex_mem.rs2     <= id_ex_s1.rs2;
         ex_mem.func3   <= id_ex_s1.func3;
         
-        if (id_ex_s1.opcode == JAL) begin
+        if(jal_last_stage) begin //check if instruction reaches end of pipeline and JAL is not yet taken
             ex_mem.valid <= 0;
         end else begin
             ex_mem.valid <= id_ex_s1.valid;

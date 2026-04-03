@@ -53,6 +53,9 @@ module top(
 
     execute_stage u_execute(.*);
 
+    logic [31:0] execute_pc_JAL_addr;
+    logic        execute_pc_JAL_MUX;
+
     mem_wb_t mem_wb;
     
     logic memory_flush = 0;

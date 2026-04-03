@@ -11,6 +11,8 @@ module fetch_stage (
     input logic         pc_stall,
     input logic         pc_flush,
     input logic [31:0]  pc_flush_addr,
+    input logic         execute_pc_JAL_MUX,
+    input logic [31:0]  execute_pc_JAL_addr,
 
     // output is a 
     output rv_pipe_pkg::if_id_t if_id
@@ -55,13 +57,16 @@ module fetch_stage (
             
         end else if (pc_flush) begin
             {PC_pipe_0_lower, PC_pipe_0_upper} <= pc_flush_addr;
-        end else begin
+        end else if (pc_JAL_MUX) begin
+            {PC_pipe_0_lower, PC_pipe_0_upper} <= pc_JAL_addr;
+        end
+        else begin
             PC_pipe_0_upper <= PC[31:16];
             {PC_pipe_0_cout, PC_pipe_0_lower} <= PC[15:0] + 12;
                 
             PC_pipe_1_lower <= PC_pipe_0_lower;
             PC_pipe_1_upper <= PC_pipe_0_upper + PC_pipe_0_cout;
-        end
+        end 
     end
     
     
