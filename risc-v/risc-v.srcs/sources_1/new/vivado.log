@@ -3,25 +3,122 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Thu Apr  2 21:20:01 2026
-# Process ID         : 120544
+# Start of session at: Fri Apr  3 16:55:59 2026
+# Process ID         : 657949
 # Current directory  : /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new
 # Command line       : vivado
 # Log file           : /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/vivado.log
 # Journal file       : /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/vivado.jou
-# Running On         : gelib-4e-32.ews.illinois.edu
+# Running On         : gelib-4e-30.ews.illinois.edu
 # Platform           : RedHatEnterprise
 # Operating System   : Red Hat Enterprise Linux 9.7 (Plow)
 # Processor Detail   : Intel(R) Xeon(R) W-1350 @ 3.30GHz
-# CPU Frequency      : 1905.839 MHz
+# CPU Frequency      : 4269.746 MHz
 # CPU Physical cores : 6
 # CPU Logical cores  : 12
 # Host memory        : 16208 MB
 # Swap memory        : 4294 MB
 # Total Virtual      : 20503 MB
-# Available Virtual  : 16502 MB
+# Available Virtual  : 17246 MB
 #-----------------------------------------------------------
 start_gui
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /software/xilinx-2025.1/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /software/xilinx-2025.1/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /software/xilinx-2025.1/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_project /home/rohankr2/projects/risc-v/risc-v/risc-v.xpr
+INFO: [Project 1-313] Project file moved from '/home/srn6/pprojs/risc-v/risc-v' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /software/xilinx-2025.1/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /software/xilinx-2025.1/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /software/xilinx-2025.1/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/software/xilinx-2025.1/2025.1/Vivado/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found '/home/rohankr2/projects/risc-v/risc-v/risc-v.gen/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found '/home/rohankr2/projects/risc-v/risc-v/risc-v.gen/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found '/home/rohankr2/projects/risc-v/risc-v/risc-v.gen/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found '/home/rohankr2/projects/risc-v/risc-v/risc-v.gen/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'blk_mem_gen_0' generated file not found '/home/rohankr2/projects/risc-v/risc-v/risc-v.gen/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0_sim_netlist.vhdl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 10396.922 ; gain = 224.359 ; free physical = 5554 ; free virtual = 15227
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/utils_1/imports/synth_1/instruction_memory.dcp with file /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/top.dcp
+launch_runs impl_1 -jobs 6
+[Fri Apr  3 16:57:51 2026] Launched blk_mem_gen_0_synth_1, synth_1...
+Run output will be captured here:
+blk_mem_gen_0_synth_1: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/blk_mem_gen_0_synth_1/runme.log
+synth_1: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/runme.log
+[Fri Apr  3 16:57:51 2026] Launched impl_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/runme.log
+reset_run synth_1
+reset_run blk_mem_gen_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Process appears to be owned by user 'srn6' and cannot be killed by user 'rohankr2'
+
+launch_runs impl_1 -jobs 6
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'...
+[Fri Apr  3 17:00:08 2026] Launched blk_mem_gen_0_synth_1, synth_1...
+Run output will be captured here:
+blk_mem_gen_0_synth_1: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/blk_mem_gen_0_synth_1/runme.log
+synth_1: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/runme.log
+[Fri Apr  3 17:00:08 2026] Launched impl_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+launch_runs impl_1 -jobs 6
+[Fri Apr  3 17:07:21 2026] Launched synth_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/runme.log
+[Fri Apr  3 17:07:21 2026] Launched impl_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/utils_1/imports/synth_1/instruction_memory.dcp with file /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/top.dcp
+launch_runs impl_1 -jobs 6
+[Fri Apr  3 17:15:39 2026] Launched synth_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/runme.log
+[Fri Apr  3 17:15:39 2026] Launched impl_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7s50csga324-1IL
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 10741.941 ; gain = 0.000 ; free physical = 5542 ; free virtual = 13239
+INFO: [Netlist 29-17] Analyzing 76 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10798.816 ; gain = 1.000 ; free physical = 5479 ; free virtual = 13175
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11314.680 ; gain = 0.000 ; free physical = 5056 ; free virtual = 12753
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 11314.680 ; gain = 0.000 ; free physical = 5056 ; free virtual = 12752
+Read PlaceDB: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 11314.680 ; gain = 0.000 ; free physical = 5056 ; free virtual = 12752
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11314.680 ; gain = 0.000 ; free physical = 5056 ; free virtual = 12752
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 11314.680 ; gain = 0.000 ; free physical = 5056 ; free virtual = 12752
+Read Physdb Files: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 11314.680 ; gain = 0.000 ; free physical = 5056 ; free virtual = 12752
+Restored from archive | CPU: 0.070000 secs | Memory: 1.803215 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 11314.680 ; gain = 0.000 ; free physical = 5056 ; free virtual = 12752
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11314.680 ; gain = 0.000 ; free physical = 5056 ; free virtual = 12752
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 11611.078 ; gain = 1013.332 ; free physical = 6776 ; free virtual = 14476

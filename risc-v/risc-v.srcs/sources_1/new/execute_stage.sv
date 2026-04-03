@@ -87,13 +87,13 @@ module execute_stage(
                 3'h2: valid_and_execute_out <= {1, slt}; // SLT
                 3'h3: valid_and_execute_out <= {1, sltu}; // SLTU
                 3'h4: valid_and_execute_out <= {1, xor_res}; // XOR
-                3'h5: valid_and_execute_out <= {1, id_ex_s1.func7 = 7'h20 ? sra : srl}; // SRL & SRA
+                3'h5: valid_and_execute_out <= {1, id_ex_s1.func7 == 7'h20 ? sra : srl}; // SRL & SRA
                 3'h6: valid_and_execute_out <= {1, or_res}; // OR
                 3'h7: valid_and_execute_out <= {1, and_res}; // AND
-                default: ex_mem.valid <= 0;
+                default: valid_and_execute_out <= 32'b0;
             endcase
         end else begin
-            ex_mem.execute_out  <= jal;
+            valid_and_execute_out[31:0]  <= jal;
             execute_pc_JAL_addr <= jal;
             execute_pc_JAL_MUX  <= 1'b1; //if JAL, set PC JAL mux control bit
         end
@@ -104,12 +104,12 @@ module execute_stage(
         ex_mem.func3   <= id_ex_s1.func3;
         
         if(jal_last_stage) begin    //check if instruction reaches end of pipeline and branch is not yet taken
-            ex_mem.valid <= 0;      //clear output valid bit
+            valid_and_execute_out <= 32'b0;      //clear output valid bit
             if(id_ex_s1.JAL_taken) begin
                 jal_last_stage <= 0;
             end
         end else begin
-            ex_mem.valid        <= id_ex_s1.valid;
+            valid_and_execute_out[32]        <= id_ex_s1.valid;
         end
     end
 endmodule
