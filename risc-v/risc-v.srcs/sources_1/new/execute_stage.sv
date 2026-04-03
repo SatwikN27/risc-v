@@ -75,7 +75,7 @@ module execute_stage(
     always_ff @(posedge clk) begin
        
         if (id_ex_s1.opcode == JAL) begin
-            ex_mem.valid <= 0;      //clear output valid bit
+            valid_and_execute_out <= 32'b0;      //clear output valid bit
             if (id_ex_s1.JAL_taken) begin
             jal_last_stage <= 0;
         end else if(!jal_last_stage) begin
@@ -111,16 +111,14 @@ module execute_stage(
         ex_mem.rs2     <= id_ex_s1.rs2;
         ex_mem.func3   <= id_ex_s1.func3;
         
-<<<<<<< HEAD
-=======
-        if(jal_last_stage) begin    //check if instruction reaches end of pipeline and branch is not yet taken
-            valid_and_execute_out <= 32'b0;      //clear output valid bit
-            if(id_ex_s1.JAL_taken) begin
-                jal_last_stage <= 0;
-            end
-        end else begin
-            valid_and_execute_out[32]        <= id_ex_s1.valid;
-        end
->>>>>>> 64a6a07accd82247929877677383ed4125f224a6
+        
+//        if(jal_last_stage) begin    //check if instruction reaches end of pipeline and branch is not yet taken
+//            valid_and_execute_out <= 32'b0;      //clear output valid bit
+//            if(id_ex_s1.JAL_taken) begin
+//                jal_last_stage <= 0;
+//            end
+//        end else begin
+//            valid_and_execute_out[32]        <= id_ex_s1.valid;
+//        end
     end
 endmodule
