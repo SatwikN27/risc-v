@@ -1,0 +1,160 @@
+/*
+
+AMD Vivado v2025.1 (64-bit) [Major: 2025, Minor: 1]
+SW Build: 6140274 on Wed May 21 22:58:25 MDT 2025
+IP Build: 6138677 on Thu May 22 03:10:11 MDT 2025
+IP Build: 6138677 on Thu May 22 03:10:11 MDT 2025
+
+Process ID (PID): 1203201
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri Apr 03 23:27:33 CDT 2026
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Red Hat Enterprise Linux release 9.7 (Plow)
+OS Version: 5.14.0-611.45.1.el9_7.x86_64
+OS Architecture: amd64
+Available processors (cores): 12
+LSB Release Description: NAME=Red Hat Enterprise Linux
+
+Display: 0
+Screen size: 1920x1080
+Local screen bounds: x = 0, y = 32, width = 1920, height = 1012
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.1 64-bit
+
+Java home: 	/software/xilinx-2025.1/2025.1/tps/lnx64/jre21.0.1_12
+Java executable: 	/software/xilinx-2025.1/2025.1/tps/lnx64/jre21.0.1_12/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:ParallelGCThreads=4, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms812m, -Xmx6144m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	812 MB
+Java maximum memory (-Xmx):	 6 GB
+
+User name: 	rohankr2
+User home directory: /home/rohankr2
+User working directory: /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /software/xilinx-2025.1/2025.1
+HDI_APPROOT: /software/xilinx-2025.1/2025.1/Vivado
+RDI_DATADIR: /software/xilinx-2025.1/2025.1/SharedData/data:/software/xilinx-2025.1/2025.1/Vivado/data
+RDI_BINDIR: /software/xilinx-2025.1/2025.1/Vivado/bin
+
+Vivado preferences file: /home/rohankr2/.Xilinx/Vivado/2025.1/vivado.xml
+Vivado preferences directory: /home/rohankr2/.Xilinx/Vivado/2025.1/
+Vivado layouts directory: /home/rohankr2/.Xilinx/Vivado/2025.1/data/layouts
+PlanAhead jar file: 	/software/xilinx-2025.1/2025.1/Vivado/lib/classes/planAhead.jar
+Vivado log file: 	/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/vivado.log
+Vivado journal file: 	/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1203201-gelib-4e-30.ews.illinois.edu
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: /software/xilinx-2025.1/2025.1/Vivado
+RDI_BASEROOT: /software/xilinx-2025.1/2025.1
+RDI_BINROOT: /software/xilinx-2025.1/2025.1/Vivado/bin
+RDI_BUILD: yes
+RDI_DATADIR: /software/xilinx-2025.1/2025.1/SharedData/data:/software/xilinx-2025.1/2025.1/Vivado/data
+RDI_INSTALLROOT: /software/xilinx-2025.1
+RDI_INSTALLVER: Vivado
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: /software/xilinx-2025.1/2025.1/Vivado/lib/lnx64.o/Rhel/9:/software/xilinx-2025.1/2025.1/Vivado/lib/lnx64.o/Rhel:/software/xilinx-2025.1/2025.1/Vivado/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /software/xilinx-2025.1/2025.1/Vitis/bin:/software/xilinx-2025.1/2025.1/Vivado/ids_lite/ISE/bin/lin64
+RDI_PROG: /software/xilinx-2025.1/2025.1/Vivado/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new:gelib-4e-30.ews.illinois.edu_1775276835_1203124
+RDI_SHARED_DATA: /software/xilinx-2025.1/2025.1/SharedData/data
+RDI_TPS_ROOT: /software/xilinx-2025.1/2025.1/Vivado/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /bin/bash
+XILINX: /software/xilinx-2025.1/2025.1/Vivado/ids_lite/ISE
+XILINX_DSP: /software/xilinx-2025.1/2025.1/Vivado/ids_lite/ISE
+XILINX_HLS: /software/xilinx-2025.1/2025.1/Vitis
+XILINX_PLANAHEAD: /software/xilinx-2025.1/2025.1/Vivado
+XILINX_SDK: /software/xilinx-2025.1/2025.1/Vitis
+XILINX_VITIS: /software/xilinx-2025.1/2025.1/Vitis
+XILINX_VIVADO: /software/xilinx-2025.1/2025.1/Vivado
+
+
+GUI allocated memory:	812 MB
+GUI max memory:		6,144 MB
+Engine allocated memory: 2,180 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/rohankr2/projects/risc-v/risc-v/risc-v.xpr", 0); // b.c (PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS)
+// [GUI Memory]: 114 MB (+117163kb) [00:00:11]
+// [Engine Memory]: 1,951 MB (+1894267kb) [00:00:11]
+// Opening Vivado Project: /home/rohankr2/projects/risc-v/risc-v/risc-v.xpr. Version: Vivado v2025.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: open_project /home/rohankr2/projects/risc-v/risc-v/risc-v.xpr 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 140 MB (+21446kb) [00:00:13]
+// [Engine Memory]: 2,118 MB (+72888kb) [00:00:13]
+// WARNING: HEventQueue.dispatchEvent() is taking  1585 ms.
+// Tcl Message: open_project /home/rohankr2/projects/risc-v/risc-v/risc-v.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/software/xilinx-2025.1/2025.1/Vivado/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,190 MB. GUI used memory: 71 MB. Current time: 4/3/26, 11:27:33 PM CDT
+// Project name: risc-v; location: /home/rohankr2/projects/risc-v/risc-v; part: xc7s50csga324-1IL
+dismissDialog("Open Project"); // bk (Open Project Progress)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, PAResourceEtoH.FileSetView_ADD_TAB, "Libraries", 2); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, instruction_memory.sv]", 6, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, execute_stage.sv]", 8, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SystemVerilog, xil_defaultlib, execute_stage.sv]", 8, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+// [Engine Memory]: 2,235 MB (+11261kb) [00:00:31]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 56s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 58s
