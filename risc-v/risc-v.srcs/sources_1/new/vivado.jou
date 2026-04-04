@@ -37,3 +37,48 @@ reset_run synth_1
 launch_runs impl_1 -jobs 6
 wait_on_run impl_1
 open_run impl_1
+reset_run synth_1
+save_constraints -force
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+close_design
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+close_design
+reset_run impl_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+close_design
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+close_design
+open_run impl_1
+open_run synth_1 -name synth_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
