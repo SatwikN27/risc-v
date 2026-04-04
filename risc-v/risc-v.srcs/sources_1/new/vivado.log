@@ -150,3 +150,571 @@ WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-f
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/utils_1/imports/synth_1/instruction_memory.dcp with file /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/top.dcp
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+save_constraints -force
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+launch_runs impl_1 -jobs 6
+[Fri Apr  3 20:40:18 2026] Launched synth_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/runme.log
+[Fri Apr  3 20:40:18 2026] Launched impl_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/runme.log
+close_design
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+[Fri Apr  3 20:44:34 2026] Launched synth_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/runme.log
+[Fri Apr  3 20:44:34 2026] Launched impl_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+[Fri Apr  3 20:47:16 2026] Launched synth_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/runme.log
+[Fri Apr  3 20:47:16 2026] Launched impl_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/runme.log
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 11839.098 ; gain = 0.000 ; free physical = 3323 ; free virtual = 11153
+INFO: [Netlist 29-17] Analyzing 80 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11839.098 ; gain = 0.000 ; free physical = 3341 ; free virtual = 11170
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11839.098 ; gain = 0.000 ; free physical = 3352 ; free virtual = 11180
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11839.098 ; gain = 0.000 ; free physical = 3352 ; free virtual = 11180
+Read PlaceDB: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 11839.098 ; gain = 0.000 ; free physical = 3352 ; free virtual = 11180
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11839.098 ; gain = 0.000 ; free physical = 3352 ; free virtual = 11180
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 11839.098 ; gain = 0.000 ; free physical = 3352 ; free virtual = 11180
+Read Physdb Files: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 11839.098 ; gain = 0.000 ; free physical = 3352 ; free virtual = 11180
+Restored from archive | CPU: 0.070000 secs | Memory: 1.813759 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 11839.098 ; gain = 0.000 ; free physical = 3352 ; free virtual = 11180
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11839.098 ; gain = 0.000 ; free physical = 3352 ; free virtual = 11180
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 11859.074 ; gain = 19.977 ; free physical = 3354 ; free virtual = 11186
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/utils_1/imports/synth_1/instruction_memory.dcp with file /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/top.dcp
+launch_runs impl_1 -jobs 6
+[Fri Apr  3 21:28:56 2026] Launched synth_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/runme.log
+[Fri Apr  3 21:28:56 2026] Launched impl_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+close_design
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 11982.664 ; gain = 0.000 ; free physical = 3216 ; free virtual = 11149
+INFO: [Netlist 29-17] Analyzing 110 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 11982.664 ; gain = 0.000 ; free physical = 3218 ; free virtual = 11150
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11982.664 ; gain = 0.000 ; free physical = 3229 ; free virtual = 11162
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11982.664 ; gain = 0.000 ; free physical = 3229 ; free virtual = 11162
+Read PlaceDB: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 11982.664 ; gain = 0.000 ; free physical = 3229 ; free virtual = 11162
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11982.664 ; gain = 0.000 ; free physical = 3229 ; free virtual = 11162
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 11982.664 ; gain = 0.000 ; free physical = 3229 ; free virtual = 11162
+Read Physdb Files: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 11982.664 ; gain = 0.000 ; free physical = 3229 ; free virtual = 11162
+Restored from archive | CPU: 0.060000 secs | Memory: 1.805717 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 11982.664 ; gain = 0.000 ; free physical = 3229 ; free virtual = 11162
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11982.664 ; gain = 0.000 ; free physical = 3229 ; free virtual = 11162
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 12018.688 ; gain = 36.023 ; free physical = 3213 ; free virtual = 11149
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/utils_1/imports/synth_1/instruction_memory.dcp with file /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/top.dcp
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+launch_runs impl_1 -jobs 6
+[Fri Apr  3 21:57:44 2026] Launched synth_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/runme.log
+[Fri Apr  3 21:57:44 2026] Launched impl_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/runme.log
+close_design
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+reset_run impl_1
+launch_runs impl_1 -jobs 6
+[Fri Apr  3 22:03:09 2026] Launched impl_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/runme.log
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/utils_1/imports/synth_1/instruction_memory.dcp with file /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/top.dcp
+launch_runs impl_1 -jobs 6
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+[Fri Apr  3 22:04:23 2026] Launched synth_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/runme.log
+[Fri Apr  3 22:04:23 2026] Launched impl_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 12018.688 ; gain = 0.000 ; free physical = 5081 ; free virtual = 13012
+INFO: [Netlist 29-17] Analyzing 80 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 12018.688 ; gain = 0.000 ; free physical = 5086 ; free virtual = 13016
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12018.688 ; gain = 0.000 ; free physical = 5014 ; free virtual = 12944
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 12018.688 ; gain = 0.000 ; free physical = 5014 ; free virtual = 12944
+Read PlaceDB: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 12018.688 ; gain = 0.000 ; free physical = 5014 ; free virtual = 12944
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12018.688 ; gain = 0.000 ; free physical = 5014 ; free virtual = 12944
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 12018.688 ; gain = 0.000 ; free physical = 5014 ; free virtual = 12944
+Read Physdb Files: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 12018.688 ; gain = 0.000 ; free physical = 5014 ; free virtual = 12944
+Restored from archive | CPU: 0.080000 secs | Memory: 1.114998 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 12018.688 ; gain = 0.000 ; free physical = 5014 ; free virtual = 12944
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12018.688 ; gain = 0.000 ; free physical = 5014 ; free virtual = 12944
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 12059.043 ; gain = 40.355 ; free physical = 5012 ; free virtual = 12947
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/utils_1/imports/synth_1/instruction_memory.dcp with file /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/top.dcp
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+launch_runs impl_1 -jobs 6
+[Fri Apr  3 22:23:35 2026] Launched synth_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/runme.log
+[Fri Apr  3 22:23:35 2026] Launched impl_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/runme.log
+close_design
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12106.051 ; gain = 0.000 ; free physical = 5168 ; free virtual = 13109
+INFO: [Netlist 29-17] Analyzing 79 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'top' is not ideal for floorplanning, since the cellview 'execute_stage' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 12106.051 ; gain = 0.000 ; free physical = 5168 ; free virtual = 13109
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12128.043 ; gain = 0.000 ; free physical = 5137 ; free virtual = 13078
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12128.043 ; gain = 0.000 ; free physical = 5137 ; free virtual = 13078
+Read PlaceDB: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 12128.043 ; gain = 0.000 ; free physical = 5137 ; free virtual = 13078
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12128.043 ; gain = 0.000 ; free physical = 5137 ; free virtual = 13078
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 12128.043 ; gain = 0.000 ; free physical = 5137 ; free virtual = 13078
+Read Physdb Files: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 12128.043 ; gain = 0.000 ; free physical = 5137 ; free virtual = 13078
+Restored from archive | CPU: 0.060000 secs | Memory: 2.226311 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 12128.043 ; gain = 0.000 ; free physical = 5137 ; free virtual = 13078
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12128.043 ; gain = 0.000 ; free physical = 5137 ; free virtual = 13078
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 12172.070 ; gain = 66.020 ; free physical = 5048 ; free virtual = 12993
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/utils_1/imports/synth_1/instruction_memory.dcp with file /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/top.dcp
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+launch_runs impl_1 -jobs 6
+[Fri Apr  3 22:28:34 2026] Launched synth_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/synth_1/runme.log
+[Fri Apr  3 22:28:34 2026] Launched impl_1...
+Run output will be captured here: /home/rohankr2/projects/risc-v/risc-v/risc-v.runs/impl_1/runme.log
+close_design
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12172.070 ; gain = 0.000 ; free physical = 5050 ; free virtual = 12991
+INFO: [Netlist 29-17] Analyzing 80 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12172.070 ; gain = 0.000 ; free physical = 5051 ; free virtual = 12992
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12172.070 ; gain = 0.000 ; free physical = 5051 ; free virtual = 12992
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 12172.070 ; gain = 0.000 ; free physical = 5051 ; free virtual = 12992
+Read PlaceDB: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 12172.070 ; gain = 0.000 ; free physical = 5051 ; free virtual = 12992
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12172.070 ; gain = 0.000 ; free physical = 5051 ; free virtual = 12992
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 12172.070 ; gain = 0.000 ; free physical = 5051 ; free virtual = 12992
+Read Physdb Files: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 12172.070 ; gain = 0.000 ; free physical = 5051 ; free virtual = 12992
+Restored from archive | CPU: 0.060000 secs | Memory: 1.898430 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 12172.070 ; gain = 0.000 ; free physical = 5051 ; free virtual = 12992
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12172.070 ; gain = 0.000 ; free physical = 5051 ; free virtual = 12992
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 12190.082 ; gain = 18.012 ; free physical = 5127 ; free virtual = 13072
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/fetch_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/tb_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/execute_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rohankr2/projects/risc-v/risc-v/risc-v.srcs/sources_1/new/decode_stage.sv:]

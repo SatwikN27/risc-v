@@ -9,10 +9,6 @@ module execute_stage(
 );
     import rv_pipe_pkg::*;
 
-    logic [31:0] rs1, rs2, value2;
-    assign rs1    = id_ex.rs1;
-    assign rs2    = id_ex.rs2;
-    assign value2 = {id_ex.opcode[5], id_ex.opcode[4]} == 2'b11 ? rs2 : id_ex.immediates.immI;
 
     // Control pipeline register — 1 cycle delay, shared by both stage-2 blocks
     id_ex_t id_ex_s1;
@@ -25,8 +21,8 @@ module execute_stage(
 	logic [15:0] mem_addr_I_sum_lower;
 	logic [15:0] mem_addr_S_sum_lower;
 
-	logic	 	 mem_add_I_co;
-	logic	 	 mem_add_S_co;
+	logic	 	 mem_addr_I_co;
+	logic	 	 mem_addr_S_co;
 
     // ── execute Stage 1 registers ────────────────────────────────────────────
 	logic [15:0] add_sum_lower; // ADD
@@ -80,30 +76,42 @@ module execute_stage(
 	logic [32:0] valid_and_execute_out; // {1, execute_out} for simplifying switch case
 
 	assign {ex_mem.valid, ex_mem.execute_out} = valid_and_execute_out;
- 
+	
+	logic [31:0] rs1, rs2, value2;
+    id_ex_t id_ex_s0;  // pre-stage: registered alongside rs1/value2
+
+	// ── Mux tree intermediates ────────────────────────────────────────────────
+	logic [31:0] mux_0_1, mux_2_3, mux_4_5, mux_6_7;
+	logic [31:0] mux_01_23, mux_45_67;
+	id_ex_t      id_ex_s2, id_ex_s3;
+	logic [31:0] jal_s2, jal_s3;
+
+	// ── Mem addr pipeline through mux tree stages ─────────────────────────────
+	logic [31:0] mem_addr_I_s2, mem_addr_S_s2;
+	logic [31:0] mem_addr_I_s3, mem_addr_S_s3;
+
+	// ── Latch and pipeline rs values and necessary imediates ───────────────────
+	always_ff @(posedge clk) begin
+		rs1      <= id_ex.rs1;
+		rs2      <= id_ex.rs2;
+		value2   <= {id_ex.opcode[5], id_ex.opcode[4]} == 2'b11 ? id_ex.rs2 : id_ex.immediates.immI;
+		id_ex_s0 <= id_ex;
+	end
+
     // ── mem_addr Stage 1: compute both address candidates ────────────────────
     always_ff @(posedge clk) begin
-        {mem_addr_I_co, mem_addr_I_sum_lower} <= rs1[15:0] + id_ex.immediates.immI[15:0];
-        {mem_addr_S_co, mem_addr_S_sum_lower} <= rs1[15:0] + id_ex.immediates.immS[15:0];
-        id_ex_s1   <= id_ex;  // pipeline control signals for both stage-2 blocks
+        {mem_addr_I_co, mem_addr_I_sum_lower} <= rs1[15:0] + id_ex_s0.immediates.immI[15:0];
+        {mem_addr_S_co, mem_addr_S_sum_lower} <= rs1[15:0] + id_ex_s0.immediates.immS[15:0];
+        id_ex_s1   <= id_ex_s0;  // pipeline control signals for both stage-2 blocks
     end
 
     // ── mem_addr Stage 2: select correct address ─────────────────────────────
 	always_ff @(posedge clk) begin
-		mem_addr_I <= {rs1[31:0] + id_ex_s1.immediates.immI[31:0] + mem_addr_I_co, mem_add_I_sum_lower};
-		mem_addr_S <= {rs1[31:0] + id_ex_s1.immediates.immS[31:0] + mem_addr_S_co, mem_add_S_sum_lower};
+		mem_addr_I <= {rs1[31:0] + id_ex_s1.immediates.immI[31:0] + mem_addr_I_co, mem_addr_I_sum_lower};
+		mem_addr_S <= {rs1[31:0] + id_ex_s1.immediates.immS[31:0] + mem_addr_S_co, mem_addr_S_sum_lower};
 	end
 
-    // ── mem_addr Stage 3: select correct address ─────────────────────────────
-    always_ff @(posedge clk) begin
-        if ({id_ex_s1.opcode[6], id_ex_s1.opcode[5], id_ex_s1.opcode[4],
-             id_ex_s1.opcode[1], id_ex_s1.opcode[0]} == 5'b00011) begin
-            ex_mem.mem_addr <= mem_addr_I;  // load: rs1 + immI
-        end else begin
-            ex_mem.mem_addr <= mem_addr_S;  // store: rs1 + immS
-        end
-    end
-
+    // ── execute stage 2: first half of execute operations  ─────────────────────────────
 	always_ff @(posedge clk) begin
 		{add_co_lower, add_sum_lower} <= rs1[15:0] + value2[15:0]; // ADD
 
@@ -127,13 +135,13 @@ module execute_stage(
 
 		and_res_bottom <= rs1[15:0] & value2[15:0]; // AND
 
-		{jal_co_lower, jal_sum_lower} <= id_ex.pc[15:0] + id_ex.immediates.immJ[15:0]; // JAL
+		{jal_co_lower, jal_sum_lower} <= id_ex.pc[15:0] + id_ex_s0.immediates.immJ[15:0]; // JAL
 
 		// Pipeline inputs
 		rs1_pipe   <= rs1;
 		value2_pipe <= value2;
-		pc_pipe    <= id_ex.pc;
-		immJ_pipe  <= id_ex.immediates.immJ;
+		pc_pipe    <= id_ex_s0.pc;
+		immJ_pipe  <= id_ex_s0.immediates.immJ;
 	end
 
 	always_ff @(posedge clk) begin
@@ -150,45 +158,67 @@ module execute_stage(
 		jal     <= 32'({pc_pipe[31:16] + immJ_pipe[31:16] + jal_co_lower, jal_sum_lower}); // JAL
 	end
 
-    // ── execute Stage 2: select correct result ───────────────────────────────
-    always_ff @(posedge clk) begin
-       
-        if (id_ex_s1.opcode == JAL && !jal_last_stage) begin
-            jal_last_stage <= 1;
-        end else begin
-            jal_last_stage <= 0;
-        end
-        
-        if (id_ex_s1.opcode != JAL) begin
-            unique case (id_ex_s1.func3)
-                3'h0: valid_and_execute_out <= {1, id_ex_s1.func7 == 7'h20 ? sub : add}; // SUB & ADD
-                3'h1: valid_and_execute_out <= {1, sll}; // SLL
-                3'h2: valid_and_execute_out <= {1, slt}; // SLT
-                3'h3: valid_and_execute_out <= {1, sltu}; // SLTU
-                3'h4: valid_and_execute_out <= {1, xor_res}; // XOR
-                3'h5: valid_and_execute_out <= {1, id_ex_s1.func7 == 7'h20 ? sra : srl}; // SRL & SRA
-                3'h6: valid_and_execute_out <= {1, or_res}; // OR
-                3'h7: valid_and_execute_out <= {1, and_res}; // AND
-                default: valid_and_execute_out <= 32'b0;
-            endcase
-        end else begin
-            valid_and_execute_out[31:0]  <= jal;
-            execute_pc_JAL_addr <= jal;
-            execute_pc_JAL_MUX  <= 1'b1; //if JAL, set PC JAL mux control bit
-        end
-    
-        ex_mem.opcode  <= id_ex_s1.opcode;
-        ex_mem.rd_addr <= id_ex_s1.rd_addr;
-        ex_mem.rs2     <= id_ex_s1.rs2;
-        ex_mem.func3   <= id_ex_s1.func3;
-        
-        if(jal_last_stage) begin    //check if instruction reaches end of pipeline and branch is not yet taken
-            valid_and_execute_out <= 32'b0;      //clear output valid bit
-            if(id_ex_s1.JAL_taken) begin
-                jal_last_stage <= 0;
-            end
-        end else begin
-            valid_and_execute_out[32]        <= id_ex_s1.valid;
-        end
-    end
+	// ── Mux tree stage A: level-1 select by func3[0] ─────────────────────────
+	always_ff @(posedge clk) begin
+		mux_0_1 <= id_ex_s1.func3[0] ? sll                                    : (id_ex_s1.func7 == 7'h20 ? sub : add);
+		mux_2_3 <= id_ex_s1.func3[0] ? sltu                                   : slt;
+		mux_4_5 <= id_ex_s1.func3[0] ? (id_ex_s1.func7 == 7'h20 ? sra : srl) : xor_res;
+		mux_6_7 <= id_ex_s1.func3[0] ? and_res                                : or_res;
+
+		mem_addr_I_s2 <= mem_addr_I;
+		mem_addr_S_s2 <= mem_addr_S;
+
+		jal_s2   <= jal;
+		id_ex_s2 <= id_ex_s1;
+	end
+
+	// ── Mux tree stage B: level-2 select by func3[1] ─────────────────────────
+	always_ff @(posedge clk) begin
+		mux_01_23 <= id_ex_s2.func3[1] ? mux_2_3 : mux_0_1;
+		mux_45_67 <= id_ex_s2.func3[1] ? mux_6_7 : mux_4_5;
+
+		mem_addr_I_s3 <= mem_addr_I_s2;
+		mem_addr_S_s3 <= mem_addr_S_s2;
+
+		jal_s3   <= jal_s2;
+		id_ex_s3 <= id_ex_s2;
+	end
+
+	// ── Mux tree stage C: level-3 select by func3[2] → output ────────────────
+	always_ff @(posedge clk) begin
+		if (id_ex_s3.opcode == JAL && !jal_last_stage) begin
+			jal_last_stage <= 1;
+		end else begin
+			jal_last_stage <= 0;
+		end
+
+		if (id_ex_s3.opcode != JAL) begin
+			valid_and_execute_out <= {1'b1, id_ex_s3.func3[2] ? mux_45_67 : mux_01_23};
+		end else begin
+			valid_and_execute_out[31:0] <= jal_s3;
+			execute_pc_JAL_addr         <= jal_s3;
+			execute_pc_JAL_MUX          <= 1'b1;
+		end
+
+		ex_mem.opcode  <= id_ex_s3.opcode;
+		ex_mem.rd_addr <= id_ex_s3.rd_addr;
+		ex_mem.rs2     <= id_ex_s3.rs2;
+		ex_mem.func3   <= id_ex_s3.func3;
+
+		if ({id_ex_s3.opcode[6], id_ex_s3.opcode[5], id_ex_s3.opcode[4],
+			 id_ex_s3.opcode[1], id_ex_s3.opcode[0]} == 5'b00011) begin
+			ex_mem.mem_addr <= mem_addr_I_s3;  // load: rs1 + immI
+		end else begin
+			ex_mem.mem_addr <= mem_addr_S_s3;  // store: rs1 + immS
+		end
+
+		if (jal_last_stage) begin
+			valid_and_execute_out <= 32'b0;
+			if (id_ex_s3.JAL_taken) begin
+				jal_last_stage <= 0;
+			end
+		end else begin
+			valid_and_execute_out[32] <= id_ex_s3.valid;
+		end
+	end
 endmodule
