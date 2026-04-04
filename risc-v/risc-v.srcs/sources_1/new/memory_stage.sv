@@ -63,13 +63,13 @@ module memory_stage(
     logic [31:0]     read_data_out;
     //opcode decode stage. Replace with control bits
     always_comb begin
-        if(ex_mem.opcode == LOAD_IMMEDIATE) begin
+		if (ex_mem.valid == 1'b0) begin
+			write_en = 4'b0000;
+		end if(ex_mem.opcode == LOAD_IMMEDIATE) begin
             write_en = 4'b0000;
             read_addr = ex_mem.mem_addr;
             write_addr = 32'bx;
             write_data = 32'bx;
-            
-            
         end else if(ex_mem.opcode == STORE) begin
             if(ex_mem.func3 == 3'b000) begin    //store byte
                 write_en = 4'b0001;

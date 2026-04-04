@@ -20,18 +20,18 @@
 
 
 module instruction_memory(
-    input logic         clk,            // clock
-    input logic         rst_n,          // reset
+    input logic         clk,            	// clock
+    input logic         rst_n, 	  		    // reset
     input logic         flush,
     input logic         stall,
-    input logic         instr_en,       // instruction enable
-    input logic  [31:0] instr_addr,     // instruction address
-    output logic [31:0] instr_data,     // instruction data
-    output logic        instr_valid_out // intstruction valid output
+    input logic         instr_en,       	// instruction enable
+    input logic  [31:0] instr_addr,     	// instruction address
+    output logic [31:0] instr_data,     	// instruction data
+    output logic        instr_valid_out,	// intstruction valid output
+	output logic 		i_reset 			// internal reset
     );
     
     logic valid_pr;     // valid bit pipeline register
-    logic i_reset;      // internal reset
     
     
     blk_mem_gen_0 i_mem (       // bram initilization

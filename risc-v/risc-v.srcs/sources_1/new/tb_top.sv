@@ -23,13 +23,12 @@ module tb_top;
 
     // Reset sequence
     initial begin
-        rst_n = 1;
-        #70;
         rst_n = 0;
+        #300;
+        rst_n = 1;
+        #1
         dut.u_decode.register_file[1] = 32'd5;
         dut.u_decode.register_file[2] = 32'd7;
-        #70;
-        rst_n = 1;
     end
 
     // Optional cycle counter
@@ -43,11 +42,19 @@ module tb_top;
     // Per-cycle log
     always @(posedge clk) begin
         if (rst_n) begin
-            $display("cycle=%0d pc=%d pc_JAL_ADDR=%h pc_JAL_MUX=%h",
+            $display("cycle=%0d\n\tpc=%0d inst_data=%b reg[3]=%0d reg[1]=%0d reg[2]=%0d\n\ti_mem_rsta=%0b i_mem_addra=%0d i_mem_ena=%0b i_mem_douta=%0b i_mem_rsta_busy=%0b" ,
                 cycle_count,
                 dut.if_id.pc,
-                dut.u_fetch.execute_pc_JAL_addr,
-                dut.u_fetch.execute_pc_JAL_MUX,
+                dut.if_id.instruction,
+                dut.u_decode.register_file[3],
+                dut.u_decode.register_file[1],
+                dut.u_decode.register_file[2],
+                dut.u_fetch.instr_mem.i_mem.rsta,
+                dut.u_fetch.instr_mem.i_mem.addra,
+                dut.u_fetch.instr_mem.i_mem.ena,
+                dut.u_fetch.instr_mem.i_mem.douta,
+                dut.u_fetch.instr_mem.i_mem.rsta_busy,
+                
             );
         end
     end
@@ -55,7 +62,7 @@ module tb_top;
     // Final checks
     initial begin
         // wait long enough for a few instructions to execute
-        #30000;
+        #9000;
 
         if (dut.u_decode.register_file[1] !== 32'd5) begin
             $display("FAIL: x1 expected 5, got %0d", dut.u_decode.register_file[1]);

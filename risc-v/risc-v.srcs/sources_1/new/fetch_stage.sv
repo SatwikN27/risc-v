@@ -29,6 +29,9 @@ module fetch_stage (
     logic [31:0]    instr_data;
     logic           instr_valid_out;
     
+	// instruction memory internal reset signal
+	logic i_reset;
+
     instruction_memory instr_mem (
         .clk                (clk),
         .rst_n              (rst_n),
@@ -37,7 +40,8 @@ module fetch_stage (
         .instr_en           (!pc_stall),
         .instr_addr         (PC),
         .instr_data         (instr_data),
-        .instr_valid_out    (instr_valid_out)
+        .instr_valid_out    (instr_valid_out),
+		.i_reset			(i_reset)
     );
 
     logic [15:0] PC_pipe_0_lower;
@@ -83,7 +87,7 @@ module fetch_stage (
         if(!pc_stall) begin
             if_id.pc             <= PC;
             if_id.instruction    <= instr_data;
-            if_id.valid          <= instr_valid_out;
+            if_id.valid          <= (!(| instr_data)) & instr_valid_out; // If all bits from the instr data are 0s, this is a nop and an invalid instruction
             if_id.opcode         <= instr_data[6:0];
             if_id.JAL_taken      <= JAL_taken_pipe;
             JAL_taken_pipe       <= JAL_taken;
