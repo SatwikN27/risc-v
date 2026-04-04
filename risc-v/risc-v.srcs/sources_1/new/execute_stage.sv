@@ -21,7 +21,48 @@ module execute_stage(
     logic [31:0] mem_addr_I;  // rs1 + immI  (load)
     logic [31:0] mem_addr_S;  // rs1 + immS  (store)
 
+    // ── mem_addr Stage 1 registers ───────────────────────────────────────────
+	logic [15:0] mem_addr_I_sum_lower;
+	logic [15:0] mem_addr_S_sum_lower;
+
+	logic	 	 mem_add_I_co;
+	logic	 	 mem_add_S_co;
+
     // ── execute Stage 1 registers ────────────────────────────────────────────
+	logic [15:0] add_sum_lower; // ADD
+	logic        add_co_lower;
+
+	logic [15:0] sub_sum_lower; // SUB
+	logic        sub_co_lower;
+
+	logic [15:0] sll_half_shift; // SLL
+
+	logic        slt_top_equals; // SLT
+	logic        slt_top_lt;
+
+	logic        sltu_top_equals; // SLTU
+	logic        sltu_top_lt;
+
+	logic [15:0] xor_res_bottom; // XOR
+
+	logic [31:0] srl_half_shift; // SRL
+
+	logic [31:0] sra_half_shift; // SRA
+
+	logic [15:0] or_res_bottom; // OR
+
+	logic [15:0] and_res_bottom; // AND
+
+	logic [15:0] jal_sum_lower; // JAL
+	logic        jal_co_lower;
+
+	// Piped inputs
+	logic [31:0] rs1_pipe;
+	logic [31:0] value2_pipe;
+	logic [31:0] pc_pipe;
+	logic [31:0] immJ_pipe;
+
+    // ── execute Stage 2 registers ────────────────────────────────────────────
     logic [31:0] add;      // ADD
     logic [31:0] sub;      // SUB
     logic [31:0] sll;      // SLL
@@ -42,12 +83,18 @@ module execute_stage(
  
     // ── mem_addr Stage 1: compute both address candidates ────────────────────
     always_ff @(posedge clk) begin
-        mem_addr_I <= rs1 + id_ex.immediates.immI;
-        mem_addr_S <= rs1 + id_ex.immediates.immS;
+        {mem_addr_I_co, mem_addr_I_sum_lower} <= rs1[15:0] + id_ex.immediates.immI[15:0];
+        {mem_addr_S_co, mem_addr_S_sum_lower} <= rs1[15:0] + id_ex.immediates.immS[15:0];
         id_ex_s1   <= id_ex;  // pipeline control signals for both stage-2 blocks
     end
 
     // ── mem_addr Stage 2: select correct address ─────────────────────────────
+	always_ff @(posedge clk) begin
+		mem_addr_I <= {rs1[31:0] + id_ex_s1.immediates.immI[31:0] + mem_addr_I_co, mem_add_I_sum_lower};
+		mem_addr_S <= {rs1[31:0] + id_ex_s1.immediates.immS[31:0] + mem_addr_S_co, mem_add_S_sum_lower};
+	end
+
+    // ── mem_addr Stage 3: select correct address ─────────────────────────────
     always_ff @(posedge clk) begin
         if ({id_ex_s1.opcode[6], id_ex_s1.opcode[5], id_ex_s1.opcode[4],
              id_ex_s1.opcode[1], id_ex_s1.opcode[0]} == 5'b00011) begin
@@ -57,62 +104,50 @@ module execute_stage(
         end
     end
 
-    // ── execute Stage 1: compute all candidates ──────────────────────────────
-    always_ff @(posedge clk) begin
-        add     <= rs1 + value2;
-        sub     <= rs1 - value2;
-        sll     <= rs1 << value2[4:0];
-        slt     <= ($signed(rs1) < $signed(value2)) ? 32'd1 : 32'd0;
-        sltu    <= (rs1 < value2)                   ? 32'd1 : 32'd0;
-        xor_res <= rs1 ^ value2;
-        srl     <= rs1 >> value2[4:0];
-        sra     <= 32'($signed(rs1) >>> value2[4:0]);
-        or_res  <= rs1 | value2;
-        and_res <= rs1 & value2;
-        jal     <= id_ex.pc + id_ex.immediates.immJ;
-    end
-
-	logic [15:0] add_sum_lower;
-	logic 		 add_co_lower;			
-
-	logic [15:0] sub_sum_lower;
-	logic 		 sub_co_lower;			
-
-	logic [15:0] sll_half_shift;
-
-	logic 		 slt_top_equals;
-	logic 		 slt_top_lt;
-
-	logic		 sltu_top_equals;
-	logic		 sltu_top_lt;
-
-	logic [15:0] xor_res_bottom;
-	
-	logic [31:0] rs1_pipe;
-	logic [31:0] value2_pipe;
-
 	always_ff @(posedge clk) begin
 		{add_co_lower, add_sum_lower} <= rs1[15:0] + value2[15:0]; // ADD
-		
+
 		{sub_co_lower, sub_sum_lower} <= rs1[15:0] + !value2[15:0] + 1; // SUB
-		
-		sll_half_shift <= rs1 <<< value2[3:0]; // SLL
 
-		slt_top_equals <= rs1[31:16] == value2[31:16];
-		slt_top_lt <= $signed(rs1[31:16]) < $signed(value2[31:16]);
+		sll_half_shift <= rs1 <<< value2[2:0]; // SLL
 
-		sltu_top_equals <= rs1[31:16] == value2[31:16];
-		sltu_top_lt <= rs1[31:16] < value2[31:16];
+		slt_top_equals <= rs1[31:16] == value2[31:16]; // SLT
+		slt_top_lt     <= $signed(rs1[31:16]) < $signed(value2[31:16]);
 
-		xor_res_bottom <= rs1[15:0] ^ value2[15:0];
+		sltu_top_equals <= rs1[31:16] == value2[31:16]; // SLTU
+		sltu_top_lt     <= rs1[31:16] < value2[31:16];
+
+		xor_res_bottom <= rs1[15:0] ^ value2[15:0]; // XOR
+
+		srl_half_shift <= rs1 >>> value2[2:0]; // SRL
+
+		sra_half_shift <= 32'($signed(rs1) >>> value2[2:0]); // SRA
+
+		or_res_bottom <= rs1[15:0] | value2[15:0]; // OR
+
+		and_res_bottom <= rs1[15:0] & value2[15:0]; // AND
+
+		{jal_co_lower, jal_sum_lower} <= id_ex.pc[15:0] + id_ex.immediates.immJ[15:0]; // JAL
+
+		// Pipeline inputs
+		rs1_pipe   <= rs1;
+		value2_pipe <= value2;
+		pc_pipe    <= id_ex.pc;
+		immJ_pipe  <= id_ex.immediates.immJ;
+	end
 
 	always_ff @(posedge clk) begin
-		add  	<= 32'({rs1_pipe[31:16] + value2_pipe[31:16] + add_co_lower, add_sum_lower});
-		sub  	<= 32'({rs1_pipe[31:16] + !value2_pipe[31:16] + add_co_lower, add_sum_lower});
-		sll  	<= sll_half_shift <<< {value2[4], 4'b0000};
-		slt  	<= slt_top_lt | (slt_top_equals & ($signed(rs1[15:0]) < $signed(value2[15:0])));
-		sltu 	<= slt_top_lt | (slt_top_equals & (rs1[15:0] < value2[15:0]));
-		xor_res <= {rs1[31:16] ^ value2[31:16], xor_res_bottom};
+		add     <= 32'({rs1_pipe[31:16] + value2_pipe[31:16] + add_co_lower, add_sum_lower}); // ADD
+		sub     <= 32'({rs1_pipe[31:16] + !value2_pipe[31:16] + sub_co_lower, sub_sum_lower}); // SUB
+		sll     <= sll_half_shift <<< {value2_pipe[4:3], 3'b000}; // SLL
+		slt     <= slt_top_lt | (slt_top_equals & ($signed(rs1_pipe[15:0]) < $signed(value2_pipe[15:0]))); // SLT
+		sltu    <= sltu_top_lt | (sltu_top_equals & (rs1_pipe[15:0] < value2_pipe[15:0])); // SLTU
+		xor_res <= {rs1_pipe[31:16] ^ value2_pipe[31:16], xor_res_bottom}; // XOR
+		srl     <= srl_half_shift >> {value2_pipe[4:3], 3'b000}; // SRL
+		sra     <= 32'($signed(sra_half_shift) >>> {value2_pipe[4:3], 3'b000}); // SRA
+		or_res  <= {rs1_pipe[31:16] | value2_pipe[31:16], or_res_bottom}; // OR
+		and_res <= {rs1_pipe[31:16] & value2_pipe[31:16], and_res_bottom}; // AND
+		jal     <= 32'({pc_pipe[31:16] + immJ_pipe[31:16] + jal_co_lower, jal_sum_lower}); // JAL
 	end
 
     // ── execute Stage 2: select correct result ───────────────────────────────
@@ -127,7 +162,7 @@ module execute_stage(
         if (id_ex_s1.opcode != JAL) begin
             unique case (id_ex_s1.func3)
                 3'h0: valid_and_execute_out <= {1, id_ex_s1.func7 == 7'h20 ? sub : add}; // SUB & ADD
-                3'h1: valid_and_execute_out <= {1, sll};
+                3'h1: valid_and_execute_out <= {1, sll}; // SLL
                 3'h2: valid_and_execute_out <= {1, slt}; // SLT
                 3'h3: valid_and_execute_out <= {1, sltu}; // SLTU
                 3'h4: valid_and_execute_out <= {1, xor_res}; // XOR
