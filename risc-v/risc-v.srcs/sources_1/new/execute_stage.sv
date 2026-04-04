@@ -48,7 +48,7 @@ module execute_stage(
 	logic [15:0] or_res_bottom; // OR
 
 	logic [15:0] and_res_bottom; // AND
-
+				
 	logic [15:0] jal_sum_lower; // JAL
 	logic        jal_co_lower;
 
@@ -60,8 +60,8 @@ module execute_stage(
 
     // ── execute Stage 2 registers ────────────────────────────────────────────
     logic [31:0] add;      // ADD
-    logic [31:0] sub;      // SUB
-    logic [31:0] sll;      // SLL
+	logic [31:0] sub;      // SUB
+	logic [31:0] sll;      // SLL
     logic [31:0] slt;      // SLT
     logic [31:0] sltu;     // SLTU
     logic [31:0] xor_res;  // XOR
@@ -89,6 +89,17 @@ module execute_stage(
 	// ── Mem addr pipeline through mux tree stages ─────────────────────────────
 	logic [31:0] mem_addr_I_s2, mem_addr_S_s2;
 	logic [31:0] mem_addr_I_s3, mem_addr_S_s3;
+
+    // -- Rst Values on neg edge of rst_n --------------------------------------
+    always_ff @(posedge clk) begin
+        if (!rst_n) begin
+            execute_pc_JAL_MUX <= 1'b0;
+            id_ex_s1 <= '{default:0};
+            id_ex_s2 <= '{default:0};
+            id_ex_s3 <= '{default:0};
+        end
+    end
+
 
 	// ── Latch and pipeline rs values and necessary imediates ───────────────────
 	always_ff @(posedge clk) begin
@@ -191,13 +202,14 @@ module execute_stage(
 		end else begin
 			jal_last_stage <= 0;
 		end
-
-		if (id_ex_s3.opcode != JAL) begin
-			valid_and_execute_out <= {1'b1, id_ex_s3.func3[2] ? mux_45_67 : mux_01_23};
-		end else begin
+																
+		if (id_ex_s3.opcode == JAL) begin
 			valid_and_execute_out[31:0] <= jal_s3;
 			execute_pc_JAL_addr         <= jal_s3;
-			execute_pc_JAL_MUX          <= 1'b1;
+            execute_pc_JAL_MUX          <= 1'b1;
+		end else begin
+			valid_and_execute_out <= {1'b1, id_ex_s3.func3[2] ? mux_45_67 : mux_01_23};
+			execute_pc_JAL_MUX          <= 1'b0;
 		end
 
 		ex_mem.opcode  <= id_ex_s3.opcode;

@@ -43,18 +43,11 @@ module tb_top;
     // Per-cycle log
     always @(posedge clk) begin
         if (rst_n) begin
-            $display("cycle=%0d pc=%d if_id_instr=%h if_instr_addr=%h if_instr_data=%h if_rst_en=%b if_pc_stall=%b",
+            $display("cycle=%0d pc=%d pc_JAL_ADDR=%h pc_JAL_MUX=%h",
                 cycle_count,
                 dut.if_id.pc,
-                dut.if_id.instruction,
-                dut.u_fetch.PC,
-                dut.u_fetch.instr_data,
-                dut.u_fetch.rst_n,
-                dut.u_fetch.pc_stall,
-                
-//                dut.u_decode.register_file[1],
-//                dut.u_decode.register_file[2],
-//                dut.u_decode.register_file[3]
+                dut.u_fetch.execute_pc_JAL_addr,
+                dut.u_fetch.execute_pc_JAL_MUX,
             );
         end
     end
