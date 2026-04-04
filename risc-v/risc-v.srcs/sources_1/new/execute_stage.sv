@@ -34,6 +34,7 @@ module execute_stage(
     logic [31:0] and_res;  // AND
     logic [31:0] jal;      // JAL
 
+
     logic [31:0] jal_last_stage; //Set valid bit for rst
 	logic [32:0] valid_and_execute_out; // {1, execute_out} for simplifying switch case
 
@@ -70,6 +71,49 @@ module execute_stage(
         and_res <= rs1 & value2;
         jal     <= id_ex.pc + id_ex.immediates.immJ;
     end
+
+	logic [15:0] add_sum_lower;
+	logic 		 add_co_lower;			
+
+	logic [15:0] sub_sum_lower;
+	logic 		 sub_co_lower;			
+
+	logic [15:0] sll_half_shift;
+
+	logic 		 slt_top_equals;
+	logic 		 slt_top_lt;
+
+	logic		 sltu_top_equals;
+	logic		 sltu_top_lt;
+
+	logic [15:0] xor_res_bottom;
+	
+	logic [31:0] rs1_pipe;
+	logic [31:0] value2_pipe;
+
+	always_ff @(posedge clk) begin
+		{add_co_lower, add_sum_lower} <= rs1[15:0] + value2[15:0]; // ADD
+		
+		{sub_co_lower, sub_sum_lower} <= rs1[15:0] + !value2[15:0] + 1; // SUB
+		
+		sll_half_shift <= rs1 <<< value2[3:0]; // SLL
+
+		slt_top_equals <= rs1[31:16] == value2[31:16];
+		slt_top_lt <= $signed(rs1[31:16]) < $signed(value2[31:16]);
+
+		sltu_top_equals <= rs1[31:16] == value2[31:16];
+		sltu_top_lt <= rs1[31:16] < value2[31:16];
+
+		xor_res_bottom <= rs1[15:0] ^ value2[15:0];
+
+	always_ff @(posedge clk) begin
+		add  	<= 32'({rs1_pipe[31:16] + value2_pipe[31:16] + add_co_lower, add_sum_lower});
+		sub  	<= 32'({rs1_pipe[31:16] + !value2_pipe[31:16] + add_co_lower, add_sum_lower});
+		sll  	<= sll_half_shift <<< {value2[4], 4'b0000};
+		slt  	<= slt_top_lt | (slt_top_equals & ($signed(rs1[15:0]) < $signed(value2[15:0])));
+		sltu 	<= slt_top_lt | (slt_top_equals & (rs1[15:0] < value2[15:0]));
+		xor_res <= {rs1[31:16] ^ value2[31:16], xor_res_bottom};
+	end
 
     // ── execute Stage 2: select correct result ───────────────────────────────
     always_ff @(posedge clk) begin

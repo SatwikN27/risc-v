@@ -553,3 +553,75 @@ selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 4 ; 1.065 ; 4 ;
 selectButton(PAResourceCommand.PACommandNames_SCHEMATIC, "TimingPathsResultPanel_run_schematic"); // C (PAResourceCommand.PACommandNames_SCHEMATIC, TimingPathsResultPanel_run_schematic)
 // Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
 runTclCommand (PAResourceOtoP.PAViews_SCHEMATIC, "select_objects [get_cells u_execute]"); // j (PAResourceOtoP.PAViews_SCHEMATIC, PlanAheadTabSchematic)
+// Elapsed time: 110 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 1591 seconds
+selectCodeEditor("execute_stage.sv", 718, 375); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 721, 249); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 269, 204); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 287, 356); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 195, 318); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 190, 408); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 190, 408, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 74, 349); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 80, 326); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 80, 326, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 81, 402); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 81, 402, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 12, 316); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 13, 316, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 85, 394); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 85, 394, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 593, 322); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 593, 322, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 553, 394); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 553, 394, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+selectCodeEditor("execute_stage.sv", 3, 323); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 5, 324, false, false, false, false, true); // ae (execute_stage.sv) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 3,462 MB. GUI used memory: 133 MB. Current time: 4/3/26, 5:48:33 PM CDT
+// Elapsed time: 718 seconds
+selectCodeEditor("execute_stage.sv", 461, 89); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 285, 235); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 241, 257); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 223, 276); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 101, 232); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 89, 276); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 55, 309); // ae (execute_stage.sv)
+// Elapsed time: 306 seconds
+selectCodeEditor("execute_stage.sv", 474, 185); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 201, 231); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 209, 280); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 449, 163); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 449, 163); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 468, 137); // ae (execute_stage.sv)
+selectCodeEditor("execute_stage.sv", 478, 125); // ae (execute_stage.sv)
+selectTable(PAResourceTtoZ.TimingItemFlatTablePanel_TABLE, "Path 1 ; 0.951 ; 4 ; 4 ; 122 ; u_decode/id_ex_reg[rs2][4]/C ; u_execute/srl_reg[7]/D ; 4.9890637 ; 1.376 ; 3.6130633 ; 6.0 ; clk ; clk ;  ; 0.03535534", 0, "Path 1", 0); // e.b (PAResourceTtoZ.TimingItemFlatTablePanel_TABLE)
+// [GUI Memory]: 216 MB (+7338kb) [01:09:24]
+selectButton(PAResourceCommand.PACommandNames_SCHEMATIC, "TimingPathsResultPanel_run_schematic"); // C (PAResourceCommand.PACommandNames_SCHEMATIC, TimingPathsResultPanel_run_schematic)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+runTclCommand (PAResourceOtoP.PAViews_SCHEMATIC, "unselect_objects"); // j (PAResourceOtoP.PAViews_SCHEMATIC, PlanAheadTabSchematic)
+// Elapsed time: 353 seconds
+runTclCommand (PAResourceOtoP.PAViews_SCHEMATIC, "select_objects [get_cells u_execute/srl_reg[7]]"); // j (PAResourceOtoP.PAViews_SCHEMATIC, PlanAheadTabSchematic)
+runTclCommand (PAResourceOtoP.PAViews_SCHEMATIC, "unselect_objects"); // j (PAResourceOtoP.PAViews_SCHEMATIC, PlanAheadTabSchematic)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,462 MB. GUI used memory: 134 MB. Current time: 4/3/26, 6:18:33 PM CDT
+// Elapsed time: 470 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "execute_stage.sv", 3); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:32m:02s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01h:32m:04s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,496 MB. GUI used memory: 135 MB. Current time: 4/3/26, 6:28:33 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,488 MB. GUI used memory: 118 MB. Current time: 4/3/26, 6:58:33 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,488 MB. GUI used memory: 116 MB. Current time: 4/3/26, 7:28:33 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 02h:47m:23s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 02h:47m:25s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 02h:47m:33s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,514 MB. GUI used memory: 116 MB. Current time: 4/3/26, 7:43:58 PM CDT
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 02h:47m:35s
