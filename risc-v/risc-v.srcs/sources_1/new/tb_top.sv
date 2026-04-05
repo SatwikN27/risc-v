@@ -42,6 +42,7 @@ module tb_top;
     // Per-cycle log
     always @(posedge clk) begin
         if (rst_n) begin
+            #5;
             $display("cycle=%0d\n\tpc=%0d inst_data=%b reg[3]=%0d reg[1]=%0d reg[2]=%0d\n\ti_mem_rsta=%0b i_mem_addra=%0d i_mem_ena=%0b i_mem_douta=%0b i_mem_rsta_busy=%0b" ,
                 cycle_count,
                 dut.if_id.pc,
@@ -53,8 +54,14 @@ module tb_top;
                 dut.u_fetch.instr_mem.i_mem.addra,
                 dut.u_fetch.instr_mem.i_mem.ena,
                 dut.u_fetch.instr_mem.i_mem.douta,
-                dut.u_fetch.instr_mem.i_mem.rsta_busy,
-                
+                dut.u_fetch.instr_mem.i_mem.rsta_busy,  
+            );
+            $display("\tPC=%0d PC_pipe_0=%0b%0b PC_pipe_1=%0b%0b",
+                dut.u_fetch.PC,
+                dut.u_fetch.PC_pipe_0_upper,
+                dut.u_fetch.PC_pipe_0_lower,
+                dut.u_fetch.PC_pipe_1_upper,
+                dut.u_fetch.PC_pipe_1_lower
             );
         end
     end

@@ -54,11 +54,10 @@ module fetch_stage (
     logic JAL_taken_pipe;
 
     always_ff @ (posedge clk) begin
-        if(!rst_n) begin
-            PC <= 32'b0;
-            {PC_pipe_1_upper, PC_pipe_1_lower} <= 32'd4;
+        if(!rst_n) begin 
+            {PC_pipe_1_upper, PC_pipe_1_lower} <= 32'd0;
             PC_pipe_0_cout <= 1'b0;
-            {PC_pipe_0_upper, PC_pipe_0_lower} <= 32'd8;
+            {PC_pipe_0_upper, PC_pipe_0_lower} <= 32'd4;
             JAL_taken                          <= 1'b0;
             if_id <= '{default:0};
         end else if (pc_flush) begin
@@ -68,23 +67,22 @@ module fetch_stage (
             {PC_pipe_0_lower, PC_pipe_0_upper} <= execute_pc_JAL_addr;
             JAL_taken                          <= 1'b1;
         end else begin
-            PC_pipe_0_upper <= PC[31:16];
-            {PC_pipe_0_cout, PC_pipe_0_lower} <= PC[15:0] + 12;
-                
             PC_pipe_1_lower <= PC_pipe_0_lower;
             PC_pipe_1_upper <= PC_pipe_0_upper + PC_pipe_0_cout;
             JAL_taken                          <= 1'b0;
+        
+            PC_pipe_0_upper <= PC[31:16];
+            {PC_pipe_0_cout, PC_pipe_0_lower} <= PC[15:0] + 16'd8;
+                
+
         end 
     end
     
     
-    always_ff @ (posedge clk) begin
-        PC <= {PC_pipe_1_upper, PC_pipe_1_lower};
-    end
-    
+    assign PC = {PC_pipe_1_upper, PC_pipe_1_lower};
 
     always_ff @(posedge clk) begin
-        if(!pc_stall) begin
+        if(!pc_stall && rst_n) begin
             if_id.pc             <= PC;
             if_id.instruction    <= instr_data;
             if_id.valid          <= (!(| instr_data)) & instr_valid_out; // If all bits from the instr data are 0s, this is a nop and an invalid instruction
