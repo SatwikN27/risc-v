@@ -51,25 +51,32 @@ module fetch_stage (
     
     logic [15:0] PC_pipe_1_lower;
     logic [15:0] PC_pipe_1_upper;
-    logic JAL_taken_pipe;
+    logic JAL_taken_pipe0;
+    logic JAL_taken_pipe1;
+    logic JAL_taken_pipe2;
+    logic JAL_taken_pipe3;
 
     always_ff @ (posedge clk) begin
         if(!rst_n) begin 
             {PC_pipe_1_upper, PC_pipe_1_lower} <= 32'd0;
             PC_pipe_0_cout <= 1'b0;
             {PC_pipe_0_upper, PC_pipe_0_lower} <= 32'd4;
-            JAL_taken                          <= 1'b0;
+            JAL_taken_pipe0                          <= 1'b0;
+            JAL_taken_pipe1                          <= 1'b0;
             if_id <= '{default:0};
         end else if (pc_flush) begin
             {PC_pipe_0_lower, PC_pipe_0_upper} <= pc_flush_addr;
-            JAL_taken                          <= 1'b0;
+            JAL_taken_pipe0                          <= 1'b0;
+            JAL_taken_pipe1                          <= 1'b0;
         end else if (execute_pc_JAL_MUX) begin
             {PC_pipe_0_lower, PC_pipe_0_upper} <= execute_pc_JAL_addr;
-            JAL_taken                          <= 1'b1;
+            JAL_taken_pipe0                          <= 1'b1;
+            JAL_taken_pipe1                          <= 1'b0;
         end else begin
             PC_pipe_1_lower <= PC_pipe_0_lower;
             PC_pipe_1_upper <= PC_pipe_0_upper + PC_pipe_0_cout;
-            JAL_taken                          <= 1'b0;
+            JAL_taken_pipe0                          <= 1'b0;
+            JAL_taken_pipe1                          <= JAL_taken_pipe0;
         
             PC_pipe_0_upper <= PC[31:16];
             {PC_pipe_0_cout, PC_pipe_0_lower} <= PC[15:0] + 16'd8;
@@ -80,15 +87,26 @@ module fetch_stage (
     
     
     assign PC = {PC_pipe_1_upper, PC_pipe_1_lower};
+    
+    logic [31:0] PC_pipe_second_0;
+    logic [31:0] PC_pipe_second_1;
+
+    
 
     always_ff @(posedge clk) begin
         if(!pc_stall && rst_n) begin
-            if_id.pc             <= PC;
+            PC_pipe_second_0 <= PC;
+            PC_pipe_second_1 <= PC_pipe_second_0;
+        
+            JAL_taken_pipe2 <= JAL_taken_pipe1;
+            JAL_taken_pipe3 <= JAL_taken_pipe2; 
+        
+        
+            if_id.pc             <= PC_pipe_second_1;
             if_id.instruction    <= instr_data;
             if_id.valid          <= (!(| instr_data)) & instr_valid_out; // If all bits from the instr data are 0s, this is a nop and an invalid instruction
             if_id.opcode         <= instr_data[6:0];
-            if_id.JAL_taken      <= JAL_taken_pipe;
-            JAL_taken_pipe       <= JAL_taken;
+            if_id.JAL_taken      <= JAL_taken_pipe3;
         
             //instruction          <= instr_data;
         end

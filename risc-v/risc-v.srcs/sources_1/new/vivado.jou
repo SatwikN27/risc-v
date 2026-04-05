@@ -57,3 +57,13 @@ source tb_top.tcl
 close_sim
 launch_simulation
 source tb_top.tcl
+close_sim
+launch_simulation
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
